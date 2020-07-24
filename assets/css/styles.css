@@ -3793,7 +3793,8 @@ input, select, textarea {
 .content>h3,
 .content>h2,
 .content>h1,
-.content>p {
+.content>p,
+.content>.skill>h3 {
 	display: inline;
 }
 
@@ -3822,4 +3823,8 @@ input, select, textarea {
 
 .content > ul {
 	padding-top: 0.5rem;
+}
+
+.skill > h3 {
+	font-weight: bold;
 }
