@@ -1,11 +1,11 @@
-# About Me
+# Personal Portfolio
 A website all about me. 
 
 Check out my portolio @ https://jaeyoungchang5.github.io/portfolio
 
-Design by HTML5 UP
-
 ## Credits:
+	Design:
+		HTML5 UP
 	Icons:
 		Font Awesome (fontawesome.io)
 
