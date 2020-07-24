@@ -2414,6 +2414,15 @@ input, select, textarea {
 		width: 25%;
 	}
 
+	.content > h3, .content > h2, .content > h1, .content > p {
+		display: inline;
+	}
+
+	.content-separator {
+		padding-right: 1%;
+		padding-left: 1%;
+	}
+
 /* List */
 
 	ol {
