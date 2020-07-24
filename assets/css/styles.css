@@ -2419,6 +2419,7 @@ input, select, textarea {
 	}
 
 	.content-separator {
+		display: inline;
 		padding-right: 1%;
 		padding-left: 1%;
 	}
