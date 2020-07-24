@@ -2409,20 +2409,6 @@ input, select, textarea {
 			.image.main img {
 				width: 100%;
 			}
-	#headshot {
-		border-radius: 100%;
-		width: 25%;
-	}
-
-	.content > h3, .content > h2, .content > h1, .content > p {
-		display: inline;
-	}
-
-	.content-separator {
-		display: inline;
-		padding-right: 1%;
-		padding-left: 1%;
-	}
 
 /* List */
 
@@ -2438,7 +2424,7 @@ input, select, textarea {
 
 	ul {
 		list-style: disc;
-		margin: 0 0 2em 0;
+		margin: 0 0 0 0;
 		padding-left: 1em;
 	}
 
@@ -3349,7 +3335,7 @@ input, select, textarea {
 
 	#main {
 		background-color: #ffffff;
-		color: #636363;
+		color: black;
 		border-radius: 0.25em;
 	}
 
@@ -3362,7 +3348,7 @@ input, select, textarea {
 		}
 
 		#main strong, #main b {
-			color: #636363;
+			color: black;
 		}
 
 		#main h1, #main h2, #main h3, #main h4, #main h5, #main h6 {
@@ -3797,3 +3783,30 @@ input, select, textarea {
 			}
 
 		}
+
+/* Custom */
+#headshot {
+	border-radius: 100%;
+	width: 25%;
+}
+
+.content>h3,
+.content>h2,
+.content>h1,
+.content>p {
+	display: inline;
+}
+
+.underline {
+	border-bottom: dotted 1px;
+}
+
+.content-separator {
+	display: inline;
+	padding-right: 1%;
+	padding-left: 1%;
+}
+
+.pdf-link {
+	list-style: none;
+}
