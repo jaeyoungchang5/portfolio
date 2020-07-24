@@ -3798,7 +3798,11 @@ input, select, textarea {
 }
 
 .underline {
-	border-bottom: dotted 1px;
+	border-bottom: 0.3rem solid #b4e7f8;
+}
+
+.underline:hover {
+	background-color: #b4e7f8;
 }
 
 .content-separator {
@@ -3809,4 +3813,13 @@ input, select, textarea {
 
 .pdf-link {
 	list-style: none;
+}
+
+.sub-descriptor{
+	/* padding-left: 0.5rem; */
+	font-style: italic;
+}
+
+.content > ul {
+	padding-top: 0.5rem;
 }
