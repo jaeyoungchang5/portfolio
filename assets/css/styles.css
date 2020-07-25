@@ -1409,7 +1409,9 @@ body.is-preload #header.alt .logo {
 
 .sub-descriptor {
 	/* padding-left: 0.5rem; */
-	font-style: italic;
+	
+	list-style-type: none;
+	padding-top: 0.5rem;
 }
 
 .content>ul {
