@@ -1401,6 +1401,7 @@ body.is-preload #header.alt .logo {
 	display: inline;
 	padding-right: 1%;
 	padding-left: 1%;
+	border-bottom: 0;
 }
 
 .pdf-link {
@@ -1410,11 +1411,11 @@ body.is-preload #header.alt .logo {
 .sub-descriptor {
 	/* padding-left: 0.5rem; */
 	list-style-type: none;
-	padding-top: 0.5rem;
 }
 
 .content>ul {
 	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
 }
 
 .skill>h3 {
