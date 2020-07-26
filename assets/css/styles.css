@@ -1354,3 +1354,13 @@ body.is-preload #header.alt .logo {
 .skill {
 	margin-bottom: 1.3rem;
 }
+
+@media screen and (max-width: 736px) {
+	.sub-header {
+		display: block;
+		margin-bottom: 0.5rem;
+	}
+	.sub-header .content-separator {
+		margin-left: 3%;
+	}
+}
