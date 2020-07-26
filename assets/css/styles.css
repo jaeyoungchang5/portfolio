@@ -1359,8 +1359,9 @@ body.is-preload #header.alt .logo {
 	.sub-header {
 		display: block;
 		margin-bottom: 0.5rem;
+		margin-left: 3%;
 	}
 	.sub-header .content-separator {
-		margin-left: 3%;
+		padding-left: 0;
 	}
 }
