@@ -1,7 +1,7 @@
-# Personal Portfolio
+# Personal Portfolio [![Netlify Status](https://api.netlify.com/api/v1/badges/85d47227-633a-4068-ba6e-aadf536a5bba/deploy-status)](https://app.netlify.com/sites/suspicious-jones-b16aef/deploys)
 A website all about me. 
 
-Check out my portolio @ https://jaeyoungchang5.github.io/portfolio
+Check out my portolio @ https://jaeyoungchang.dev
 
 ## Credits:
 	Design:
