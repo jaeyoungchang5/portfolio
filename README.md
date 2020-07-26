@@ -5,7 +5,7 @@ Check out my portolio @ https://jaeyoungchang.dev
 
 ## Credits:
 	Design:
-		HTML5UP
+		HTML5 UP @ajlkn
 		
 	Icons:
 		Font Awesome (fontawesome.io)
