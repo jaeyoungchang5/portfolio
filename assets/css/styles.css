@@ -4,7 +4,7 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-html, body, div, span, h1, h2, h3, h4, h5, h6, p,
+html, body, div, span, h1, h2, h3, p,
 a, em, img, strong, i, ul, li, footer, header, menu, nav, 
 section {
 	margin: 0;
@@ -15,7 +15,7 @@ section {
 	vertical-align: baseline;
 }
 
-footer, header, menu, nav, section {
+footer, header, nav, section {
 	display: block;
 }
 
@@ -122,14 +122,14 @@ p.content {
 	text-align: justify;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3 {
 	font-weight: 300;
 	line-height: 1.5;
 	margin: 0 0 0.7em 0;
 	letter-spacing: -0.025em;
 }
 
-h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+h1 a, h2 a, h3 a {
 	color: inherit;
 	text-decoration: none;
 }
@@ -147,32 +147,10 @@ h3 {
 	font-size: 1.25em;
 }
 
-h4 {
-	font-size: 1.1em;
-}
-
-h5 {
-	font-size: 0.9em;
-}
-
-h6 {
-	font-size: 0.7em;
-}
-
 @media screen and (max-width: 736px) {
 	h1 {
 		font-size: 2em;
 	}
-}
-
-hr {
-	border: 0;
-	border-bottom: solid 1px;
-	margin: 2em 0;
-}
-
-hr.major {
-	margin: 3em 0;
 }
 
 .align-left {
@@ -191,16 +169,12 @@ a:hover {
 	color: #ffffff;
 }
 
-strong, b {
+strong {
 	color: #ffffff;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3 {
 	color: #ffffff;
-}
-
-hr {
-	border-bottom-color: rgba(255, 255, 255, 0.35);
 }
 
 /* Button */
@@ -369,26 +343,6 @@ hr {
 	height: 2em;
 	text-align: center;
 	line-height: 2em;
-}
-
-.icon.style1 {
-	color: #efa8b0;
-}
-
-.icon.style2 {
-	color: #c79cc8;
-}
-
-.icon.style3 {
-	color: #a89cc8;
-}
-
-.icon.style4 {
-	color: #9bb2e1;
-}
-
-.icon.style5 {
-	color: #8cc9f0;
 }
 
 @media screen and (max-width: 1680px) {
@@ -623,18 +577,10 @@ ul.actions.fit.stacked {
 		padding-top: 0;
 	}
 
-	ul.actions:not(.fixed) li input[type="submit"],
-	ul.actions:not(.fixed) li input[type="reset"],
-	ul.actions:not(.fixed) li input[type="button"],
-	ul.actions:not(.fixed) li button,
 	ul.actions:not(.fixed) li .button {
 		width: 100%;
 	}
 
-	ul.actions:not(.fixed) li input[type="submit"].icon:before,
-	ul.actions:not(.fixed) li input[type="reset"].icon:before,
-	ul.actions:not(.fixed) li input[type="button"].icon:before,
-	ul.actions:not(.fixed) li button.icon:before,
 	ul.actions:not(.fixed) li .button.icon:before {
 		margin-left: -0.5rem;
 	}
@@ -664,7 +610,7 @@ ul.icons li:last-child {
 
 /* Section/Article */
 
-section.special, article.special {
+section.special {
 	text-align: center;
 }
 
@@ -685,8 +631,7 @@ header.major h2:after {
 	border-radius: 2px;
 }
 
-section.special header.major h2:after,
-article.special header.major h2:after {
+section.special header.major h2:after {
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -986,16 +931,12 @@ body.is-preload #header.alt .logo {
 	color: #636363;
 }
 
-#nav strong, #nav b {
+#nav strong {
 	color: #636363;
 }
 
-#nav h1, #nav h2, #nav h3, #nav h4, #nav h5, #nav h6 {
+#nav h1, #nav h2, #nav h3 {
 	color: #636363;
-}
-
-#nav hr {
-	border-bottom-color: #dddddd;
 }
 
 #nav+#main {
@@ -1078,24 +1019,16 @@ body.is-preload #header.alt .logo {
 	border-radius: 0.25em;
 }
 
-#main input, #main select, #main textarea {
-	color: #636363;
-}
-
 #main a:hover {
 	color: #636363;
 }
 
-#main strong, #main b {
+#main strong {
 	color: black;
 }
 
-#main h1, #main h2, #main h3, #main h4, #main h5, #main h6 {
+#main h1, #main h2, #main h3 {
 	color: #636363;
-}
-
-#main hr {
-	border-bottom-color: #dddddd;
 }
 
 #main .button {
@@ -1177,10 +1110,6 @@ body.is-preload #header.alt .logo {
 
 #main ul.alt li {
 	border-top-color: #dddddd;
-}
-
-#main dl dt {
-	color: #636363;
 }
 
 #main header.major h2:after {
@@ -1381,11 +1310,11 @@ body.is-preload #header.alt .logo {
 	width: 25%;
 }
 
-.content>h3,
-.content>h2,
-.content>h1,
-.content>p,
-.content>.skill>h3 {
+.content h3,
+.content h2,
+.content h1,
+.content p,
+.content .skill h3 {
 	display: inline;
 }
 
@@ -1413,11 +1342,15 @@ body.is-preload #header.alt .logo {
 	list-style-type: none;
 }
 
-.content>ul {
+.content ul {
 	padding-top: 0.5rem;
 	padding-bottom: 0.5rem;
 }
 
-.skill>h3 {
+.skill h3 {
 	font-weight: bold;
+}
+
+.skill {
+	margin-bottom: 1.3rem;
 }
