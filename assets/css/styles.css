@@ -855,7 +855,7 @@ header.major h2:after {
 
 @media screen and (max-width: 736px) {
 	#header {
-		padding: 3em 2em 0.1em 2em;
+		padding: 2em 2em 0.1em 2em;
 	}
 
 	#header p {
@@ -868,7 +868,7 @@ header.major h2:after {
 	}
 
 	#header.alt {
-		padding: 4em 2em 1em 2em;
+		padding: 2em 2em 1em 2em;
 	}
 
 	#header.alt h1 {
@@ -878,25 +878,26 @@ header.major h2:after {
 
 @media screen and (max-width: 480px) {
 	#header {
-		padding: 3em 1.5em 0.1em 1.5em;
+		padding: 1.5em 1.5em 0.1em 1.5em;
 	}
 
 	#header.alt {
-		padding: 4em 1.5em 1em 1.5em;
+		padding: 1.5em 1.5em 1em 1.5em;
 	}
 }
 
 @media screen and (max-width: 360px) {
 	#header {
-		padding: 2.5em 1em 0.1em 1em;
+		padding: 1em 1em 0.1em 1em;
 	}
 
 	#header.alt {
-		padding: 3.5em 1em 0.5em 1em;
+		padding: 1em 1em 0.5em 1em;
 	}
 }
 
-body.is-preload #header.alt>* {
+/* heading automation */
+/* body.is-preload #header.alt>* {
 	opacity: 0;
 }
 
@@ -905,7 +906,7 @@ body.is-preload #header.alt .logo {
 	-webkit-transform: scale(0.8) rotate(-30deg);
 	-ms-transform: scale(0.8) rotate(-30deg);
 	transform: scale(0.8) rotate(-30deg);
-}
+} */
 
 /* Nav */
 
@@ -1363,5 +1364,13 @@ body.is-preload #header.alt .logo {
 	}
 	.sub-header .content-separator {
 		padding-left: 0;
+	}
+
+	#header.alt .logo img {
+		display: none;
+	}
+
+	#header {
+		padding-top: 0;
 	}
 }
