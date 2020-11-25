@@ -142,7 +142,7 @@
 							Created an online inventory management system for FAS’s warehouses around the U.S.
 						</li>
 						<li>
-							Exhibited in ADIPEC  <a class="underline" href="https://www.adipec.com/" target="_blank">ADIPEC (Abu Dhabi International Petroleum Exhibition & Conference)</a> and 
+							Exhibited in <a class="underline" href="https://www.adipec.com/" target="_blank">ADIPEC (Abu Dhabi International Petroleum Exhibition & Conference)</a> and 
 							showcased FAS’s software capabilities to thousands of attendees, resulting in a deal with Saudi Drill Company (November 2019)
 							<span class="content-separator"></span>
 							<a class="underline" href="https://photos.app.goo.gl/osEqMRQajRicLNS5A" target="_blank"><i class="fas fa-images"></i></a>
@@ -292,12 +292,16 @@
 
 		<!-- Footer -->
 		<footer id="footer">
-			<p class="copyright">&copy; JaeYoung Chang 2020. Design: <a href="https://html5up.net" target="_blank">HTML5 UP</a>.</p>
+			<p class="copyright">&copy; JaeYoung Chang <span id="footer-year"></span>. Design: <a href="https://html5up.net" target="_blank">HTML5 UP</a>.</p>
 		</footer>
 
 	</div>
 
 	<!-- Scripts -->
+	<script>
+		let date = new Date();
+		document.getElementById("footer-year").innerHTML = date.getFullYear();
+	</script>
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/jquery.scrollex.min.js"></script>
 	<script src="assets/js/jquery.scrolly.min.js"></script>
