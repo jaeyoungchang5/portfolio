@@ -2,7 +2,7 @@ import React from "react";
 import { CodeBracketIcon, EyeIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 
-const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
+const ProjectCard = ({ imgUrl, title, description, points, gitUrl, previewUrl }) => {
 	return (
 		<div>
 			<div
@@ -26,7 +26,12 @@ const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
 			</div>
 			<div className="text-white rounded-b-xl mt-3 bg-[#181818]py-6 px-4">
 				<h5 className="text-xl font-semibold mb-2">{title}</h5>
-				<p className="text-[#ADB7BE]">{description}</p>
+				<p className="text-[#ADB7BE] italic">{description}</p>
+				<ul className="list-disc pl-2 text-[#ADB7BE]">
+					{points ? points.map((point, index) => (
+						<li key={index}>{point}</li>
+					)) : <></>}
+				</ul>
 			</div>
 		</div>
 	);

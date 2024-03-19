@@ -34,15 +34,14 @@ const TAB_DATA = [
 const AboutSection = () => {
 
 	return (
-		<section className="text-white" id="about">
+		<section className="text-white mt-4" id="about">
 			<div className="mt-4 md:mt-0 text-center flex flex-col h-full">
 				<h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
 				<p className="text-left text-base lg:text-lg">
-					I am a full stack software engineer for Epic Systems, the nation&apos;s leader in Healthcare Software.
+					I am a full-stack engineer at Epic Systems, the nation&apos;s leader in Healthcare Software. 
 					I graduated from the University of Notre Dame in 2022 with a BS in Computer Science and a Minor in Engineering Corporate Practice. 
-					I have experience working with React, TypeScript, JavaScript, C#, .NET, NodeJS, ExpressJS, SQL, MongoDB, Python. 
-					I am a quick learner and I am always looking to expand my knowledge and skill set. I am a team player and
-					I believe I can bring something special to the table.
+					
+					<br></br>
 				</p>
 			</div>
 		</section>

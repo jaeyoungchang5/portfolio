@@ -7,8 +7,13 @@ import { motion, useInView } from "framer-motion";
 const projectsData = [
 	{
 		id: 1,
-		title: "Swipe & Swing, a Golf Matching Mobile App",
-		description: "Launched a golf mobile app that allows golfers to find nearby matches with similar golfing preferences. Developed features to allow users to swipe and match with profiles, message golfers they matched with, and use a map API to find golf courses and book tee times. Designed the backend framework to store and return data from a SQL database",
+		title: "Swipe & Swing",
+		description: "A Golf Matching Mobile App",
+		points: [
+			"Launched a golf matching mobile app that allows golfers to find nearby matches with similar golfing preferences",
+			"Developed features to allow users to swipe and match with profiles, message golfers they matched with, and use a map API to find golf courses and book tee times",
+			"Designed the backend framework to store and return data from a SQL database"
+		],
 		image: "/images/projects/1.png",
 		tag: ["All", "Mobile"],
 		gitUrl: "/",
@@ -110,14 +115,15 @@ const ProjectsSection = () => {
 						animate={isInView ? "animate" : "initial"}
 						transition={{ duration: 0.3, delay: index * 0.4 }}
 					>
-					<ProjectCard
-						key={project.id}
-						title={project.title}
-						description={project.description}
-						imgUrl={project.image}
-						gitUrl={project.gitUrl}
-						previewUrl={project.previewUrl}
-					/>
+						<ProjectCard
+							key={project.id}
+							title={project.title}
+							description={project.description}
+							points={project.points}
+							imgUrl={project.image}
+							gitUrl={project.gitUrl}
+							previewUrl={project.previewUrl}
+						/>
 					</motion.li>
 				))}
 			</ul>

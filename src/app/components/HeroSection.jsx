@@ -35,6 +35,8 @@ const HeroSection = () => {
 					</h1>
 					<p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
 						I am a lifelong learner, driven software developer, and proud Korean. 
+						<br></br>
+						My greatest passion is people, so let&apos;s connect and get to know one another!
 					</p>
 					<div>
 						<Link
