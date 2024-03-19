@@ -6,6 +6,8 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import GithubIcon from "../../../public/github-icon.svg";
 import LinkedinIcon from "../../../public/linkedin-icon.svg";
+import MailIcon from "../../../public/mail-icon.svg"
+import DownloadIcon from "../../../public/download-icon.svg"
 
 const HeroSection = () => {
 	return (
@@ -37,17 +39,21 @@ const HeroSection = () => {
 					<div>
 						<Link
 							href="/#contact"
-							className="px-5 inline-block py-3 w-full sm:w-fit rounded-full mr-3 bg-gradient-to-br from-blue-400 to-blue-700 hover:bg-slate-200 text-white"
+							className="px-1 mr-3 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-blue-400 to-blue-700 hover:bg-slate-800 text-white mt-3"
 						>
-							Contact Me
+							<span className="flex bg-[#121212] hover:bg-slate-800 rounded-full px-4 py-2">
+								<Image className="invert self-center w-7 h-7 mr-1" src={MailIcon} alt="Mail Icon" />
+								<p className="self-center">Contact Me</p>
+							</span>
 						</Link>
 						<Link
 							href="https://github.com/jaeyoungchang5"
 							target="_blank"
 							className="px-1 mr-3 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-blue-400 to-blue-700 hover:bg-slate-800 text-white mt-3"
 						>
-							<span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-4 py-2">
-								GitHub
+							<span className="flex bg-[#121212] hover:bg-slate-800 rounded-full px-4 py-2">
+								<Image className="self-center w-7 h-7 mr-1" src={GithubIcon} alt="GitHub Icon" />
+								<p className="self-center">GitHub</p>
 							</span>
 						</Link>
 						<Link
@@ -55,8 +61,9 @@ const HeroSection = () => {
 							target="_blank"
 							className="px-1 mr-3 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-blue-400 to-blue-700 hover:bg-slate-800 text-white mt-3"
 						>
-							<span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-4 py-2">
-								LinkedIn
+							<span className="flex bg-[#121212] hover:bg-slate-800 rounded-full px-4 py-2">
+								<Image className="self-center w-7 h-7 mr-1" src={LinkedinIcon} alt="LinkedIn Icon" />
+								<p className="self-center">LinkedIn</p>
 							</span>
 						</Link>
 						<Link
@@ -64,9 +71,10 @@ const HeroSection = () => {
 							target="_blank"
 							className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-blue-400 to-blue-700 hover:bg-slate-800 text-white mt-3"
 						>
-							<span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-4 py-2">
-								Download Resume
-							</span>
+						<span className="flex bg-[#121212] hover:bg-slate-800 rounded-full px-4 py-2">
+							<Image className="invert self-center w-7 h-7 mr-1" src={DownloadIcon} alt="Github Icon" />
+							<p className="self-center">Resume</p>
+						</span>
 						</Link>
 					</div>
 				</motion.div>

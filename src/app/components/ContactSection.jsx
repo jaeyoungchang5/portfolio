@@ -2,6 +2,7 @@
 import React from "react";
 import GithubIcon from "../../../public/github-icon.svg";
 import LinkedinIcon from "../../../public/linkedin-icon.svg";
+import MailIcon from "../../../public/mail-icon.svg"
 import Link from "next/link";
 import Image from "next/image";
 
@@ -23,11 +24,14 @@ const ContactSection = () => {
 					try my best to get back to you!
 				</p>
 				<div className="socials flex flex-row gap-2">
+					<Link href="mailto:jaeyoungchang5@gmail.com">
+						<Image className="invert" src={MailIcon} alt="Mail Icon" />
+					</Link>
 					<Link target="_blank" href="https://github.com/jaeyoungchang5">
-					<Image src={GithubIcon} alt="Github Icon" />
+						<Image src={GithubIcon} alt="Github Icon" />
 					</Link>
 					<Link target="_blank" href="https://www.linkedin.com/in/jaeyoungchang5/">
-					<Image src={LinkedinIcon} alt="Linkedin Icon" />
+						<Image src={LinkedinIcon} alt="Linkedin Icon" />
 					</Link>
 				</div>
 			</div>
