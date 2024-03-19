@@ -37,7 +37,7 @@ const AboutSection = () => {
 		<section className="text-white" id="about">
 			<div className="mt-4 md:mt-0 text-center flex flex-col h-full">
 				<h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
-				<p className="text-base lg:text-lg">
+				<p className="text-left text-base lg:text-lg">
 					I am a full stack software engineer for Epic Systems, the nation&apos;s leader in Healthcare Software.
 					I graduated from the University of Notre Dame in 2022 with a BS in Computer Science and a Minor in Engineering Corporate Practice. 
 					I have experience working with React, TypeScript, JavaScript, C#, .NET, NodeJS, ExpressJS, SQL, MongoDB, Python. 

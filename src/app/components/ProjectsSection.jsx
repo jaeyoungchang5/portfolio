@@ -7,10 +7,10 @@ import { motion, useInView } from "framer-motion";
 const projectsData = [
 	{
 		id: 1,
-		title: "React Portfolio Website",
-		description: "Project 1 description",
+		title: "Swipe & Swing, a Golf Matching Mobile App",
+		description: "Launched a golf mobile app that allows golfers to find nearby matches with similar golfing preferences. Developed features to allow users to swipe and match with profiles, message golfers they matched with, and use a map API to find golf courses and book tee times. Designed the backend framework to store and return data from a SQL database",
 		image: "/images/projects/1.png",
-		tag: ["All", "Web"],
+		tag: ["All", "Mobile"],
 		gitUrl: "/",
 		previewUrl: "/",
 	},
