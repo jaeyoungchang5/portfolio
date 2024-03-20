@@ -72,6 +72,7 @@ const AboutSection = () => {
                                     target={linkObj.target}
                                     icon={linkObj.icon}
                                     iconClasses={linkObj.iconClasses}
+                                    roundedness='rounded-full'
                                 />
                             )
                         })}

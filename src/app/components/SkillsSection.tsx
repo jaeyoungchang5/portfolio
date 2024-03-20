@@ -83,6 +83,7 @@ const SkillsSection = () => {
                                 key={index}
                                 text={language.text}
                                 icon={language.icon}
+                                roundedness='rounded-lg'
                             />
                         )
                     })}
