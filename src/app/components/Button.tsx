@@ -5,16 +5,18 @@ import React from 'react';
 export type IButtonProps = {
     text: string,
     link?: string,
+    buttonClasses?: string[],
     icon?: any,
     iconClasses?: string[],
     target?: string,
     roundedness?: string,
 }
 
-const Button = ({text, link, icon, iconClasses, target, roundedness}: IButtonProps) => {
+const Button = ({text, link, buttonClasses, icon, iconClasses, target, roundedness}: IButtonProps) => {
+    const additionalButtonClasses: string | undefined = buttonClasses?.join(' ');
     roundedness = roundedness || 'rounded';
     return (
-        <div className={`px-1 mr-1.5 inline-block py-1 w-full sm:w-fit align-middle ${roundedness} bg-gradient-to-br from-blue-400 to-blue-700 hover:bg-slate-800 text-white mt-3`}>
+        <div className={`px-1 inline-block py-1 w-full sm:w-fit align-middle ${roundedness} text-white ${additionalButtonClasses}`}>
             {link ? 
                 <Link
                     href={link ? link : ''}

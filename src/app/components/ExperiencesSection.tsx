@@ -7,6 +7,7 @@ const ExperiencesSection = () => {
                 <h2 className="text-4xl font-bold text-white mt-10 mb-8 md:mb-12">
                     My Experiences
                 </h2>
+                <div className='grid grid-cols-1 lg:grid-cols-2'>
                 <div className="story-header">
                     <h2>Full-Stack Software Engineer</h2>
                     <span className="sub-header">
@@ -129,6 +130,8 @@ const ExperiencesSection = () => {
                         <strong>Technologies Used:</strong> Salesforce, Apex Programming Language, VBA, Microsoft Excel, Smartsheets
                     </div>
                 </div>
+                
+            </div>
         </section>
     )
 };
