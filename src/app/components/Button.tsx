@@ -41,7 +41,7 @@ const Button = ({text, link, icon, iconClasses, target, roundedness}: IButtonPro
 const ButtonInnerText = ({text, icon, iconClasses, roundedness}: IButtonProps) => {
     const additionalIconClasses: string | undefined = iconClasses?.join(' ');
     return (
-        <span className={`flex bg-[#121212] hover:bg-slate-800 ${roundedness} px-4 py-2`}>
+        <span className={`flex bg-[#121212] hover:bg-slate-800 ${roundedness} px-3 py-2`}>
             { icon ? 
                 <Image className={`self-center w-7 h-7 mr-1 ${additionalIconClasses}`} src={icon} alt="Mail Icon" />
             : 
