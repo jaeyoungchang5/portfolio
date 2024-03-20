@@ -37,8 +37,6 @@ const links: Array<IButtonProps> = [
 ];
 
 const AboutSection = () => {
-
-
 	return (
 		<section className='sm:py-2 lg:py-8' id='about'>
 			<div className="grid grid-cols-1 lg:grid-cols-12">
