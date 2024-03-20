@@ -25,3 +25,20 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.funderline {
+  border-bottom: 0.2rem solid #1d4ed8;
+  border-radius: 1.5px;
+}
+
+.funderline:hover {
+  background-color: rgba(29, 78, 216, 0.4);
+  border-top: 0.2rem rgba(29, 78, 216, 0.4);
+  border-radius: 1.5px;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
