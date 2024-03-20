@@ -6,8 +6,36 @@ import GithubIcon from "../../../public/github-icon.svg";
 import LinkedinIcon from "../../../public/linkedin-icon.svg";
 import MailIcon from "../../../public/mail-icon.svg"
 import DownloadIcon from "../../../public/download-icon.svg"
+import Button, { IButtonProps } from './Button';
+
+const links: Array<IButtonProps> = [
+    {
+        text: "Email me",
+        link: "mailto:jaeyoungchang5@gmail.com",
+        icon: MailIcon,
+        iconClasses: ['invert']
+    },
+    {
+        text: 'GitHub',
+        link: 'https://github.com/jaeyoungchang5',
+        icon: GithubIcon
+    },
+    {
+        text: 'LinkedIn',
+        link: 'https://www.linkedin.com/in/jaeyoungchang5/',
+        icon: LinkedinIcon
+    },
+    {
+        text: 'Resume',
+        link: '/files/resume.pdf',
+        icon: DownloadIcon,
+        iconClasses: ['invert']
+    }
+];
 
 const AboutSection = () => {
+
+
 	return (
 		<section className='sm:py-2 lg:py-8' id='about'>
 			<div className="grid grid-cols-1 lg:grid-cols-12">
@@ -33,46 +61,18 @@ const AboutSection = () => {
                         <br></br><br></br>
                         My greatest passion is people, so let&apos;s connect and get to know one another!
                     </p>
-                    <div className='contact-links'>
-                        <Link
-                            href="mailto:jaeyoungchang5@gmail.com"
-                            className="px-1 mr-3 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-blue-400 to-blue-700 hover:bg-slate-800 text-white mt-3"
-                        >
-                            <span className="flex bg-[#121212] hover:bg-slate-800 rounded-full px-4 py-2">
-                                <Image className="invert self-center w-7 h-7 mr-1" src={MailIcon} alt="Mail Icon" />
-                                <p className="self-center">Email Me</p>
-                            </span>
-                        </Link>
-                        <Link
-                            href="https://github.com/jaeyoungchang5"
-                            target="_blank"
-                            className="px-1 mr-3 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-blue-400 to-blue-700 hover:bg-slate-800 text-white mt-3"
-                        >
-                            <span className="flex bg-[#121212] hover:bg-slate-800 rounded-full px-4 py-2">
-                                <Image className="self-center w-7 h-7 mr-1" src={GithubIcon} alt="GitHub Icon" />
-                                <p className="self-center">GitHub</p>
-                            </span>
-                        </Link>
-                        <Link
-                            href="https://www.linkedin.com/in/jaeyoungchang5/"
-                            target="_blank"
-                            className="px-1 mr-3 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-blue-400 to-blue-700 hover:bg-slate-800 text-white mt-3"
-                        >
-                            <span className="flex bg-[#121212] hover:bg-slate-800 rounded-full px-4 py-2">
-                                <Image className="self-center w-7 h-7 mr-1" src={LinkedinIcon} alt="LinkedIn Icon" />
-                                <p className="self-center">LinkedIn</p>
-                            </span>
-                        </Link>
-                        <Link
-                            href="/files/resume.pdf"
-                            target="_blank"
-                            className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-blue-400 to-blue-700 hover:bg-slate-800 text-white mt-3"
-                        >
-                            <span className="flex bg-[#121212] hover:bg-slate-800 rounded-full px-4 py-2">
-                                <Image className="invert self-center w-7 h-7 mr-1" src={DownloadIcon} alt="Github Icon" />
-                                <p className="self-center">Resume</p>
-                            </span>
-                        </Link>
+                    <div>
+                        {links.map((linkObj, index) => {
+                            return (
+                                <Button
+                                    key={index}
+                                    text={linkObj.text}
+                                    link={linkObj.text}
+                                    icon={linkObj.icon}
+                                    iconClasses={linkObj.iconClasses}
+                                />
+                            )
+                        })}
                     </div>
                 </div>
             </div>
