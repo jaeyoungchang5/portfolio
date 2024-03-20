@@ -2,10 +2,10 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import GithubIcon from "../../../public/github-icon.svg";
-import LinkedinIcon from "../../../public/linkedin-icon.svg";
-import MailIcon from "../../../public/mail-icon.svg"
-import DownloadIcon from "../../../public/download-icon.svg"
+import GithubIcon from "../../../public/icons/github-icon.svg";
+import LinkedinIcon from "../../../public/icons/linkedin-icon.svg";
+import MailIcon from "../../../public/icons/mail-icon.svg"
+import DownloadIcon from "../../../public/icons/download-icon.svg"
 import Button, { IButtonProps } from './Button';
 
 const links: Array<IButtonProps> = [
@@ -18,18 +18,21 @@ const links: Array<IButtonProps> = [
     {
         text: 'GitHub',
         link: 'https://github.com/jaeyoungchang5',
-        icon: GithubIcon
+        icon: GithubIcon,
+        target: '_blank'
     },
     {
         text: 'LinkedIn',
         link: 'https://www.linkedin.com/in/jaeyoungchang5/',
-        icon: LinkedinIcon
+        icon: LinkedinIcon,
+        target: '_blank'
     },
     {
         text: 'Resume',
         link: '/files/resume.pdf',
         icon: DownloadIcon,
-        iconClasses: ['invert']
+        iconClasses: ['invert'],
+        target: '_blank'
     }
 ];
 
@@ -67,7 +70,8 @@ const AboutSection = () => {
                                 <Button
                                     key={index}
                                     text={linkObj.text}
-                                    link={linkObj.text}
+                                    link={linkObj.link}
+                                    target={linkObj.target}
                                     icon={linkObj.icon}
                                     iconClasses={linkObj.iconClasses}
                                 />

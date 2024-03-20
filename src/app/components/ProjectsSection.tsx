@@ -3,8 +3,8 @@ import React from 'react'
 const ProjectsSection = () => {
 	return (
 		<section className='sm:py-2 lg:py-8' id='projects'>
-			<div className="content align-left story">
-				<h2 className="text-center text-4xl font-bold text-white mt-10 mb-8 md:mb-12">
+			<div className="place-self-center text-center text-slate-200 lg:text-left justify-self-start">
+				<h2 className="text-4xl font-bold text-white mt-10 mb-8 md:mb-12">
 					My Projects
 				</h2>
 				<div id="swipe-and-swing" className="content align-left story">
