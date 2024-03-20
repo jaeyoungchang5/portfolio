@@ -7,7 +7,7 @@ import { TypeAnimation } from 'react-type-animation';
 
 const HeroSection = () => {
     return (
-        <section className="sm:py-4 lg:py-16">
+        <section className="sm:py-2 lg:py-8" id='hero'>
             <motion.div
                 initial={{ opacity: 0, scale: 0.5 }}
                 animate={{ opacity: 1, scale: 1 }}
