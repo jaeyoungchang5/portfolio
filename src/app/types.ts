@@ -15,6 +15,20 @@ export type ICardProps = {
 	technologies: string[],
 }
 
+export type INavLinkProps = {
+    href: string,
+    title: string,
+}
+
+export type IMenuOverlayProps = {
+    links: MenuLink[]
+}
+
+type MenuLink = {
+    title: string,
+    path: string,
+}
+
 export interface BadgeInterface {
     text: string;
     filled?: boolean;
