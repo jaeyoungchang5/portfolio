@@ -59,3 +59,14 @@ export interface CardInterface {
     subtitle?: string,
     body: string,
 }
+
+export enum SkillType {
+    All,
+    Languages,
+    Frameworks,
+    Frontend,
+    Backend,
+    Web,
+    Mobile,
+    Database
+}
