@@ -4,7 +4,7 @@ const ProjectsSection = () => {
 	return (
 		<section className='sm:py-2 lg:py-8' id='projects'>
 			<div className="place-self-center text-center text-slate-200 lg:text-left justify-self-start">
-				<h2 className="text-4xl font-bold text-white mt-10 mb-8 md:mb-12">
+				<h2 className="text-4xl font-bold text-blue-400 mt-10 mb-8 md:mb-12">
 					My Projects
 				</h2>
 				<div id="swipe-and-swing" className="content align-left story">
@@ -71,7 +71,7 @@ const ProjectsSection = () => {
 					</div>
 					<p></p>
 					<ul>
-						<li>Developed a web app for <a className="underline" href="https://aeropartsnow.com/" target="_blank">AeroParts Now</a> to help customers upload aircraft inventory items into the AeroParts Now database</li>
+						<li>Developed a web app for <a className="funderline" href="https://aeropartsnow.com/" target="_blank">AeroParts Now</a> to help customers upload aircraft inventory items into the AeroParts Now database</li>
 						<li>This app imports a CSV file of inventory items, merges parts&apos; <em>Quantities</em> if their <em>Part Number</em>, <em>Serial Number</em>, <em>Condition Code</em>, and <em>Warehouse Location</em> are the same, and exports the merged inventory in multiple CSV files (960 inventory items per file)</li>
 						<li>Used this app to deal with inventory in the range of 10,000 - 90,000 inventory items</li>
 					</ul>

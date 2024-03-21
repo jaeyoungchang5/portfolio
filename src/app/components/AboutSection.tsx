@@ -1,36 +1,28 @@
 import React from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
-
-import GithubIcon from "../../../public/icons/github-icon.svg";
-import LinkedinIcon from "../../../public/icons/linkedin-icon.svg";
-import MailIcon from "../../../public/icons/mail-icon.svg"
-import DownloadIcon from "../../../public/icons/download-icon.svg"
-import Button, { IButtonProps } from './Button';
+import Button from './Button';
+import { IButtonProps } from '../types';
 
 const links: Array<IButtonProps> = [
     {
-        text: "Email me",
         link: "mailto:jaeyoungchang5@gmail.com",
-        icon: MailIcon,
+        icon: 'Mail',
         iconClasses: ['invert']
     },
     {
-        text: 'GitHub',
         link: 'https://github.com/jaeyoungchang5',
-        icon: GithubIcon,
+        icon: 'GitHub',
         target: '_blank'
     },
     {
-        text: 'LinkedIn',
         link: 'https://www.linkedin.com/in/jaeyoungchang5/',
-        icon: LinkedinIcon,
+        icon: 'LinkedIn',
         target: '_blank'
     },
     {
         text: 'Resume',
         link: '/files/resume.pdf',
-        icon: DownloadIcon,
+        icon: 'Download',
         iconClasses: ['invert'],
         target: '_blank'
     }
@@ -52,8 +44,8 @@ const AboutSection = () => {
                     </div>
                 </div>
                 <div className='lg:col-span-8 place-self-center text-center lg:text-left justify-self-start'>
-                    <h2 className='text-4xl font-bold text-white mb-4'>About Me</h2>
-                    <p className='text-slate-200 text-center lg:text-left pb-4 text-base lg:text-lg'>
+                    <h2 className='text-4xl font-bold text-blue-400 mb-4'>About Me</h2>
+                    <p className='text-slate-200 text-center lg:text-left pb-4 text-lg'>
                         I am a lifelong learner, driven software developer, and proud Korean. 
                         <br></br><br></br>
                         I am a full-stack engineer at <a href="https://www.epic.com/" target='_blank' className='funderline'>Epic Systems</a>, the nation&apos;s leader in Healthcare Software. 
@@ -70,7 +62,7 @@ const AboutSection = () => {
                                     text={linkObj.text}
                                     link={linkObj.link}
                                     target={linkObj.target}
-                                    buttonClasses={['mr-1.5 mb-3', 'bg-gradient-to-br from-blue-400 to-blue-700 hover:bg-slate-800']}
+                                    buttonClasses={['pl-1 mr-1.5 mb-3', 'bg-gradient-to-br from-blue-400 to-blue-700 hover:bg-slate-800']}
                                     icon={linkObj.icon}
                                     iconClasses={linkObj.iconClasses}
                                     roundedness='rounded-full'
