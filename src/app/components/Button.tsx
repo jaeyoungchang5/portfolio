@@ -94,7 +94,7 @@ const ButtonInnerText = ({text, icon, iconClasses, roundedness}: IButtonProps) =
     return (
         <span className={`flex bg-[#121212] hover:bg-slate-800 ${roundedness} px-3 py-2`}>
             { svgIcon ? 
-                <Image className={`self-center w-7 h-7 mr-1 ${additionalIconClasses}`} src={svgIcon} alt="Mail Icon" />
+                <Image className={`self-center w-7 h-7 mr-1 ${additionalIconClasses}`} src={svgIcon} alt='Icon' />
             : 
                 null
             }
