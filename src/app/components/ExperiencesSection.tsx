@@ -4,6 +4,14 @@ import { ICardProps } from '../types';
 
 const experiences: ICardProps[] = [
     {
+        title: 'Co-Founder & CTO',
+        subtitle: 'Wealth Kitchen, Inc. | June 2023 - Present',
+        bulletPoints: [
+            ''
+        ],
+        technologies: ['TypeScript', 'Express', 'Salesforce', 'Apex Programming']
+    },
+    {
         title: 'Full-Stack Software Engineer',
         subtitle: '<a href="https://www.epic.com/" target="_blank" class="funderline">Epic Systems</a> | August 2022 - Present',
         bulletPoints: [
@@ -58,9 +66,9 @@ const experiences: ICardProps[] = [
 const ExperiencesSection = () => {
     return (
         <section className='' id='experiences'>
-            <div className="place-self-center text-center text-slate-200 lg:text-left justify-self-start">
+            <div className="place-self-center text-slate-200 text-left justify-self-start">
                 <h2 className="text-4xl font-bold text-blue-400 mb-4">
-                    My Experiences
+                    Experiences
                 </h2>
                 <div className='flex flex-col'>
                     {experiences.map((experience, index) => {

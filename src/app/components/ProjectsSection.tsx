@@ -27,9 +27,9 @@ const projects: ICardProps[] = [
 		title: 'My Portfolio',
 		subtitle: '',
 		bulletPoints: [
-			'Deployed my own personal website created from scratch with Next and Tailwind',
+			'Deployed my own personal website created from scratch with Next.js, Tailwind CSS, and Vercel',
 		],
-		technologies: ['Next', 'React', 'TypeScript', 'Vercel', 'Tailwind']
+		technologies: ['Next.js', 'React', 'TypeScript', 'Vercel', 'Tailwind']
 	},
 	{
 		title: 'Notre Dame Menu Text App',
@@ -65,9 +65,9 @@ const projects: ICardProps[] = [
 const ProjectsSection = () => {
 	return (
 		<section className='' id='projects'>
-            <div className="place-self-center text-center text-slate-200 lg:text-left justify-self-start">
+            <div className="place-self-center text-slate-200 text-left justify-self-start">
                 <h2 className="text-4xl font-bold text-blue-400 mb-4">
-                    My Projects
+                    Projects
                 </h2>
 				<div className='flex flex-col'>
 					{projects.map((project, index) => {

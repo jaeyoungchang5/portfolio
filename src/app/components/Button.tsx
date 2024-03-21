@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { IButtonProps } from '../types';
+import { BorderRoundness, BorderType, IButtonProps } from '../types';
 
 import GithubIcon from "../../../public/icons/github-icon.svg";
 import LinkedinIcon from "../../../public/icons/linkedin-icon.svg";
@@ -55,25 +55,24 @@ const svgIcons: { [Name: string]: IButtonProps } = {
     Git: { text: 'Git', icon: GitIcon }
 }
 
-const Button = ({text, link, buttonClasses, icon, iconClasses, target, roundedness}: IButtonProps) => {
-    const additionalButtonClasses: string | undefined = buttonClasses?.join(' ');
-    roundedness = roundedness || 'rounded';
+const Button = ({text, link, target, border, roundedness, icon, iconInvert}: IButtonProps) => {
     if (!text && icon && svgIcons[icon] && svgIcons[icon].text) {
         text = svgIcons[icon].text
     } else if (!text && icon && !svgIcons[icon]){
         text = icon;
     }
+
     return (
-        <div className={`pr-1 inline-block py-1 w-full sm:w-fit align-middle ${roundedness} text-white ${additionalButtonClasses}`}>
+        <div className={`flex mr-1 my-1 text-white ${border} ${roundedness}`}>
             {link ? 
                 <Link
-                    href={link ? link : ''}
+                    href={link && link}
                     target={target ? target : ''}
                 >
                     <ButtonInnerText
                         text={text}
                         icon={icon}
-                        iconClasses={iconClasses}
+                        iconInvert={iconInvert}
                         roundedness={roundedness}
                     />
                 </Link>
@@ -81,24 +80,23 @@ const Button = ({text, link, buttonClasses, icon, iconClasses, target, roundedne
                 <ButtonInnerText
                     text={text}
                     icon={icon}
-                    iconClasses={iconClasses}
+                    iconInvert={iconInvert}
                     roundedness={roundedness}
                 />}
         </div>
     );
 };
 
-const ButtonInnerText = ({text, icon, iconClasses, roundedness}: IButtonProps) => {
-    const additionalIconClasses: string | undefined = iconClasses?.join(' ');
+const ButtonInnerText = ({text, icon, iconInvert, roundedness}: IButtonProps) => {
     const svgIcon = (icon && svgIcons[icon]) ? svgIcons[icon].icon : undefined;
     return (
-        <span className={`flex bg-[#121212] hover:bg-slate-800 ${roundedness} px-3 py-2`}>
+        <span className={`flex px-2 py-1 md:px-3 md:py-2 bg-[#121212] hover:bg-slate-800 ${roundedness}`}>
             { svgIcon ? 
-                <Image className={`self-center w-7 h-7 mr-1 ${additionalIconClasses}`} src={svgIcon} alt='Icon' />
+                <Image className={`self-center w-4 h-5 md:w-7 md:h-7 mr-1 ${iconInvert && 'invert'}`} src={svgIcon} alt='Icon' />
             : 
                 null
             }
-            <p className="self-center pl-1">{text}</p>
+            <p className="self-center text-sm md:text-base pl-1">{text}</p>
         </span>
     )
 }

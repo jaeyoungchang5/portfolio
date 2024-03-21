@@ -24,6 +24,10 @@ const Navbar = () => {
 		console.log(scrollY);
 		setScrollY(scrollY);
 	}, []);
+
+	function closeNavBar() {
+		setNavbarOpen(false);
+	}
   
 	useEffect(() => {
 		//add eventlistener to window
@@ -35,37 +39,37 @@ const Navbar = () => {
 	}, [onScroll]);
 
     return (
-		<nav id='navbar' className={`fixed mx-auto top-0 left-0 right-0 z-10 ${scrollY > 20 && 'bg-gray-800 border-gray-400 border-b'} border-white border-b-1 opacity-100`}>
+		<nav id='navbar' className={`fixed mx-auto top-0 left-0 right-0 z-10 ${(scrollY > 0 || navbarOpen) && 'bg-gray-800 border-gray-400 border-b'} border-white border-b-1 opacity-100`}>
 			<div className='flex container lg:py-4 items-center justify-between mx-auto px-4 py-2'>
 				<div className='flex justify-left'>
 					<div className='mobile-menu block md:hidden'>
 						{!navbarOpen ? (
-						<button
-							onClick={() => setNavbarOpen(true)}
-							className='flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white'
-						>
-							<Image className='h-5 w-5 invert' src={MenuIcon} alt='Menu Icon' />
-						</button>
-						) : (
-						<button
-							onClick={() => setNavbarOpen(false)}
-							className='flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white'
-						>
-							<Image className='h-5 w-5 invert' src={CloseIcon} alt='Close Icon' />
-						</button>
+								<button
+									onClick={() => setNavbarOpen(true)}
+									className='flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white'
+								>
+									<Image className='h-5 w-5 invert' src={MenuIcon} alt='Menu Icon' />
+								</button>
+							) : (
+								<button
+									onClick={() => setNavbarOpen(false)}
+									className='flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white'
+								>
+									<Image className='h-5 w-5 invert' src={CloseIcon} alt='Close Icon' />
+								</button>
 						)}
 					</div>
 					<div className='hidden md:block md:w-auto'>
 						<ul className='flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0'>
 							{navLinks.map((link, index) => (
 								<li key={index}>
-									<NavLink href={link.path} title={link.title} />
+									<NavLink href={link.path} title={link.title} navbarOpen={navbarOpen} navbarCloseCallback={closeNavBar} />
 								</li>
 							))}
 						</ul>
 					</div>
 
-					{navbarOpen ? <MenuOverlay links={navLinks} /> : null}
+					{navbarOpen ? <MenuOverlay links={navLinks} navbarOpen={navbarOpen} navbarCloseCallback={closeNavBar} /> : null}
 				</div>
 				<div className='flex flex-row justify-end'>
 					<div className='rounded-lg hover:bg-[#ADB7BE]'>
@@ -84,17 +88,23 @@ const Navbar = () => {
     );
 };
 
-const NavLink = ({ href, title }: INavLinkProps) => {
+const NavLink = ({ href, title, navbarOpen, navbarCloseCallback }: INavLinkProps) => {
 	const isBrowser = () => typeof window !== 'undefined';
-	function scrollToTop() {
+
+	function handleClick() {
 		if (!isBrowser()) return;
-		window.scrollTo({ top: 0, behavior: 'smooth' })
+
+		if (href === '/') {
+			window.scrollTo({ top: 0, behavior: 'smooth' })
+		}
+
+		if (navbarOpen) navbarCloseCallback();
 	}
 
 	return (
 		<Link
 			href={href}
-			onClick={(href === '/') ? scrollToTop : undefined}
+			onClick={handleClick}
 			className='block py-2 pl-3 pr-4 text-white sm:text-xl rounded md:p-0 hover:text-[#ADB7BE]'
 		>
 			{title}
@@ -102,12 +112,12 @@ const NavLink = ({ href, title }: INavLinkProps) => {
 	);
 };
 
-const MenuOverlay = ({ links }: IMenuOverlayProps) => {
+const MenuOverlay = ({ links, navbarOpen, navbarCloseCallback }: IMenuOverlayProps) => {
     return (
 		<ul className='flex flex-col py-4 items-center'>
 			{links.map((link, index) => (
 				<li key={index}>
-					<NavLink href={link.path} title={link.title} />
+					<NavLink href={link.path} title={link.title} navbarOpen={navbarOpen} navbarCloseCallback={navbarCloseCallback} />
 				</li>
 			))}
 		</ul>

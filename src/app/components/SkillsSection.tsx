@@ -2,7 +2,7 @@
 import React, { useState, useTransition } from 'react'
 import Button from './Button';
 import TabButton from './TabButton';
-import { IButtonProps } from '../types';
+import { BorderRoundness, BorderType, IButtonProps } from '../types';
 
 enum SkillType {
     All,
@@ -52,12 +52,12 @@ const SkillsSection = () => {
 
     return (
         <section className='' id='skills'>
-            <div className="place-self-center text-center text-slate-200 lg:text-left justify-self-start">
+            <div className="text-center lg:text-left text-slate-200 place-self-center  justify-self-start">
                 <h2 className="text-4xl font-bold text-blue-400 mb-4">
                     My Skills
                 </h2>
 
-                <div className="flex flex-row lg:justify-start justify-center mt-8">
+                <div className="justify-center lg:justify-start mt-8 flex flex-row">
                     <TabButton
                         selectTab={() => handleTabChange(SkillType.All)}
                         active={tab === SkillType.All}
@@ -80,21 +80,19 @@ const SkillsSection = () => {
                         Frameworks{" "}
                     </TabButton>
                 </div>
-                <div>
-                    <div className='bg-gray-800 border border-gray-700 rounded-lg p-2'>
-                        {skills.map((skill, index) => {
-                            if (tab === SkillType.All || skill.skillType.includes(tab)) {
-                                return (
-                                    <Button
-                                        key={index}
-                                        icon={skill.icon}
-                                        roundedness='rounded-lg'
-                                        buttonClasses={['border border-blue-400', 'm-1']}
-                                    />
-                                )
-                            }
-                        })}
-                    </div>
+                <div className='justify-center lg:justify-start flex flex-row flex-wrap bg-gray-800 border border-gray-700 rounded-lg p-2'>
+                    {skills.map((skill, index) => {
+                        if (tab === SkillType.All || skill.skillType.includes(tab)) {
+                            return (
+                                <Button
+                                    key={index}
+                                    icon={skill.icon}
+                                    border={BorderType.thin}
+                                    roundedness={BorderRoundness.normal}
+                                />
+                            )
+                        }
+                    })}
                 </div>
             </div>
         </section>
