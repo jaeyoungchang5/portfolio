@@ -11,7 +11,7 @@ const Card = ({ title, subtitle, bulletPoints, technologies }: ICardProps) => {
 			}
 
 			{bulletPoints &&
-				<ul className='list-disc list-inside'>
+				<ul className='list-disc list-inside text-left'>
 					{bulletPoints.map((bulletPoint, index) => {
 						return <li key={index} className="mb-2 text-white text-lg" dangerouslySetInnerHTML={{__html: bulletPoint}} />
 					})}
