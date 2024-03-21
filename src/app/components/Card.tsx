@@ -6,7 +6,9 @@ const Card = ({ title, subtitle, bulletPoints, technologies }: ICardProps) => {
 	return (
 		<div className="mr-4 mb-4 p-6 bg-gray-800 border border-gray-700 rounded-lg shadow">
 			<h5 className="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{title}</h5>
-			<p className='mb-3' dangerouslySetInnerHTML={{__html: subtitle}} />
+			{subtitle &&
+				<p className='mb-3 text-gray-400' dangerouslySetInnerHTML={{__html: subtitle}} />
+			}
 
 			{bulletPoints &&
 				<ul className='list-disc list-inside'>

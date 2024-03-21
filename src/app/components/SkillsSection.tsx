@@ -51,13 +51,13 @@ const SkillsSection = () => {
     };
 
     return (
-        <section className='sm:py-4 lg:py-8' id='skills'>
+        <section className='' id='skills'>
             <div className="place-self-center text-center text-slate-200 lg:text-left justify-self-start">
                 <h2 className="text-4xl font-bold text-blue-400 mb-4">
-                    Skills
+                    My Skills
                 </h2>
 
-                <div className="flex flex-row justify-start mt-8">
+                <div className="flex flex-row lg:justify-start justify-center mt-8">
                     <TabButton
                         selectTab={() => handleTabChange(SkillType.All)}
                         active={tab === SkillType.All}

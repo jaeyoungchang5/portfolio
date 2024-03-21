@@ -10,7 +10,7 @@ export type IButtonProps = {
 
 export type ICardProps = {
 	title: string,
-	subtitle: string,
+	subtitle?: string,
 	bulletPoints: string[],
 	technologies: string[],
 }

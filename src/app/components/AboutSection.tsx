@@ -30,7 +30,7 @@ const links: Array<IButtonProps> = [
 
 const AboutSection = () => {
 	return (
-		<section className='sm:py-4 lg:py-8' id='about'>
+		<section className='' id='about'>
 			<div className="grid grid-cols-1 lg:grid-cols-12">
                 <div className='lg:col-span-4 sm:pb-8 lg:order-last place-self-center mt-4 lg:mt-0'>
                     <div className="rounded-full bg-[#181818] pl-10 w-[250px] h-[250px] xl:w-[350px] xl:h-[350px] relative">

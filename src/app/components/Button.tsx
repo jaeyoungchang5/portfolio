@@ -60,6 +60,8 @@ const Button = ({text, link, buttonClasses, icon, iconClasses, target, roundedne
     roundedness = roundedness || 'rounded';
     if (!text && icon && svgIcons[icon] && svgIcons[icon].text) {
         text = svgIcons[icon].text
+    } else if (!text && icon && !svgIcons[icon]){
+        text = icon;
     }
     return (
         <div className={`pr-1 inline-block py-1 w-full sm:w-fit align-middle ${roundedness} text-white ${additionalButtonClasses}`}>

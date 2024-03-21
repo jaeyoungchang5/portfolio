@@ -51,19 +51,19 @@ const experiences: ICardProps[] = [
             '<a class="funderline" href="https://photos.app.goo.gl/osEqMRQajRicLNS5A" target="_blank">Exhibited in ADIPEC</a> (<a class="funderline" href="https://www.adipec.com/" target="_blank">Abu Dhabi International Petroleum Exhibition & Conference</a>) and showcased FAS&apos;s software capabilities to thousands of attendees, resulting in a deal with Saudi Drill Company (November 2019)',
             '<a class="funderline" href="https://photos.app.goo.gl/xUjRt96Y8C1HZKSFA" target="_blank">Flown out to FAS&apos;s Command Center and Operating Frac Sites</a> in the Houston (TX) area to research the needs of operators and identify places for improvements for the Cloud Software (August 2019)',
         ],
-        technologies: []
+        technologies: ['Salesforce']
     }
 ];
 
 const ExperiencesSection = () => {
     return (
-        <section className='sm:py-2 lg:py-8' id='experiences'>
+        <section className='' id='experiences'>
             <div className="place-self-center text-center text-slate-200 lg:text-left justify-self-start">
-                <h2 className="text-4xl font-bold text-blue-400 mt-10 mb-8 md:mb-12">
+                <h2 className="text-4xl font-bold text-blue-400 mb-4">
                     My Experiences
                 </h2>
-                <div className='flex flex-wrap'>
-                    {experiences.map((experience,index) => {
+                <div className='flex flex-col'>
+                    {experiences.map((experience, index) => {
                         return (
                             <Card 
                                 key={index}

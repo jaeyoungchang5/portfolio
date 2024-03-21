@@ -2,6 +2,7 @@ import AboutSection from "./components/AboutSection";
 import ExperiencesSection from "./components/ExperiencesSection";
 import HeroSection from "./components/HeroSection";
 import ProjectsSection from "./components/ProjectsSection";
+import SectionDivider from "./components/SectionDivider";
 import SkillsSection from "./components/SkillsSection";
 
 
@@ -11,8 +12,11 @@ export default function Home() {
 			<div className="container mt-24 mx-auto px-12 py-4">
 				<HeroSection />
 				<AboutSection />
+				<SectionDivider />
 				<SkillsSection />
+				<SectionDivider />
 				<ExperiencesSection />
+				<SectionDivider />
 				<ProjectsSection />
 			</div>
 		</main>
