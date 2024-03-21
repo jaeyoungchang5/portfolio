@@ -20,9 +20,7 @@ const Navbar = () => {
     const [navbarOpen, setNavbarOpen] = useState(false);
 	const [scrollY, setScrollY] = useState(0);
 	const onScroll = useCallback(() => {
-		const { scrollY } = window;
-		console.log(scrollY);
-		setScrollY(scrollY);
+		setScrollY(window.scrollY);
 	}, []);
 
 	function closeNavBar() {
@@ -46,14 +44,14 @@ const Navbar = () => {
 						{!navbarOpen ? (
 								<button
 									onClick={() => setNavbarOpen(true)}
-									className='flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white'
+									className={`flex items-center px-3 py-2 text-slate-200 hover:text-white hover:border-white`}
 								>
 									<Image className='h-5 w-5 invert' src={MenuIcon} alt='Menu Icon' />
 								</button>
 							) : (
 								<button
 									onClick={() => setNavbarOpen(false)}
-									className='flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white'
+									className={`flex items-center px-3 py-2 text-slate-200 hover:text-white hover:border-white`}
 								>
 									<Image className='h-5 w-5 invert' src={CloseIcon} alt='Close Icon' />
 								</button>
@@ -114,7 +112,7 @@ const NavLink = ({ href, title, navbarOpen, navbarCloseCallback }: INavLinkProps
 
 const MenuOverlay = ({ links, navbarOpen, navbarCloseCallback }: IMenuOverlayProps) => {
     return (
-		<ul className='flex flex-col py-4 items-center'>
+		<ul className='absolute top-12 bg-gray-800 border rounded-md items-center'>
 			{links.map((link, index) => (
 				<li key={index}>
 					<NavLink href={link.path} title={link.title} navbarOpen={navbarOpen} navbarCloseCallback={navbarCloseCallback} />
