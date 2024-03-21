@@ -24,3 +24,10 @@ yarn-error.log*
 
 # other
 backups/
+
+# next.js
+/.next/
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
