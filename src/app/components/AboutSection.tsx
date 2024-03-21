@@ -1,14 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
 import Button from './Button';
-import { BorderRoundness, BorderType, IButtonProps } from '../types';
-
-const links: Array<IButtonProps> = [
-    { link: "mailto:jaeyoungchang5@gmail.com", icon: 'Mail', iconInvert: true, },
-    { link: 'https://github.com/jaeyoungchang5', icon: 'GitHub', target: '_blank' },
-    { link: 'https://www.linkedin.com/in/jaeyoungchang5/', icon: 'LinkedIn', target: '_blank' },
-    { text: 'Resume', link: '/files/resume.pdf', icon: 'Download', iconInvert: true, target: '_blank' }
-];
+import { BorderRoundness, BorderType } from '../types';
+import { links } from '../content';
 
 const AboutSection = () => {
 	return (
