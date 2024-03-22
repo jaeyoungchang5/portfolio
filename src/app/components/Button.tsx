@@ -125,7 +125,7 @@ const ButtonInnerText = ({text, icon, link, roundedness }: IButtonProps) => {
             : 
                 null
             }
-            <p className="self-center text-sm md:text-base pl-1">{text}</p>
+            <p className={`self-center text-sm md:text-base ${svgIcon && 'pl-1'}`}>{text}</p>
         </span>
     )
 }
