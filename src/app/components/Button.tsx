@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { BorderRoundness, BorderType, IButtonProps } from '../types';
+import { IButtonProps } from '../types';
 
 import GithubIcon from "../../../public/icons/github-icon.svg";
 import LinkedinIcon from "../../../public/icons/linkedin-icon.svg";
@@ -66,31 +66,33 @@ const Button = ({text, link, target, border, roundedness, icon, iconInvert}: IBu
         <div className={`flex mr-1 my-1 text-white ${border} ${roundedness}`}>
             {link ? 
                 <Link
-                    href={link && link}
+                    href={link}
                     target={target ? target : ''}
                 >
                     <ButtonInnerText
                         text={text}
+                        link={link}
+                        roundedness={roundedness}
                         icon={icon}
                         iconInvert={iconInvert}
-                        roundedness={roundedness}
                     />
                 </Link>
             :
                 <ButtonInnerText
                     text={text}
+                    link={link}
+                    roundedness={roundedness}
                     icon={icon}
                     iconInvert={iconInvert}
-                    roundedness={roundedness}
                 />}
         </div>
     );
 };
 
-const ButtonInnerText = ({text, icon, iconInvert, roundedness}: IButtonProps) => {
+const ButtonInnerText = ({text, icon, link, roundedness, iconInvert}: IButtonProps) => {
     const svgIcon = (icon && svgIcons[icon]) ? svgIcons[icon].icon : undefined;
     return (
-        <span className={`flex px-2 py-1 md:px-3 md:py-2 bg-[#121212] hover:bg-slate-800 ${roundedness}`}>
+        <span className={`flex px-2 py-1 md:px-3 md:py-2 bg-[#121212] ${link && 'hover:bg-slate-800'} ${roundedness}`}>
             { svgIcon ? 
                 <Image className={`self-center w-4 h-5 md:w-7 md:h-7 mr-1 ${iconInvert && 'invert'}`} src={svgIcon} alt='Icon' />
             : 
