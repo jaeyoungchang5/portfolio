@@ -51,9 +51,10 @@ export const skills: Array<Skills> = [
     { icon: 'Pickleball', skillType: [ SkillType.Hobbies ] },
     { icon: 'Gaelic Football', skillType: [ SkillType.Hobbies ] },
     { icon: 'Hurling', skillType: [ SkillType.Hobbies ] },
-    { icon: 'Guitar', skillType: [ SkillType.Hobbies ] },
-    { icon: 'Saxophone', skillType: [ SkillType.Hobbies ] },
     { icon: 'Woodworking', skillType: [ SkillType.Hobbies ] },
+    { icon: 'Guitar', skillType: [ SkillType.Hobbies ] },
+    { icon: 'Piano', skillType: [ SkillType.Hobbies ] },
+    { icon: 'Saxophone', skillType: [ SkillType.Hobbies ] },
 ];
 
 type Exps = ICardProps & { type: ExpType[] }
@@ -68,23 +69,42 @@ export const experiences: Exps[] = [
             'Discovered, investigated, and fixed hundreds of bugs',
             'Helped facilitate the company-wide move from SVN to Git',
         ],
-        technologies: ['TypeScript', 'CSharp', 'Dotnet', 'Git', 'Cache'],
+        technologies: ['React', 'TypeScript', 'CSharp', 'Dotnet', 'Git', 'Cache'],
         type: [ ExpType.FullTime ]
     },
     {
-        title: 'Software Engineering Intern',
+        title: 'Software Engineer Intern',
+        subtitle: '<a class="funderline" href="https://www.linkedin.com/company/yoketeam/" target="_blank">YOKE</a> | Aug 2021 - Dec 2021',
+        bulletPoints: [
+            'Built features to enhance the way student atheletes maximize their name, image, and likeness',
+        ],
+        technologies: [ 'React', 'TypeScript' ],
+        type: [ ExpType.Internship, ExpType.StartUp ]
+    },
+    {
+        title: 'Undergraduate Teaching Assistant',
+        subtitle: '<a class="funderline" href="https://cse.nd.edu" target="_blank">University of Notre Dame</a> | Aug 2020 - Dec 2021',
+        bulletPoints: [
+            'Teaching Assistant for Fundamentals of Computing (CSE 20311)',
+            'Helped teach hundreds of computer science students in this introduction to computer science'
+        ],
+        technologies: [ 'CPlusPlus' ],
+        type: [ ]
+    },
+    {
+        title: 'Software Engineer Intern',
         subtitle: '<a href="https://www.epic.com/" target="_blank" class="funderline">Epic Systems</a> | Summer 2021',
         bulletPoints: [
             'Prototyped a full-stack solution that shows patients a detailed preview of medical record information requested by 3rd party apps, while adhering to health care data exchange standards',
         ],
-        technologies: ['React', 'TypeScript', 'CSharp', 'Git'],
+        technologies: ['React', 'TypeScript', 'CSharp', 'Dotnet' , 'Git'],
         type: [ ExpType.Internship ]
     },
     {
         title: 'Jr. Software Engineer',
         subtitle: '<a class="funderline" href="https://ideacenter.nd.edu/" target="_blank">The IDEA Center</a> | Summer 2020',
         bulletPoints: [
-            'Built an eCommerce web app equipped with user authentication, product listings, Stripe-payment integration, an admin console, and customizable email notifications (<a class="funderline" href="#idea-marketplace">Read More</a>)',
+            'Built an eCommerce web app equipped with user authentication, product listings, Stripe-payment integration, an admin console, and customizable email notifications',
         ],
         technologies: ['React', 'JavaScript', 'Redux', 'Express'],
         type: [ ExpType.Internship, ExpType.StartUp ]
