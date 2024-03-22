@@ -1,46 +1,53 @@
 import { IButtonProps, ICardProps, SkillType } from "./types";
 
 export const links: Array<IButtonProps> = [
-    { link: "mailto:jaeyoungchang5@gmail.com", icon: 'Mail', iconInvert: true, },
+    { link: "mailto:jaeyoungchang5@gmail.com", icon: 'Mail' },
     { link: 'https://github.com/jaeyoungchang5', icon: 'GitHub', target: '_blank' },
     { link: 'https://www.linkedin.com/in/jaeyoungchang5/', icon: 'LinkedIn', target: '_blank' },
-    { text: 'Resume', link: '/files/resume.pdf', icon: 'Download', iconInvert: true, target: '_blank' }
+    { text: 'Resume', link: '/files/resume.pdf', icon: 'Download', target: '_blank' }
 ];
 
 type Skills = IButtonProps & { skillType: number[] }
 
 export const skills: Array<Skills> = [
-    { icon: 'TypeScript', skillType: [SkillType.Languages] },
-    { icon: 'JavaScript', skillType: [SkillType.Languages] },
-    { icon: 'CSharp', skillType: [SkillType.Languages] },
-    { icon: 'Python', skillType: [SkillType.Languages] },
-    { icon: 'CPlusPlus', skillType: [SkillType.Languages] },
-    { icon: 'Java', skillType: [SkillType.Languages] },
-    { icon: 'Bash', skillType: [SkillType.Languages] },
-    { icon: 'MUMPS', skillType: [SkillType.Languages] },
-    { icon: 'Arduino', skillType: [SkillType.Languages] },
-    { icon: 'SQL', skillType: [SkillType.Languages] },
-    { icon: 'Swift', skillType: [SkillType.Languages] },
-    { icon: 'Kotlin', skillType: [SkillType.Languages] },
-    { icon: 'React', skillType: [SkillType.Frameworks] },
-    { icon: 'ReactNative', skillType: [SkillType.Frameworks] },
-    { icon: 'Dotnet', skillType: [SkillType.Frameworks] },
-    { icon: 'Express', skillType: [SkillType.Frameworks] },
-    { icon: 'MongoDB', skillType: [SkillType.Frameworks] },
-    { icon: 'jQuery', skillType: [SkillType.Frameworks] },
-    { icon: 'Redux', skillType: [SkillType.Frameworks] },
-    { icon: 'Cache', skillType: [SkillType.Frameworks] },
+    { icon: 'TypeScript', skillType: [ SkillType.Languages, SkillType.Web, SkillType.Mobile ] },
+    { icon: 'JavaScript', skillType: [ SkillType.Languages, SkillType.Web, SkillType.Mobile] },
+    { icon: 'CSharp', skillType: [ SkillType.Languages, SkillType.Web ] },
+    { icon: 'Python', skillType: [ SkillType.Languages] },
+    { icon: 'CPlusPlus', skillType: [ SkillType.Languages] },
+    { icon: 'Java', skillType: [ SkillType.Languages] },
+    { icon: 'React', skillType: [ SkillType.Libraries, SkillType.Web ] },
+    { icon: 'ReactNative', skillType: [ SkillType.Frameworks, SkillType.Mobile ] },
+    { icon: 'Next', skillType: [ SkillType.Frameworks, SkillType.Web ] },
+    { icon: 'Dotnet', skillType: [ SkillType.Frameworks, SkillType.Web ] },
+    { icon: 'Node', skillType: [ SkillType.Web ] },
+    { icon: 'Express', skillType: [ SkillType.Frameworks, SkillType.Web ] },
+    { icon: 'SQL', skillType: [ SkillType.Languages, SkillType.Database ] },
+    { icon: 'MongoDB', skillType: [ SkillType.Database] },
+    { icon: 'Git', skillType: [ SkillType.Tools ] },
+    { icon: 'Redux', skillType: [ SkillType.Libraries, SkillType.Web ] },
+    { icon: 'jQuery', skillType: [ SkillType.Libraries, SkillType.Web ] },
+    { icon: 'Tailwind', skillType: [ SkillType.Frameworks, SkillType.Web ] },
+    { icon: 'Expo', skillType: [ SkillType.Frameworks, SkillType.Mobile, SkillType.Tools ] },
+    { icon: 'Firebase', skillType: [ SkillType.Tools ] },
+    { icon: 'Heroku', skillType: [ SkillType.Tools ] },
+    { icon: 'Netlify', skillType: [ SkillType.Tools ] },
+    { icon: 'Vercel', skillType: [ SkillType.Tools ] },
+    { icon: 'Postman', skillType: [ SkillType.Tools ] },
+    { icon: 'Markdown', skillType: [ SkillType.Languages ] },
+    { icon: 'Bash', skillType: [ SkillType.Languages, SkillType.Tools ] },
+    { icon: 'Swift', skillType: [ SkillType.Languages, SkillType.Mobile ] },
+    { icon: 'Kotlin', skillType: [ SkillType.Languages, SkillType.Mobile ] },
+    { icon: 'Cache', skillType: [ SkillType.Languages ] },
+    { icon: 'Arduino', skillType: [ SkillType.Languages] },
+    { icon: 'HTML', skillType: [ SkillType.Languages, SkillType.Web ] },
+    { icon: 'CSS', skillType: [ SkillType.Languages, SkillType.Web ] },
+    { icon: 'Sass', skillType: [ SkillType.Languages, SkillType.Web ] },
+    { icon: 'Puppeteer', skillType: [ SkillType.Frameworks ] },
+    { icon: 'Salesforce', skillType: [ SkillType.Tools ] },
 ];
 
 export const experiences: ICardProps[] = [
-    {
-        title: 'Co-Founder & CTO',
-        subtitle: 'Wealth Kitchen, Inc. | June 2023 - Present',
-        bulletPoints: [
-            ''
-        ],
-        technologies: ['TypeScript', 'Express', 'Salesforce', 'Apex Programming']
-    },
     {
         title: 'Full-Stack Software Engineer',
         subtitle: '<a href="https://www.epic.com/" target="_blank" class="funderline">Epic Systems</a> | August 2022 - Present',
@@ -50,7 +57,7 @@ export const experiences: ICardProps[] = [
             'Discovered, investigated, and fixed hundreds of bugs',
             'Helped facilitate the company-wide move from SVN to Git',
         ],
-        technologies: ['TypeScript', 'CSharp', 'Dotnet', 'Git', 'MUMPS', 'Cache']
+        technologies: ['TypeScript', 'CSharp', 'Dotnet', 'Git', 'Cache']
     },
     {
         title: 'Software Engineering Intern',
@@ -120,7 +127,7 @@ export const projects: ICardProps[] = [
 		bulletPoints: [
 			'Deployed my own personal website created from scratch with Next.js, Tailwind CSS, and Vercel',
 		],
-		technologies: ['Next.js', 'React', 'TypeScript', 'Vercel', 'Tailwind']
+		technologies: ['Next', 'React', 'TypeScript', 'Vercel', 'Tailwind']
 	},
 	{
 		title: 'Notre Dame Menu Text App',
@@ -149,6 +156,6 @@ export const projects: ICardProps[] = [
 			'Developed a web app that scrapes your Instagram followers & following (via a Headless Browser), and returns a list of users who are not following you back & users who have unfollowed you',
 			'Instagram doesn&apos;t have a public API that can be used to gather a list of followers, following, unfollowed, and not following back',
 		],
-		technologies: ['Express', 'EJS', 'Puppeteer', 'HTML', 'CSS']
+		technologies: ['JavaScript', 'Express', 'Puppeteer', 'HTML', 'CSS']
 	}
 ];

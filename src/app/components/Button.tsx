@@ -26,12 +26,26 @@ import jQueryIcon from '../../../public/icons/jquery.svg';
 import ReduxIcon from '../../../public/icons/redux.svg';
 import GitIcon from '../../../public/icons/git-icon.svg';
 import EpicIcon from '../../../public/icons/epic.svg';
+import ExpoIcon from '../../../public/icons/expo-icon.svg';
+import SassIcon from '../../../public/icons/sass.svg';
+import HTMLIcon from '../../../public/icons/html-5.svg';
+import CSSIcon from '../../../public/icons/css-3.svg';
+import TailwindIcon from '../../../public/icons/tailwindcss-icon.svg';
+import FirebaseIcon from '../../../public/icons/firebase.svg';
+import HerokuIcon from '../../../public/icons/heroku-icon.svg';
+import NetlifyIcon from '../../../public/icons/netlify-icon.svg';
+import VercelIcon from '../../../public/icons/vercel-icon.svg';
+import SalesforceIcon from '../../../public/icons/salesforce.svg';
+import PostmanIcon from '../../../public/icons/postman-icon.svg';
+import MarkdownIcon from '../../../public/icons/markdown.svg';
+import NextIcon from '../../../public/icons/nextjs-icon.svg'
+import PuppeteerIcon from '../../../public/icons/puppeteer.svg';
 
 const svgIcons: { [Name: string]: IButtonProps } = {
     GitHub: { text: 'GitHub', icon: GithubIcon },
     LinkedIn: { text: 'LinkedIn', icon: LinkedinIcon },
-    Mail: { text: 'Email me', icon: MailIcon },
-    Download: { text: 'Download', icon: DownloadIcon },
+    Mail: { text: 'Email me', icon: MailIcon, iconInvert: true },
+    Download: { text: 'Download', icon: DownloadIcon, iconInvert: true },
     TypeScript: { text: 'TypeScript', icon: TypeScriptIcon },
     JavaScript: { text: 'JavaScript', icon: JavaScriptIcon },
     CSharp: { text: 'C#', icon: CSharpIcon },
@@ -39,7 +53,6 @@ const svgIcons: { [Name: string]: IButtonProps } = {
     CPlusPlus: { text: 'C/C++', icon: CPlusPlusIcon },
     Java: { text: 'Java', icon: JavaIcon },
     Bash: { text: 'Bash', icon: BashIcon },
-    MUMPS: { text: 'MUMPS', icon: EpicIcon },
     Arduino: { text: 'Arduino', icon: ArduinoIcon },
     SQL: { text: 'SQL', icon: SQLIcon },
     Swift: { text: 'Swift', icon: SwiftIcon },
@@ -47,15 +60,30 @@ const svgIcons: { [Name: string]: IButtonProps } = {
     React: { text: 'React', icon: ReactIcon },
     ReactNative: { text: 'React Native', icon: ReactIcon },
     Dotnet: { text: '.NET', icon: DotnetIcon },
+    Node: { text: 'Node.js', icon: NodeIcon },
     Express: { text: 'Express.js', icon: NodeIcon },
     MongoDB: { text: 'MongoDB', icon: MongoDBIcon },
     jQuery: { text: 'jQuery', icon: jQueryIcon },
     Redux: { text: 'Redux', icon: ReduxIcon },
     Cache: { text: 'Caché', icon: EpicIcon },
-    Git: { text: 'Git', icon: GitIcon }
+    Git: { text: 'Git', icon: GitIcon },
+    Expo: { text: 'Expo', icon: ExpoIcon, iconInvert: true },
+    Sass: { text: 'Sass', icon: SassIcon },
+    HTML: { text: 'HTML', icon: HTMLIcon },
+    CSS: { text: 'CSS', icon: CSSIcon },
+    Tailwind: { text: 'Tailwind CSS', icon: TailwindIcon },
+    Firebase: { text:'Firebase', icon: FirebaseIcon },
+    Heroku: { text: 'Heroku', icon: HerokuIcon },
+    Netlify: { text: 'Netlify', icon: NetlifyIcon },
+    Vercel: { text: 'Vercel', icon: VercelIcon, iconInvert: true },
+    Salesforce: { text: 'Salesforce', icon: SalesforceIcon },
+    Postman: { text: 'Postman', icon: PostmanIcon },
+    Markdown: { text: 'Markdown', icon: MarkdownIcon, iconInvert: true },
+    Next: { text: 'Next.js', icon: NextIcon, iconInvert: true },
+    Puppeteer: { text: 'Puppeteer', icon: PuppeteerIcon },
 }
 
-const Button = ({text, link, target, border, roundedness, icon, iconInvert}: IButtonProps) => {
+const Button = ({text, link, target, border, roundedness, icon }: IButtonProps) => {
     if (!text && icon && svgIcons[icon] && svgIcons[icon].text) {
         text = svgIcons[icon].text
     } else if (!text && icon && !svgIcons[icon]){
@@ -74,7 +102,6 @@ const Button = ({text, link, target, border, roundedness, icon, iconInvert}: IBu
                         link={link}
                         roundedness={roundedness}
                         icon={icon}
-                        iconInvert={iconInvert}
                     />
                 </Link>
             :
@@ -83,16 +110,16 @@ const Button = ({text, link, target, border, roundedness, icon, iconInvert}: IBu
                     link={link}
                     roundedness={roundedness}
                     icon={icon}
-                    iconInvert={iconInvert}
                 />}
         </div>
     );
 };
 
-const ButtonInnerText = ({text, icon, link, roundedness, iconInvert}: IButtonProps) => {
+const ButtonInnerText = ({text, icon, link, roundedness }: IButtonProps) => {
     const svgIcon = (icon && svgIcons[icon]) ? svgIcons[icon].icon : undefined;
+    const iconInvert = (icon && svgIcons[icon]) ? svgIcons[icon].iconInvert : false;
     return (
-        <span className={`flex px-2 py-1 md:px-3 md:py-2 bg-[#121212] ${link && 'hover:bg-slate-800'} ${roundedness}`}>
+        <span className={`flex px-2 py-1 md:px-3 md:py-2 bg-neutral-900 ${link && 'hover:bg-slate-800'} ${roundedness}`}>
             { svgIcon ? 
                 <Image className={`self-center w-4 h-5 md:w-7 md:h-7 mr-1 ${iconInvert && 'invert'}`} src={svgIcon} alt='Icon' />
             : 

@@ -12,6 +12,8 @@ const SkillsSection = () => {
         { tab: SkillType.All, text: 'All' },
         { tab: SkillType.Languages, text: 'Languages' },
         { tab: SkillType.Frameworks, text: 'Frameworks' },
+        { tab: SkillType.Web, text: 'Web' },
+        { tab: SkillType.Tools, text: 'Tools' },
     ];
 
     const handleTabChange = (skillType: SkillType) => {

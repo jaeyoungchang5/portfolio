@@ -62,9 +62,10 @@ export enum SkillType {
     All,
     Languages,
     Frameworks,
-    Frontend,
-    Backend,
+    Libraries,
     Web,
     Mobile,
-    Database
+    Database,
+    Tools,
+    Hobbies,
 }
