@@ -117,7 +117,7 @@ export const experiences: Exps[] = [
             'Defined APN&apos;s 2020/2021 Product Development Roadmap (Scope of Work for development team, categorization of modules & sub-modules, calculation of time-costs, and determination of priority)',
             'Configured APN&apos;s Pipedrive CRM with automation, dashboard reports, and feature enhancements',
         ],
-        technologies: ['React'],
+        technologies: ['React', 'JavaScript' , 'Express', 'HTML', 'CSS'],
         type: [ ExpType.Internship ]
     },
     {
@@ -139,6 +139,15 @@ export const experiences: Exps[] = [
 type Prjs = ICardProps & { type: PrjType[] }
 
 export const projects: Prjs[] = [
+	{
+		title: 'My Portfolio',
+		subtitle: '',
+		bulletPoints: [
+			'Deployed my own personal website created from scratch with Next.js, Tailwind CSS, and Vercel',
+		],
+		technologies: ['Next', 'React', 'TypeScript', 'Vercel', 'Tailwind'],
+        type: [ PrjType.Web ]
+	},
 	{
 		title: 'Swipe & Swing',
 		subtitle: 'A Golf Matching Mobile App',
@@ -162,15 +171,6 @@ export const projects: Prjs[] = [
         type: [ PrjType.FullStack, PrjType.Mobile ]
 	},
 	{
-		title: 'My Portfolio',
-		subtitle: '',
-		bulletPoints: [
-			'Deployed my own personal website created from scratch with Next.js, Tailwind CSS, and Vercel',
-		],
-		technologies: ['Next', 'React', 'TypeScript', 'Vercel', 'Tailwind'],
-        type: [ PrjType.Web ]
-	},
-	{
 		title: 'Notre Dame Menu Text App',
 		subtitle: '',
 		bulletPoints: [
@@ -189,7 +189,7 @@ export const projects: Prjs[] = [
 			'This app imports a CSV file of inventory items, merges parts&apos; <em>Quantities</em> if their <em>Part Number</em>, <em>Serial Number</em>, <em>Condition Code</em>, and <em>Warehouse Location</em> are the same, and exports the merged inventory in multiple CSV files (960 inventory items per file)',
 			'Used this app to deal with inventory in the range of 10,000 - 90,000 inventory items',
 		],
-		technologies: ['React', 'Express', 'HTML', 'CSS'],
+		technologies: ['React', 'JavaScript' , 'Express', 'HTML', 'CSS'],
         type: [ PrjType.FullStack, PrjType.Web ]
 	},
 	{
