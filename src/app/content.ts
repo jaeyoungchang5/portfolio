@@ -45,6 +45,15 @@ export const skills: Array<Skills> = [
     { icon: 'Sass', skillType: [ SkillType.Languages, SkillType.Web ] },
     { icon: 'Puppeteer', skillType: [ SkillType.Frameworks ] },
     { icon: 'Salesforce', skillType: [ SkillType.Tools ] },
+    { icon: 'Soccer', skillType: [ SkillType.Hobbies ] },
+    { icon: 'Tennis', skillType: [ SkillType.Hobbies ] },
+    { icon: 'Golf', skillType: [ SkillType.Hobbies ] },
+    { icon: 'Pickleball', skillType: [ SkillType.Hobbies ] },
+    { icon: 'Gaelic Football', skillType: [ SkillType.Hobbies ] },
+    { icon: 'Hurling', skillType: [ SkillType.Hobbies ] },
+    { icon: 'Guitar', skillType: [ SkillType.Hobbies ] },
+    { icon: 'Saxophone', skillType: [ SkillType.Hobbies ] },
+    { icon: 'Woodworking', skillType: [ SkillType.Hobbies ] },
 ];
 
 type Exps = ICardProps & { type: ExpType[] }
