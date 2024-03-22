@@ -46,7 +46,6 @@ const AboutSection = () => {
                                     border={BorderType.thick}
                                     roundedness={BorderRoundness.full}
                                     icon={linkObj.icon}
-                                    iconInvert={linkObj.iconInvert}
                                 />
                             )
                         })}

@@ -1,3 +1,14 @@
+export type ITabsProps = {
+    tabs: ITabProps[],
+    currentTab: number,
+    updateTabCallback: CallableFunction,
+}
+
+export type ITabProps = {
+    tab: number,
+    text: string,
+}
+
 export type IButtonProps = {
     text?: string,
     link?: string,
@@ -47,26 +58,28 @@ type MenuLink = {
     path: string,
 }
 
-export interface BadgeInterface {
-    text: string;
-    filled?: boolean;
-}
-
-export interface CardInterface {
-    indicator?: string,
-    badge?: BadgeInterface,
-    title: string,
-    subtitle?: string,
-    body: string,
-}
-
 export enum SkillType {
     All,
     Languages,
     Frameworks,
-    Frontend,
-    Backend,
+    Libraries,
     Web,
     Mobile,
-    Database
+    Database,
+    Tools,
+    Hobbies,
+}
+
+export enum ExpType {
+    All,
+    FullTime,
+    Internship,
+    StartUp
+}
+
+export enum PrjType {
+    All,
+    FullStack,
+    Web,
+    Mobile,
 }

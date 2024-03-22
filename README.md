@@ -1,6 +1,8 @@
 # Portfolio Website
 
-This is my personal [portfolio](https://portfolio-six-sand-52.vercel.app) built with Next.js and Tailwind CSS. It showcases my skills, projects, and achievements in an elegant and responsive design.
+Hi 👋 This is my personal [portfolio](https://portfolio-six-sand-52.vercel.app). I've it built from scratch using Next.js and Tailwind CSS. It showcases my skills, experiences, projects, and achievements in an elegant and responsive design.
+
+If you would like to look at my old website to see how it compares, check it out with [this link](https://jaeyoungchang-portfolio.netlify.app/). The website code lives in the [backupHTMLCSS branch](https://github.com/jaeyoungchang5/portfolio/tree/backupHTMLCSS).
 
 ## Installation
 
@@ -20,10 +22,5 @@ The following dependencies are required for this project:
 - Next.js: A React framework for server-side rendering and static site generation.
 - Tailwind CSS: A highly customizable CSS framework.
 - React: A JavaScript library for building user interfaces.
-- React Icons: A collection of popular icons for React projects.
 - TypeScript: A typed superset of JavaScript that compiles to plain JavaScript.
-- Resend: Resend is the email API for developers.
-
-## License
-
-This project is licensed under the [MIT License](https://opensource.org/licenses/MIT). Feel free to use, modify, and distribute the code as per the terms of the license.
+- Vercel: A development platform used for deploying the website
