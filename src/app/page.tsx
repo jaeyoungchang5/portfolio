@@ -1,5 +1,6 @@
 import AboutSection from "./components/AboutSection";
 import ExperiencesSection from "./components/ExperiencesSection";
+import Footer from "./components/Footer";
 import HeroSection from "./components/HeroSection";
 import Navbar from "./components/Navbar";
 import ProjectsSection from "./components/ProjectsSection";
@@ -21,6 +22,7 @@ export default function Home() {
 				<SectionDivider />
 				<ProjectsSection />
 			</div>
+			<Footer />
 		</main>
 	);
 }
