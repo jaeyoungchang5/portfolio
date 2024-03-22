@@ -32,6 +32,7 @@ const SkillsSection = () => {
                 <div className="justify-start mt-8 flex flex-row">
                     <Tabs tabs={tabs} currentTab={tab} updateTabCallback={handleTabChange} />
                 </div>
+                
                 <div className='justify-center lg:justify-start flex flex-row flex-wrap bg-gray-800 border border-gray-700 rounded-lg p-2'>
                     {skills.map((skill, index) => {
                         if (tab === SkillType.All || skill.skillType.includes(tab)) {

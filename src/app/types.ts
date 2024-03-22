@@ -69,3 +69,17 @@ export enum SkillType {
     Tools,
     Hobbies,
 }
+
+export enum ExpType {
+    All,
+    FullTime,
+    Internship,
+    StartUp
+}
+
+export enum PrjType {
+    All,
+    FullStack,
+    Web,
+    Mobile,
+}
