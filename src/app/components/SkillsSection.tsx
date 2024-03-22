@@ -1,10 +1,9 @@
 'use client'
 import React, { useState, useTransition } from 'react'
 import Button from './Button';
-import TabButton from './TabButton';
+import Tabs from './Tabs';
 import { BorderRoundness, BorderType, ITabProps, SkillType } from '../types';
 import { skills } from '../content';
-import Tabs from './Tabs';
 
 const SkillsSection = () => {
     const [tab, setTab] = useState(SkillType.All);
@@ -12,7 +11,7 @@ const SkillsSection = () => {
     const tabs: ITabProps[] = [
         { tab: SkillType.All, text: 'All' },
         { tab: SkillType.Languages, text: 'Languages' },
-        { tab: SkillType.Frameworks, text: 'Frameworks' }
+        { tab: SkillType.Frameworks, text: 'Frameworks' },
     ];
 
     const handleTabChange = (skillType: SkillType) => {
