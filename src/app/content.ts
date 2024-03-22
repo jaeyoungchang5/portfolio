@@ -51,9 +51,10 @@ export const skills: Array<Skills> = [
     { icon: 'Pickleball', skillType: [ SkillType.Hobbies ] },
     { icon: 'Gaelic Football', skillType: [ SkillType.Hobbies ] },
     { icon: 'Hurling', skillType: [ SkillType.Hobbies ] },
-    { icon: 'Guitar', skillType: [ SkillType.Hobbies ] },
-    { icon: 'Saxophone', skillType: [ SkillType.Hobbies ] },
     { icon: 'Woodworking', skillType: [ SkillType.Hobbies ] },
+    { icon: 'Guitar', skillType: [ SkillType.Hobbies ] },
+    { icon: 'Piano', skillType: [ SkillType.Hobbies ] },
+    { icon: 'Saxophone', skillType: [ SkillType.Hobbies ] },
 ];
 
 type Exps = ICardProps & { type: ExpType[] }
@@ -68,23 +69,42 @@ export const experiences: Exps[] = [
             'Discovered, investigated, and fixed hundreds of bugs',
             'Helped facilitate the company-wide move from SVN to Git',
         ],
-        technologies: ['TypeScript', 'CSharp', 'Dotnet', 'Git', 'Cache'],
+        technologies: ['React', 'TypeScript', 'CSharp', 'Dotnet', 'Git', 'Cache'],
         type: [ ExpType.FullTime ]
     },
     {
-        title: 'Software Engineering Intern',
+        title: 'Software Engineer Intern',
+        subtitle: '<a class="funderline" href="https://www.linkedin.com/company/yoketeam/" target="_blank">YOKE</a> | Aug 2021 - Dec 2021',
+        bulletPoints: [
+            'Built features to enhance the way student atheletes maximize their name, image, and likeness',
+        ],
+        technologies: [ 'React', 'TypeScript' ],
+        type: [ ExpType.Internship, ExpType.StartUp ]
+    },
+    {
+        title: 'Undergraduate Teaching Assistant',
+        subtitle: '<a class="funderline" href="https://cse.nd.edu" target="_blank">University of Notre Dame</a> | Aug 2020 - Dec 2021',
+        bulletPoints: [
+            'Teaching Assistant for Fundamentals of Computing (CSE 20311)',
+            'Helped teach hundreds of computer science students in this introduction to computer science'
+        ],
+        technologies: [ 'CPlusPlus' ],
+        type: [ ]
+    },
+    {
+        title: 'Software Engineer Intern',
         subtitle: '<a href="https://www.epic.com/" target="_blank" class="funderline">Epic Systems</a> | Summer 2021',
         bulletPoints: [
             'Prototyped a full-stack solution that shows patients a detailed preview of medical record information requested by 3rd party apps, while adhering to health care data exchange standards',
         ],
-        technologies: ['React', 'TypeScript', 'CSharp', 'Git'],
+        technologies: ['React', 'TypeScript', 'CSharp', 'Dotnet' , 'Git'],
         type: [ ExpType.Internship ]
     },
     {
         title: 'Jr. Software Engineer',
         subtitle: '<a class="funderline" href="https://ideacenter.nd.edu/" target="_blank">The IDEA Center</a> | Summer 2020',
         bulletPoints: [
-            'Built an eCommerce web app equipped with user authentication, product listings, Stripe-payment integration, an admin console, and customizable email notifications (<a class="funderline" href="#idea-marketplace">Read More</a>)',
+            'Built an eCommerce web app equipped with user authentication, product listings, Stripe-payment integration, an admin console, and customizable email notifications',
         ],
         technologies: ['React', 'JavaScript', 'Redux', 'Express'],
         type: [ ExpType.Internship, ExpType.StartUp ]
@@ -97,7 +117,7 @@ export const experiences: Exps[] = [
             'Defined APN&apos;s 2020/2021 Product Development Roadmap (Scope of Work for development team, categorization of modules & sub-modules, calculation of time-costs, and determination of priority)',
             'Configured APN&apos;s Pipedrive CRM with automation, dashboard reports, and feature enhancements',
         ],
-        technologies: ['React'],
+        technologies: ['React', 'JavaScript' , 'Express', 'HTML', 'CSS'],
         type: [ ExpType.Internship ]
     },
     {
@@ -119,6 +139,15 @@ export const experiences: Exps[] = [
 type Prjs = ICardProps & { type: PrjType[] }
 
 export const projects: Prjs[] = [
+	{
+		title: 'My Portfolio',
+		subtitle: '',
+		bulletPoints: [
+			'Deployed my own personal website created from scratch with Next.js, Tailwind CSS, and Vercel',
+		],
+		technologies: ['Next', 'React', 'TypeScript', 'Vercel', 'Tailwind'],
+        type: [ PrjType.Web ]
+	},
 	{
 		title: 'Swipe & Swing',
 		subtitle: 'A Golf Matching Mobile App',
@@ -142,15 +171,6 @@ export const projects: Prjs[] = [
         type: [ PrjType.FullStack, PrjType.Mobile ]
 	},
 	{
-		title: 'My Portfolio',
-		subtitle: '',
-		bulletPoints: [
-			'Deployed my own personal website created from scratch with Next.js, Tailwind CSS, and Vercel',
-		],
-		technologies: ['Next', 'React', 'TypeScript', 'Vercel', 'Tailwind'],
-        type: [ PrjType.Web ]
-	},
-	{
 		title: 'Notre Dame Menu Text App',
 		subtitle: '',
 		bulletPoints: [
@@ -169,7 +189,7 @@ export const projects: Prjs[] = [
 			'This app imports a CSV file of inventory items, merges parts&apos; <em>Quantities</em> if their <em>Part Number</em>, <em>Serial Number</em>, <em>Condition Code</em>, and <em>Warehouse Location</em> are the same, and exports the merged inventory in multiple CSV files (960 inventory items per file)',
 			'Used this app to deal with inventory in the range of 10,000 - 90,000 inventory items',
 		],
-		technologies: ['React', 'Express', 'HTML', 'CSS'],
+		technologies: ['React', 'JavaScript' , 'Express', 'HTML', 'CSS'],
         type: [ PrjType.FullStack, PrjType.Web ]
 	},
 	{
