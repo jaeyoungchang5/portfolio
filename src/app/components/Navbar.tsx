@@ -14,6 +14,7 @@ const navLinks = [
     { title: 'Skills', path: '#skills'},
     { title: 'Experiences', path: '#experiences'},
     { title: 'Projects', path: '#projects' },
+	{ title: 'Education', path: '#education' },
 ];
 
 const Navbar = () => {
