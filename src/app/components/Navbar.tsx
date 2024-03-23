@@ -7,6 +7,7 @@ import GithubIcon from "../../../public/icons/github-icon.svg";
 import LinkedinIcon from "../../../public/icons/linkedin-icon.svg";
 import MenuIcon from '../../../public/icons/menu-icon.svg';
 import CloseIcon from '../../../public/icons/close-icon.svg';
+import UpIcon from '../../../public/icons/up.svg';
 
 const navLinks = [
 	{ title: '🏠', path: '/'},
@@ -18,6 +19,8 @@ const navLinks = [
 ];
 
 const Navbar = () => {
+	const isBrowser = () => typeof window !== 'undefined'; //The approach recommended by Next.js
+
     const [navbarOpen, setNavbarOpen] = useState(false);
 	const [scrollY, setScrollY] = useState(0);
 	const onScroll = useCallback(() => {
@@ -26,6 +29,11 @@ const Navbar = () => {
 
 	function closeNavBar() {
 		setNavbarOpen(false);
+	}
+	
+	function scrollToTop() {
+		if (!isBrowser()) return;
+		window.scrollTo({ top: 0, behavior: 'smooth' });
 	}
   
 	useEffect(() => {
@@ -47,14 +55,14 @@ const Navbar = () => {
 									onClick={() => setNavbarOpen(true)}
 									className={`flex items-center px-3 py-2 text-slate-200 hover:text-white hover:border-white`}
 								>
-									<Image className='h-5 w-5 invert' src={MenuIcon} alt='Menu Icon' />
+									<Image className='h-5 w-auto invert' src={MenuIcon} alt='Menu Icon' />
 								</button>
 							) : (
 								<button
 									onClick={() => setNavbarOpen(false)}
 									className={`flex items-center px-3 py-2 text-slate-200 hover:text-white hover:border-white`}
 								>
-									<Image className='h-5 w-5 invert' src={CloseIcon} alt='Close Icon' />
+									<Image className='h-5 w-auto invert' src={CloseIcon} alt='Close Icon' />
 								</button>
 						)}
 					</div>
@@ -73,16 +81,22 @@ const Navbar = () => {
 				<div className='flex flex-row justify-end'>
 					<div className='rounded-lg hover:bg-[#ADB7BE]'>
 						<Link href='https://github.com/jaeyoungchang5' target='_blank'>
-							<Image className='h-10' src={GithubIcon} alt="Icon" />
+							<Image className='h-10 w-auto' src={GithubIcon} alt="Icon" />
 						</Link>
 					</div>
 					<div className='rounded-lg hover:bg-[#ADB7BE]'>
 						<Link href='https://www.linkedin.com/in/jaeyoungchang5/' target='_blank'>
-							<Image className='h-10' src={LinkedinIcon} alt="Icon" />
+							<Image className='h-10 w-auto' src={LinkedinIcon} alt="Icon" />
 						</Link></div>
 				</div>
 			
 			</div>
+			{scrollY > 50 && <button
+				className='fixed bottom-0 right-0 px-2 py-2 mr-3 mb-3 md:mr-6 md:mb-6 z-50 bg-slate-200 hover:bg-white rounded-full items-center'
+				onClick={scrollToTop}
+			>
+				<Image className='h-5 w-auto' src={UpIcon} alt='Scroll to top' />
+			</button>}
     	</nav>
     );
 };
