@@ -11,7 +11,7 @@ const AboutSection = () => {
                 <div className='pb-8 mt-4 lg:mt-0 lg:order-last lg:col-span-4 place-self-center'>
                     <div className="pl-10 w-[250px] h-[250px] md:w-[350px] md:h-[350px] rounded-full relative">
                         <Image
-                            src="/images/hero_image2.JPG"
+                            src="/images/hero_image.JPG"
                             alt="JaeYoung Chang Headshot"
                             className="rounded-full absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
                             width={300}
