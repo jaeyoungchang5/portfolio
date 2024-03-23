@@ -33,11 +33,23 @@ export enum BorderRoundness {
     full = 'rounded-full' 
 }
 
+export enum ButtonPositionOnCard {
+    top,
+    bottom,
+    title_right,
+}
+
+export type ILinkProps = {
+    text: string,
+    link: string
+}
+
 export type ICardProps = {
 	title: string,
 	subtitle?: string,
 	bulletPoints: string[],
 	technologies: string[],
+    link?: ILinkProps,
 }
 
 export type INavLinkProps = {
