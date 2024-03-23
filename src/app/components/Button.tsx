@@ -5,8 +5,9 @@ import { IButtonProps } from '../types';
 
 import GithubIcon from "../../../public/icons/github-icon.svg";
 import LinkedinIcon from "../../../public/icons/linkedin-icon.svg";
-import MailIcon from "../../../public/icons/mail-icon.svg"
-import DownloadIcon from "../../../public/icons/download-icon.svg"
+import MailIcon from "../../../public/icons/mail-icon.svg";
+import DownloadIcon from "../../../public/icons/download-icon.svg";
+import ResumeIcon from '../../../public/icons/resume.svg';
 import TypeScriptIcon from '../../../public/icons/typescript-icon.svg';
 import JavaScriptIcon from '../../../public/icons/javascript.svg';
 import CSharpIcon from '../../../public/icons/c-sharp.svg';
@@ -38,14 +39,25 @@ import VercelIcon from '../../../public/icons/vercel-icon.svg';
 import SalesforceIcon from '../../../public/icons/salesforce.svg';
 import PostmanIcon from '../../../public/icons/postman-icon.svg';
 import MarkdownIcon from '../../../public/icons/markdown.svg';
-import NextIcon from '../../../public/icons/nextjs-icon.svg'
+import NextIcon from '../../../public/icons/nextjs-icon.svg';
 import PuppeteerIcon from '../../../public/icons/puppeteer.svg';
+import SoccerIcon from '../../../public/icons/soccerball.svg';
+import TennisIcon from '../../../public/icons/tennis.svg';
+import GolfIcon from '../../../public/icons/golf.svg';
+import GaelicIcon from '../../../public/icons/gaelic-football.svg';
+import HurlingIcon from '../../../public/icons/hurling.svg';
+import WoodworkingIcon from '../../../public/icons/woodwork.svg';
+import GuitarIcon from '../../../public/icons/guitar.svg';
+import PianoIcon from '../../../public/icons/piano.svg';
+import SaxophoneIcon from '../../../public/icons/saxophone.svg';
+import FishingIcon from '../../../public/icons/fishing.svg';
 
 const svgIcons: { [Name: string]: IButtonProps } = {
     GitHub: { text: 'GitHub', icon: GithubIcon },
     LinkedIn: { text: 'LinkedIn', icon: LinkedinIcon },
     Mail: { text: 'Email me', icon: MailIcon, iconInvert: true },
     Download: { text: 'Download', icon: DownloadIcon, iconInvert: true },
+    Resume: { text: 'Resume', icon: ResumeIcon, iconInvert: true },
     TypeScript: { text: 'TypeScript', icon: TypeScriptIcon },
     JavaScript: { text: 'JavaScript', icon: JavaScriptIcon },
     CSharp: { text: 'C#', icon: CSharpIcon },
@@ -81,6 +93,17 @@ const svgIcons: { [Name: string]: IButtonProps } = {
     Markdown: { text: 'Markdown', icon: MarkdownIcon, iconInvert: true },
     Next: { text: 'Next.js', icon: NextIcon, iconInvert: true },
     Puppeteer: { text: 'Puppeteer', icon: PuppeteerIcon },
+    Soccer: { text: 'Soccer', icon: SoccerIcon, iconInvert: true },
+    Tennis: { text: 'Tenis', icon: TennisIcon, iconInvert: true },
+    Golf: { text: 'Golf', icon: GolfIcon, iconInvert: true },
+    Pickleball: { text: 'Pickleball', icon: TennisIcon, iconInvert: true },
+    Gaelic: { text: 'Gaelic Football', icon: GaelicIcon, iconInvert: true },
+    Hurling: { text: 'Hurling', icon: HurlingIcon, iconInvert: true },
+    Woodworking: { text: 'Woodworking', icon: WoodworkingIcon , iconInvert: true },
+    Fishing: { text: 'Fishing', icon: FishingIcon, iconInvert: true },
+    Guitar: { text: 'Guitar', icon: GuitarIcon, iconInvert: true },
+    Piano: { text: 'Piano', icon: PianoIcon, iconInvert: true },
+    Saxophone: { text: 'Saxophone', icon: SaxophoneIcon, iconInvert: true },
 }
 
 const Button = ({text, link, target, border, roundedness, icon }: IButtonProps) => {
@@ -121,7 +144,7 @@ const ButtonInnerText = ({text, icon, link, roundedness }: IButtonProps) => {
     return (
         <span className={`flex px-2 py-1 md:px-3 md:py-2 bg-neutral-900 ${link && 'hover:bg-slate-800'} ${roundedness}`}>
             { svgIcon ? 
-                <Image className={`self-center w-4 h-5 md:w-7 md:h-7 mr-1 ${iconInvert && 'invert'}`} src={svgIcon} alt='Icon' />
+                <Image className={`self-center w-4 h-5 md:w-7 md:h-7 mr-1 ${iconInvert && 'invert'}`} src={svgIcon} alt={`${text}`} />
             : 
                 null
             }

@@ -4,7 +4,7 @@ export const links: Array<IButtonProps> = [
     { link: "mailto:jaeyoungchang5@gmail.com", icon: 'Mail' },
     { link: 'https://github.com/jaeyoungchang5', icon: 'GitHub', target: '_blank' },
     { link: 'https://www.linkedin.com/in/jaeyoungchang5/', icon: 'LinkedIn', target: '_blank' },
-    { text: 'Resume', link: '/files/resume.pdf', icon: 'Download', target: '_blank' }
+    { link: '/files/resume.pdf', icon: 'Resume', target: '_blank' }
 ];
 
 type Skills = IButtonProps & { skillType: SkillType[] }
@@ -49,9 +49,10 @@ export const skills: Array<Skills> = [
     { icon: 'Tennis', skillType: [ SkillType.Hobbies ] },
     { icon: 'Golf', skillType: [ SkillType.Hobbies ] },
     { icon: 'Pickleball', skillType: [ SkillType.Hobbies ] },
-    { icon: 'Gaelic Football', skillType: [ SkillType.Hobbies ] },
+    { icon: 'Gaelic', skillType: [ SkillType.Hobbies ] },
     { icon: 'Hurling', skillType: [ SkillType.Hobbies ] },
     { icon: 'Woodworking', skillType: [ SkillType.Hobbies ] },
+    { icon: 'Fishing', skillType: [ SkillType.Hobbies ] },
     { icon: 'Guitar', skillType: [ SkillType.Hobbies ] },
     { icon: 'Piano', skillType: [ SkillType.Hobbies ] },
     { icon: 'Saxophone', skillType: [ SkillType.Hobbies ] },
@@ -64,7 +65,7 @@ export const experiences: Exps[] = [
         title: 'Full-Stack Software Engineer',
         subtitle: '<a href="https://www.epic.com/" target="_blank" class="funderline">Epic Systems</a> | August 2022 - Present',
         bulletPoints: [
-            'Spearheaded multiple projects for Epic&apos;s Dermatology Application, overseeing all aspects from design and end-user interviews to full-stack development and post-implementation usability testing',
+            'Spearheaded multiple projects for Epic&apos;s Dermatology Application, owning all aspects from design to development',
             'Developed full-stack solutions to help dermatologists document patients&apos; skin conditions',
             'Discovered, investigated, and fixed hundreds of bugs',
             'Helped facilitate the company-wide move from SVN to Git',
@@ -143,7 +144,7 @@ export const projects: Prjs[] = [
 		title: 'My Portfolio',
 		subtitle: '',
 		bulletPoints: [
-			'Deployed my own personal website created from scratch with Next.js, Tailwind CSS, and Vercel',
+			'Deployed my own personal website with Next.js, Tailwind CSS, and Vercel',
 		],
 		technologies: ['Next', 'React', 'TypeScript', 'Vercel', 'Tailwind'],
         type: [ PrjType.Web ]
@@ -153,7 +154,7 @@ export const projects: Prjs[] = [
 		subtitle: 'A Golf Matching Mobile App',
 		bulletPoints: [
 			'Launched a golf mobile app that allows golfers to find nearby matches with similar golfing preferences',
-			'Developed features to allow users to swipe and match with profiles, message golfers they matched with, and use a map API to find golf courses and book tee times',
+			'Developed features to allow users to swipe and match with profiles (think Tinder), message golfers they matched with, and use a map API to find golf courses and book tee times',
 			'Designed the backend framework to store and return data from a SQL database',
 		],
 		technologies: ['ReactNative', 'TypeScript', 'Python', 'SQL'],
@@ -164,8 +165,8 @@ export const projects: Prjs[] = [
 		subtitle: 'A Location Discovery Mobile App',
 		bulletPoints: [
 			'Deployed a location discovery mobile application that enable users to find spaces on campus with their friends',
-			'Led the development of the entire backend server with APIs, React middleware for the app, and the MongoDB database for all the mobile application&apos;s needs',
-			'Implemented a feature to allow users to create custom, shareable meetups (via link or app) with friends, from which users could see how far others were from their meetup destination via a map API',
+			'Owned the development of the entire backend server, mobile app middleware, and the MongoDB database',
+			'Developed a feature to allow users to create custom, shareable meetups (via link or app) with friends, from which users could see how far others were from their meetup destination via a map API',
 		],
 		technologies: ['ReactNative', 'TypeScript', 'Express', 'MongoDB'],
         type: [ PrjType.FullStack, PrjType.Mobile ]
@@ -197,7 +198,7 @@ export const projects: Prjs[] = [
 		subtitle: '',
 		bulletPoints: [
 			'Developed a web app that scrapes your Instagram followers & following (via a Headless Browser), and returns a list of users who are not following you back & users who have unfollowed you',
-			'Instagram doesn&apos;t have a public API that can be used to gather a list of followers, following, unfollowed, and not following back',
+			'Used the Puppeteer headless browser to scrape data because Instagram doesn&apos;t have a public API that can be used to gather a list of followers, following, unfollowed, and not following back',
 		],
 		technologies: ['JavaScript', 'Express', 'Puppeteer', 'HTML', 'CSS'],
         type: [ PrjType.FullStack, PrjType.Web ]
