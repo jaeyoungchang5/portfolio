@@ -94,7 +94,7 @@ const svgIcons: { [Name: string]: IButtonProps } = {
     Next: { text: 'Next.js', icon: NextIcon, iconInvert: true },
     Puppeteer: { text: 'Puppeteer', icon: PuppeteerIcon },
     Soccer: { text: 'Soccer', icon: SoccerIcon, iconInvert: true },
-    Tennis: { text: 'Tenis', icon: TennisIcon, iconInvert: true },
+    Tennis: { text: 'Tennis', icon: TennisIcon, iconInvert: true },
     Golf: { text: 'Golf', icon: GolfIcon, iconInvert: true },
     Pickleball: { text: 'Pickleball', icon: TennisIcon, iconInvert: true },
     Gaelic: { text: 'Gaelic Football', icon: GaelicIcon, iconInvert: true },
