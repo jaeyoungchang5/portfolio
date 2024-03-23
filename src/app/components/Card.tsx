@@ -2,7 +2,11 @@ import React from 'react'
 import Button from './Button'
 import { BorderRoundness, BorderType, ICardProps } from '../types'
 
-const Card = ({ title, subtitle, bulletPoints, technologies }: ICardProps) => {
+const Card = ({ title, subtitle, bulletPoints, technologies, link }: ICardProps) => {
+	if (link) {
+		subtitle += `${subtitle && ' | '} <a class='funderline' href=${link.link} target='_blank'>${link.text}</a>`
+	} 
+
 	return (
 		<div className="mb-4 p-4 md:p-6 bg-gray-800 border border-gray-700 rounded-lg shadow">
 			<h5 className="mb-1 text-2xl font-bold tracking-tight text-white">{title}</h5>
