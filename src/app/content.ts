@@ -154,6 +154,7 @@ export const projects: Prjs[] = [
 		subtitle: 'A Golf Matching Mobile App',
 		bulletPoints: [
 			'Launched a golf mobile app that allows golfers to find nearby matches with similar golfing preferences',
+            'Earned 1st place award in class for best application',
 			'Developed features to allow users to swipe and match with profiles (think Tinder), message golfers they matched with, and use a map API to find golf courses and book tee times',
 			'Designed the backend framework to store and return data from a SQL database',
 		],
@@ -167,6 +168,7 @@ export const projects: Prjs[] = [
 			'Deployed a location discovery mobile application that enable users to find spaces on campus with their friends',
 			'Owned the development of the entire backend server, mobile app middleware, and the MongoDB database',
 			'Developed a feature to allow users to create custom, shareable meetups (via link or app) with friends, from which users could see how far others were from their meetup destination via a map API',
+            'Earned one of three perfect project grades in class',
 		],
 		technologies: ['ReactNative', 'TypeScript', 'Express', 'MongoDB'],
         type: [ PrjType.FullStack, PrjType.Mobile ]
@@ -203,4 +205,17 @@ export const projects: Prjs[] = [
 		technologies: ['JavaScript', 'Express', 'Puppeteer', 'HTML', 'CSS'],
         type: [ PrjType.FullStack, PrjType.Web ]
 	}
+];
+
+export const educations: ICardProps[] = [
+	{
+		title: 'University of Notre Dame',
+		subtitle: '2018 - 2022 | GPA: 3.705',
+		bulletPoints: [
+			'Graduated with a BS in Computer Science from the College of Engineering',
+            'Earned a Minor in Engineering Corporate Practice',
+            'Relevant Courses: Data Structures, Algorithms, Operating Systems, Systems Programming, Advanced Databases, Computer Architecture, Logic Design, Theory of Computing, Programming Paradigms, Secure Software Engineering, Data Science, Droid Building, Discrete Mathematics'
+		],
+		technologies: [],
+	},
 ];

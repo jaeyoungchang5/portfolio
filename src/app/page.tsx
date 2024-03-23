@@ -1,4 +1,5 @@
 import AboutSection from "./components/AboutSection";
+import EducationSection from "./components/EducationSection";
 import ExperiencesSection from "./components/ExperiencesSection";
 import Footer from "./components/Footer";
 import HeroSection from "./components/HeroSection";
@@ -21,6 +22,8 @@ export default function Home() {
 				<ExperiencesSection />
 				<SectionDivider />
 				<ProjectsSection />
+				<SectionDivider />
+				<EducationSection />
 			</div>
 			<Footer />
 		</main>
