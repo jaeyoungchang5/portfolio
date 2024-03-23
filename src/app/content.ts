@@ -1,4 +1,4 @@
-import { ExpType, IButtonProps, ICardProps, PrjType, SkillType } from "./types";
+import { BorderRoundness, BorderType, ExpType, IButtonProps, ICardProps, PrjType, SkillType } from "./types";
 
 export const links: Array<IButtonProps> = [
     { link: "mailto:jaeyoungchang5@gmail.com", icon: 'Mail' },
@@ -147,7 +147,11 @@ export const projects: Prjs[] = [
 			'Deployed my own personal website with Next.js, Tailwind CSS, and Vercel',
 		],
 		technologies: ['Next', 'React', 'TypeScript', 'Vercel', 'Tailwind'],
-        type: [ PrjType.Web ]
+        type: [ PrjType.Web ],
+        link: {
+            text: 'View repo',
+            link: 'https://github.com/jaeyoungchang5/portfolio',
+        }
 	},
 	{
 		title: 'Swipe & Swing',
@@ -159,7 +163,11 @@ export const projects: Prjs[] = [
 			'Designed the backend framework to store and return data from a SQL database',
 		],
 		technologies: ['ReactNative', 'TypeScript', 'Python', 'SQL'],
-        type: [ PrjType.FullStack, PrjType.Mobile ]
+        type: [ PrjType.FullStack, PrjType.Mobile ],
+        link: {
+            text: 'View repo',
+            link: 'https://github.com/jaeyoungchang5/swipe-and-swing',
+        }
 	},
 	{
 		title: 'Campus Wayzz',
@@ -171,7 +179,11 @@ export const projects: Prjs[] = [
             'Earned one of three perfect project grades in class',
 		],
 		technologies: ['ReactNative', 'TypeScript', 'Express', 'MongoDB'],
-        type: [ PrjType.FullStack, PrjType.Mobile ]
+        type: [ PrjType.FullStack, PrjType.Mobile ],
+        link: {
+            text: 'View repo',
+            link: 'https://github.com/jaeyoungchang5/campuswayzz',
+        }
 	},
 	{
 		title: 'Notre Dame Menu Text App',
@@ -182,7 +194,11 @@ export const projects: Prjs[] = [
 			'Admin can post, delete, and edit menus for a dining hall&apos;s meal on any given date.',
 		],
 		technologies: ['React', 'JavaScript', 'Express', 'MongoDB'],
-        type: [ PrjType.FullStack, PrjType.Web ]
+        type: [ PrjType.FullStack, PrjType.Web ],
+        link: {
+            text: 'View repo',
+            link: 'https://github.com/jaeyoungchang5/menu-text-app',
+        }
 	},
 	{
 		title: 'Inventory Upload Assistance App',
@@ -193,7 +209,11 @@ export const projects: Prjs[] = [
 			'Used this app to deal with inventory in the range of 10,000 - 90,000 inventory items',
 		],
 		technologies: ['React', 'JavaScript' , 'Express', 'HTML', 'CSS'],
-        type: [ PrjType.FullStack, PrjType.Web ]
+        type: [ PrjType.FullStack, PrjType.Web ],
+        link: {
+            text: 'View repo',
+            link: 'https://github.com/jaeyoungchang5/inventory-app',
+        }
 	},
 	{
 		title: 'Instagram Insights',
@@ -203,7 +223,11 @@ export const projects: Prjs[] = [
 			'Used the Puppeteer headless browser to scrape data because Instagram doesn&apos;t have a public API that can be used to gather a list of followers, following, unfollowed, and not following back',
 		],
 		technologies: ['JavaScript', 'Express', 'Puppeteer', 'HTML', 'CSS'],
-        type: [ PrjType.FullStack, PrjType.Web ]
+        type: [ PrjType.FullStack, PrjType.Web ],
+        link: {
+            text: 'View repo',
+            link: 'https://github.com/jaeyoungchang5/instagram-project',
+        }
 	}
 ];
 
@@ -217,5 +241,9 @@ export const educations: ICardProps[] = [
             'Relevant Courses: Data Structures, Algorithms, Operating Systems, Systems Programming, Advanced Databases, Computer Architecture, Logic Design, Theory of Computing, Programming Paradigms, Secure Software Engineering, Data Science, Droid Building, Discrete Mathematics'
 		],
 		technologies: [],
+        link: {
+            text: 'View repo',
+            link: '',
+        }
 	},
 ];

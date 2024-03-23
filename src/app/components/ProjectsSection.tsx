@@ -42,6 +42,7 @@ const ProjectsSection = () => {
 									subtitle={project.subtitle} 
 									bulletPoints={project.bulletPoints}
 									technologies={project.technologies}
+									link={project.link}
 								/>
 							)
 					})}
