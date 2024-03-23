@@ -55,14 +55,14 @@ const Navbar = () => {
 									onClick={() => setNavbarOpen(true)}
 									className={`flex items-center px-3 py-2 text-slate-200 hover:text-white hover:border-white`}
 								>
-									<Image className='h-5 w-5 invert' src={MenuIcon} alt='Menu Icon' />
+									<Image className='h-5 w-auto invert' src={MenuIcon} alt='Menu Icon' />
 								</button>
 							) : (
 								<button
 									onClick={() => setNavbarOpen(false)}
 									className={`flex items-center px-3 py-2 text-slate-200 hover:text-white hover:border-white`}
 								>
-									<Image className='h-5 w-5 invert' src={CloseIcon} alt='Close Icon' />
+									<Image className='h-5 w-auto invert' src={CloseIcon} alt='Close Icon' />
 								</button>
 						)}
 					</div>
@@ -81,12 +81,12 @@ const Navbar = () => {
 				<div className='flex flex-row justify-end'>
 					<div className='rounded-lg hover:bg-[#ADB7BE]'>
 						<Link href='https://github.com/jaeyoungchang5' target='_blank'>
-							<Image className='h-10' src={GithubIcon} alt="Icon" />
+							<Image className='h-10 w-auto' src={GithubIcon} alt="Icon" />
 						</Link>
 					</div>
 					<div className='rounded-lg hover:bg-[#ADB7BE]'>
 						<Link href='https://www.linkedin.com/in/jaeyoungchang5/' target='_blank'>
-							<Image className='h-10' src={LinkedinIcon} alt="Icon" />
+							<Image className='h-10 w-auto' src={LinkedinIcon} alt="Icon" />
 						</Link></div>
 				</div>
 			

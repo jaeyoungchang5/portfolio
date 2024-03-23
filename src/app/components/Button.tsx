@@ -144,7 +144,7 @@ const ButtonInnerText = ({text, icon, link, roundedness }: IButtonProps) => {
     return (
         <span className={`flex px-2 py-1 md:px-3 md:py-2 bg-neutral-900 ${link && 'hover:bg-slate-800'} ${roundedness}`}>
             { svgIcon ? 
-                <Image className={`self-center w-4 h-5 md:w-7 md:h-7 mr-1 ${iconInvert && 'invert'}`} src={svgIcon} alt={`${text}`} />
+                <Image className={`self-center h-4 w-auto md:h-6 md:w-auto mr-1 ${iconInvert && 'invert'}`} src={svgIcon} alt={`${text}`} />
             : 
                 null
             }

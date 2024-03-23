@@ -240,10 +240,6 @@ export const educations: ICardProps[] = [
             'Earned a Minor in Engineering Corporate Practice',
             'Relevant Courses: Data Structures, Algorithms, Operating Systems, Systems Programming, Advanced Databases, Computer Architecture, Logic Design, Theory of Computing, Programming Paradigms, Secure Software Engineering, Data Science, Droid Building, Discrete Mathematics'
 		],
-		technologies: [],
-        link: {
-            text: 'View repo',
-            link: '',
-        }
+		technologies: []
 	},
 ];
