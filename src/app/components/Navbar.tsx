@@ -7,6 +7,7 @@ import GithubIcon from "../../../public/icons/github-icon.svg";
 import LinkedinIcon from "../../../public/icons/linkedin-icon.svg";
 import MenuIcon from '../../../public/icons/menu-icon.svg';
 import CloseIcon from '../../../public/icons/close-icon.svg';
+import UpIcon from '../../../public/icons/up.svg';
 
 const navLinks = [
 	{ title: '🏠', path: '/'},
@@ -18,6 +19,8 @@ const navLinks = [
 ];
 
 const Navbar = () => {
+	const isBrowser = () => typeof window !== 'undefined'; //The approach recommended by Next.js
+
     const [navbarOpen, setNavbarOpen] = useState(false);
 	const [scrollY, setScrollY] = useState(0);
 	const onScroll = useCallback(() => {
@@ -26,6 +29,11 @@ const Navbar = () => {
 
 	function closeNavBar() {
 		setNavbarOpen(false);
+	}
+	
+	function scrollToTop() {
+		if (!isBrowser()) return;
+		window.scrollTo({ top: 0, behavior: 'smooth' });
 	}
   
 	useEffect(() => {
@@ -83,6 +91,12 @@ const Navbar = () => {
 				</div>
 			
 			</div>
+			{scrollY > 50 && <button
+				className='fixed bottom-0 right-0 px-2 py-2 mr-3 mb-3 md:mr-6 md:mb-6 z-50 bg-slate-200 hover:bg-white rounded-full items-center'
+				onClick={scrollToTop}
+			>
+				<Image className='h-5 w-auto' src={UpIcon} alt='Scroll to top' />
+			</button>}
     	</nav>
     );
 };
