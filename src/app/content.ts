@@ -1,9 +1,9 @@
-import { BorderRoundness, BorderType, ExpType, IButtonProps, ICardProps, PrjType, SkillType } from "./types";
+import { ExpType, IButtonProps, ICardProps, PrjType, SkillType } from "./types";
 
 export const links: Array<IButtonProps> = [
     { link: "mailto:jaeyoungchang5@gmail.com", icon: 'Mail' },
     { link: 'https://github.com/jaeyoungchang5', icon: 'GitHub', target: '_blank' },
-    { link: 'https://www.linkedin.com/in/jaeyoungchang5/', icon: 'LinkedIn', target: '_blank' },
+    { link: 'https://www.linkedin.com/in/jaeyoungchang/', icon: 'LinkedIn', target: '_blank' },
     { link: '/files/resume.pdf', icon: 'Resume', target: '_blank' }
 ];
 
@@ -68,47 +68,33 @@ export const experiences: Exps[] = [
             'Spearheaded multiple projects for Epic&apos;s Dermatology Application, owning all aspects from design to development',
             'Developed full-stack solutions to help dermatologists document patients&apos; skin conditions',
             'Discovered, investigated, and fixed hundreds of bugs',
-            'Helped facilitate the company-wide move from SVN to Git',
+            'Supported the company-wide move from SVN to Git',
         ],
         technologies: ['React', 'TypeScript', 'CSharp', 'Dotnet', 'Git', 'Cache'],
         type: [ ExpType.FullTime ]
     },
     {
-        title: 'Software Engineer Intern',
+        title: 'Software Engineer',
         subtitle: '<a class="funderline" href="https://www.linkedin.com/company/yoketeam/" target="_blank">YOKE</a> | Aug 2021 - Dec 2021',
         bulletPoints: [
             'Built features to enhance the way student atheletes maximize their name, image, and likeness',
         ],
-        technologies: [ 'React', 'TypeScript' ],
-        type: [ ExpType.Internship, ExpType.StartUp ]
+        technologies: [ 'React', 'TypeScript', 'Git' ],
+        type: [ ExpType.FullTime, ExpType.StartUp ]
     },
     {
-        title: 'Undergraduate Teaching Assistant',
-        subtitle: '<a class="funderline" href="https://cse.nd.edu" target="_blank">University of Notre Dame</a> | Aug 2020 - Dec 2021',
+        title: 'Technology Project Management Intern',
+        subtitle: '<a class="funderline" href="https://www.simongroupholdings.com/" target="_blank">Simon Group Holdings</a> | May 2019 - Feb 2020',
         bulletPoints: [
-            'Teaching Assistant for Fundamentals of Computing (CSE 20311)',
-            'Helped teach hundreds of computer science students in this introduction to computer science'
+            'Completed an implementation of Salesforce CRM for several SGH companies in under two months, including historical data migration from each company&apos;s legacy CRM, data security between each company, and feature enhancements for each company',
+            'Identified <a class="funderline" href="https://fluidautomationstation.com/" target="_blank">Fuel Automation Station&apos;</a> (FAS) strategic customers by analyzing trends in crude oil price in relation to customers&apos; revenue and utilization of fracking units, shifting the sales team&apos;s focus to the most strategic and profitable customers',
+            '<a class="funderline" href="https://photos.app.goo.gl/osEqMRQajRicLNS5A" target="_blank">Exhibited in Abu Dhabi International Petroleum Exhibition & Conference</a> (ADIPEC 2019) and showcased FAS&apos; software capabilities to thousands of attendees, resulting in a deal with <a class="funderline" href="https://saudidrill.com" target="_blank">Saudi Drill Company</a>',
+            'Created an online inventory management system for FAS&apos; warehouses around the U.S.',
+            'Designed UI/UX for dashboard reports in FAS&apos; cloud software', 
+            '<a class="funderline" href="https://photos.app.goo.gl/xUjRt96Y8C1HZKSFA" target="_blank">Flown out to FAS&apos; Command Center and Operating Frac Sites</a> in the Houston (TX) area to research the needs of operators and identify places for improvements for the Cloud Software (August 2019)',
         ],
-        technologies: [ 'CPlusPlus' ],
-        type: [ ]
-    },
-    {
-        title: 'Software Engineer Intern',
-        subtitle: '<a href="https://www.epic.com/" target="_blank" class="funderline">Epic Systems</a> | Summer 2021',
-        bulletPoints: [
-            'Prototyped a full-stack solution that shows patients a detailed preview of medical record information requested by 3rd party apps, while adhering to health care data exchange standards',
-        ],
-        technologies: ['React', 'TypeScript', 'CSharp', 'Dotnet' , 'Git'],
+        technologies: ['Salesforce'],
         type: [ ExpType.Internship ]
-    },
-    {
-        title: 'Jr. Software Engineer',
-        subtitle: '<a class="funderline" href="https://ideacenter.nd.edu/" target="_blank">The IDEA Center</a> | Summer 2020',
-        bulletPoints: [
-            'Built an eCommerce web app equipped with user authentication, product listings, Stripe-payment integration, an admin console, and customizable email notifications',
-        ],
-        technologies: ['React', 'JavaScript', 'Redux', 'Express'],
-        type: [ ExpType.Internship, ExpType.StartUp ]
     },
     {
         title: 'Product Management Intern',
@@ -118,23 +104,18 @@ export const experiences: Exps[] = [
             'Defined APN&apos;s 2020/2021 Product Development Roadmap (Scope of Work for development team, categorization of modules & sub-modules, calculation of time-costs, and determination of priority)',
             'Configured APN&apos;s Pipedrive CRM with automation, dashboard reports, and feature enhancements',
         ],
-        technologies: ['React', 'JavaScript' , 'Express', 'HTML', 'CSS'],
+        technologies: ['React', 'JavaScript' , 'Express', 'HTML', 'CSS', 'Git'],
         type: [ ExpType.Internship ]
     },
     {
-        title: 'Technology Project Management Intern',
-        subtitle: '<a class="funderline" href="https://www.simongroupholdings.com/" target="_blank">Simon Group Holdings</a> | May 2019 - Feb 2020',
+        title: 'Jr. Software Engineer',
+        subtitle: '<a class="funderline" href="https://ideacenter.nd.edu/" target="_blank">The IDEA Center</a> | Summer 2020',
         bulletPoints: [
-            'Completed an implementation of Salesforce CRM for several SGH companies in under two months, including historical data migration from each company&apos;s legacy CRM, data security between each company, and feature enhancements for each company',
-            'Designed UI/UX for dashboard reports in Fuel Automation Station&apos;s (FAS) cloud software',
-            'Identified FAS&apos;s strategic customers by analyzing trends in crude oil price in relation to customers&apos; revenue and utilization of fracking units, shifting the sales team&apos;s focus to the most strategic and profitable customers',
-            'Created an online inventory management system for FAS&apos;s warehouses around the U.S.',
-            '<a class="funderline" href="https://photos.app.goo.gl/osEqMRQajRicLNS5A" target="_blank">Exhibited in ADIPEC</a> (<a class="funderline" href="https://www.adipec.com/" target="_blank">Abu Dhabi International Petroleum Exhibition & Conference</a>) and showcased FAS&apos;s software capabilities to thousands of attendees, resulting in a deal with Saudi Drill Company (November 2019)',
-            '<a class="funderline" href="https://photos.app.goo.gl/xUjRt96Y8C1HZKSFA" target="_blank">Flown out to FAS&apos;s Command Center and Operating Frac Sites</a> in the Houston (TX) area to research the needs of operators and identify places for improvements for the Cloud Software (August 2019)',
+            'Built an eCommerce web app equipped with user authentication, product listings, Stripe-payment integration, an admin console, and customizable email notifications',
         ],
-        technologies: ['Salesforce'],
-        type: [ ExpType.Internship ]
-    }
+        technologies: ['React', 'JavaScript', 'Redux', 'Express', 'Git'],
+        type: [ ExpType.Internship, ExpType.StartUp ]
+    },
 ];
 
 type Prjs = ICardProps & { type: PrjType[] }
