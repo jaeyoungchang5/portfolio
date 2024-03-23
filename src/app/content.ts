@@ -52,6 +52,7 @@ export const skills: Array<Skills> = [
     { icon: 'Gaelic', skillType: [ SkillType.Hobbies ] },
     { icon: 'Hurling', skillType: [ SkillType.Hobbies ] },
     { icon: 'Woodworking', skillType: [ SkillType.Hobbies ] },
+    { icon: 'Fishing', skillType: [ SkillType.Hobbies ] },
     { icon: 'Guitar', skillType: [ SkillType.Hobbies ] },
     { icon: 'Piano', skillType: [ SkillType.Hobbies ] },
     { icon: 'Saxophone', skillType: [ SkillType.Hobbies ] },

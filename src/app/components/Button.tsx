@@ -50,6 +50,7 @@ import WoodworkingIcon from '../../../public/icons/woodwork.svg';
 import GuitarIcon from '../../../public/icons/guitar.svg';
 import PianoIcon from '../../../public/icons/piano.svg';
 import SaxophoneIcon from '../../../public/icons/saxophone.svg';
+import FishingIcon from '../../../public/icons/fishing.svg';
 
 const svgIcons: { [Name: string]: IButtonProps } = {
     GitHub: { text: 'GitHub', icon: GithubIcon },
@@ -99,6 +100,7 @@ const svgIcons: { [Name: string]: IButtonProps } = {
     Gaelic: { text: 'Gaelic Football', icon: GaelicIcon, iconInvert: true },
     Hurling: { text: 'Hurling', icon: HurlingIcon, iconInvert: true },
     Woodworking: { text: 'Woodworking', icon: WoodworkingIcon , iconInvert: true },
+    Fishing: { text: 'Fishing', icon: FishingIcon, iconInvert: true },
     Guitar: { text: 'Guitar', icon: GuitarIcon, iconInvert: true },
     Piano: { text: 'Piano', icon: PianoIcon, iconInvert: true },
     Saxophone: { text: 'Saxophone', icon: SaxophoneIcon, iconInvert: true },
@@ -142,7 +144,7 @@ const ButtonInnerText = ({text, icon, link, roundedness }: IButtonProps) => {
     return (
         <span className={`flex px-2 py-1 md:px-3 md:py-2 bg-neutral-900 ${link && 'hover:bg-slate-800'} ${roundedness}`}>
             { svgIcon ? 
-                <Image className={`self-center w-4 h-5 md:w-7 md:h-7 mr-1 ${iconInvert && 'invert'}`} src={svgIcon} alt='Icon' />
+                <Image className={`self-center w-4 h-5 md:w-7 md:h-7 mr-1 ${iconInvert && 'invert'}`} src={svgIcon} alt={`${text}`} />
             : 
                 null
             }
