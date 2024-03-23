@@ -30,7 +30,7 @@ const SkillsSection = () => {
                     Skills
                 </h2>
 
-                <div className="justify-start mt-8 flex flex-row">
+                <div className="justify-start my-2 flex flex-row">
                     <Tabs tabs={tabs} currentTab={tab} updateTabCallback={handleTabChange} />
                 </div>
                 

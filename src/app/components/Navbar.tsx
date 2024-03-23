@@ -85,7 +85,7 @@ const Navbar = () => {
 						</Link>
 					</div>
 					<div className='rounded-lg hover:bg-[#ADB7BE]'>
-						<Link href='https://www.linkedin.com/in/jaeyoungchang5/' target='_blank'>
+						<Link href='https://www.linkedin.com/in/jaeyoungchang/' target='_blank'>
 							<Image className='h-10 w-auto' src={LinkedinIcon} alt="Icon" />
 						</Link></div>
 				</div>
