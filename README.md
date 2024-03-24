@@ -2,6 +2,8 @@
 
 Hi 👋 This is my personal [portfolio](https://jaeyoungchang.vercel.app). I've it built from scratch using Next.js and Tailwind CSS. It showcases my skills, experiences, projects, and achievements in an elegant and responsive design.
 
+![Home View](https://github.com/jaeyoungchang5/portfolio/tree/master/public/images/Portfolio_Home.png)
+
 If you would like to look at my old website to see how it compares, check it out with [this link](https://jaeyoungchang-portfolio.netlify.app/). The website code lives in the [backupHTMLCSS branch](https://github.com/jaeyoungchang5/portfolio/tree/backupHTMLCSS).
 
 ## Installation
