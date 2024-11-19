@@ -1,5 +1,5 @@
-'use client'
-import React, { useState, useTransition } from 'react'
+'use client';
+import React, { useState, useTransition } from 'react';
 import Button from './Button';
 import Tabs from './Tabs';
 import { BorderRoundness, BorderType, ITabProps, SkillType } from '../types';
@@ -25,15 +25,13 @@ const SkillsSection = () => {
 
     return (
         <section className='' id='skills'>
-            <div className="text-left text-slate-200 place-self-center  justify-self-start">
-                <h2 className="text-4xl font-bold text-blue-400 mb-4">
-                    Skills
-                </h2>
+            <div className='text-left text-slate-200 place-self-center  justify-self-start'>
+                <h2 className='text-4xl font-bold text-blue-400 mb-4'>Skills</h2>
 
-                <div className="justify-start my-2 flex flex-row">
+                <div className='justify-start my-2 flex flex-row'>
                     <Tabs tabs={tabs} currentTab={tab} updateTabCallback={handleTabChange} />
                 </div>
-                
+
                 <div className='justify-center lg:justify-start flex flex-row flex-wrap bg-gray-800 border border-gray-700 rounded-lg p-2'>
                     {skills.map((skill, index) => {
                         if (tab === SkillType.All || skill.skillType.includes(tab)) {
@@ -44,13 +42,13 @@ const SkillsSection = () => {
                                     border={BorderType.thin}
                                     roundedness={BorderRoundness.normal}
                                 />
-                            )
+                            );
                         }
                     })}
                 </div>
             </div>
         </section>
-    )
-}
+    );
+};
 
-export default SkillsSection
+export default SkillsSection;

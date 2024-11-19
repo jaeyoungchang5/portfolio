@@ -1,28 +1,28 @@
 export type ITabsProps = {
-    tabs: ITabProps[],
-    currentTab: number,
-    updateTabCallback: CallableFunction,
-}
+    tabs: ITabProps[];
+    currentTab: number;
+    updateTabCallback: CallableFunction;
+};
 
 export type ITabProps = {
-    tab: number,
-    text: string,
-}
+    tab: number;
+    text: string;
+};
 
 export type IButtonProps = {
-    text?: string,
-    link?: string,
-    target?: string,
-    border?: BorderType,
-    roundedness?: BorderRoundness,
-    icon?: string,
-    iconInvert?: boolean,
-}
+    text?: string;
+    link?: string;
+    target?: string;
+    border?: BorderType;
+    roundedness?: BorderRoundness;
+    icon?: string;
+    iconInvert?: boolean;
+};
 
 export enum BorderType {
     none = '',
     thin = 'border border-blue-400 m-1',
-    thick = 'p-1 mr-1.5 mb-3 bg-gradient-to-br from-blue-400 to-blue-700 hover:bg-slate-800'
+    thick = 'p-1 mr-1.5 mb-3 bg-gradient-to-br from-blue-400 to-blue-700 hover:bg-slate-800',
 }
 
 export enum BorderRoundness {
@@ -30,7 +30,7 @@ export enum BorderRoundness {
     normal = 'rounded',
     medium = 'rounded-md',
     large = 'rounded-lg',
-    full = 'rounded-full' 
+    full = 'rounded-full',
 }
 
 export enum ButtonPositionOnCard {
@@ -40,35 +40,35 @@ export enum ButtonPositionOnCard {
 }
 
 export type ILinkProps = {
-    text: string,
-    link: string
-}
+    text: string;
+    link: string;
+};
 
 export type ICardProps = {
-	title: string,
-	subtitle?: string,
-	bulletPoints: string[],
-	technologies: string[],
-    link?: ILinkProps,
-}
+    title: string;
+    subtitle?: string;
+    bulletPoints: string[];
+    technologies: string[];
+    link?: ILinkProps;
+};
 
 export type INavLinkProps = {
-    href: string,
-    title: string,
-    navbarOpen: boolean,
-    navbarCloseCallback: CallableFunction
-}
+    href: string;
+    title: string;
+    navbarOpen: boolean;
+    navbarCloseCallback: CallableFunction;
+};
 
 export type IMenuOverlayProps = {
-    links: MenuLink[],
-    navbarOpen: boolean,
-    navbarCloseCallback: CallableFunction
-}
+    links: MenuLink[];
+    navbarOpen: boolean;
+    navbarCloseCallback: CallableFunction;
+};
 
 type MenuLink = {
-    title: string,
-    path: string,
-}
+    title: string;
+    path: string;
+};
 
 export enum SkillType {
     All,
@@ -86,7 +86,7 @@ export enum ExpType {
     All,
     FullTime,
     Internship,
-    StartUp
+    StartUp,
 }
 
 export enum PrjType {
