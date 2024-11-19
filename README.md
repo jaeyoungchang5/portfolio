@@ -21,8 +21,8 @@ If you would like to look at my old website to see how it compares, check it out
 
 The following dependencies are required for this project:
 
-- Next.js: A React framework for server-side rendering and static site generation.
-- Tailwind CSS: A highly customizable CSS framework.
-- React: A JavaScript library for building user interfaces.
-- TypeScript: A typed superset of JavaScript that compiles to plain JavaScript.
-- Vercel: A development platform used for deploying the website
+-   Next.js: A React framework for server-side rendering and static site generation.
+-   Tailwind CSS: A highly customizable CSS framework.
+-   React: A JavaScript library for building user interfaces.
+-   TypeScript: A typed superset of JavaScript that compiles to plain JavaScript.
+-   Vercel: A development platform used for deploying the website

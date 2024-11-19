@@ -3,10 +3,10 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { IButtonProps } from '../types';
 
-import GithubIcon from "../../../public/icons/github-icon.svg";
-import LinkedinIcon from "../../../public/icons/linkedin-icon.svg";
-import MailIcon from "../../../public/icons/mail-icon.svg";
-import DownloadIcon from "../../../public/icons/download-icon.svg";
+import GithubIcon from '../../../public/icons/github-icon.svg';
+import LinkedinIcon from '../../../public/icons/linkedin-icon.svg';
+import MailIcon from '../../../public/icons/mail-icon.svg';
+import DownloadIcon from '../../../public/icons/download-icon.svg';
 import ResumeIcon from '../../../public/icons/resume.svg';
 import TypeScriptIcon from '../../../public/icons/typescript-icon.svg';
 import JavaScriptIcon from '../../../public/icons/javascript.svg';
@@ -51,6 +51,11 @@ import GuitarIcon from '../../../public/icons/guitar.svg';
 import PianoIcon from '../../../public/icons/piano.svg';
 import SaxophoneIcon from '../../../public/icons/saxophone.svg';
 import FishingIcon from '../../../public/icons/fishing.svg';
+import gRPCIcon from '../../../public/icons/grpc.svg';
+import GolangIcon from '../../../public/icons/go-8.svg';
+import PostgreSQLIcon from '../../../public/icons/postgresql.svg';
+import KubernetesIcon from '../../../public/icons/kubernetes.svg';
+import DockerIcon from '../../../public/icons/docker.svg';
 
 const svgIcons: { [Name: string]: IButtonProps } = {
     GitHub: { text: 'GitHub', icon: GithubIcon },
@@ -84,7 +89,7 @@ const svgIcons: { [Name: string]: IButtonProps } = {
     HTML: { text: 'HTML', icon: HTMLIcon },
     CSS: { text: 'CSS', icon: CSSIcon },
     Tailwind: { text: 'Tailwind CSS', icon: TailwindIcon },
-    Firebase: { text:'Firebase', icon: FirebaseIcon },
+    Firebase: { text: 'Firebase', icon: FirebaseIcon },
     Heroku: { text: 'Heroku', icon: HerokuIcon },
     Netlify: { text: 'Netlify', icon: NetlifyIcon },
     Vercel: { text: 'Vercel', icon: VercelIcon, iconInvert: true },
@@ -99,58 +104,55 @@ const svgIcons: { [Name: string]: IButtonProps } = {
     Pickleball: { text: 'Pickleball', icon: TennisIcon, iconInvert: true },
     Gaelic: { text: 'Gaelic Football', icon: GaelicIcon, iconInvert: true },
     Hurling: { text: 'Hurling', icon: HurlingIcon, iconInvert: true },
-    Woodworking: { text: 'Woodworking', icon: WoodworkingIcon , iconInvert: true },
+    Woodworking: { text: 'Woodworking', icon: WoodworkingIcon, iconInvert: true },
     Fishing: { text: 'Fishing', icon: FishingIcon, iconInvert: true },
     Guitar: { text: 'Guitar', icon: GuitarIcon, iconInvert: true },
     Piano: { text: 'Piano', icon: PianoIcon, iconInvert: true },
     Saxophone: { text: 'Saxophone', icon: SaxophoneIcon, iconInvert: true },
-}
+    gRPC: { text: 'gRPC', icon: gRPCIcon },
+    Golang: { text: 'Golang', icon: GolangIcon },
+    PostgreSQL: { text: 'PostgreSQL', icon: PostgreSQLIcon },
+    Kubernetes: { text: 'Kubernetes', icon: KubernetesIcon },
+    Docker: { text: 'Docker', icon: DockerIcon },
+};
 
-const Button = ({text, link, target, border, roundedness, icon }: IButtonProps) => {
+const Button = ({ text, link, target, border, roundedness, icon }: IButtonProps) => {
     if (!text && icon && svgIcons[icon] && svgIcons[icon].text) {
-        text = svgIcons[icon].text
-    } else if (!text && icon && !svgIcons[icon]){
+        text = svgIcons[icon].text;
+    } else if (!text && icon && !svgIcons[icon]) {
         text = icon;
     }
 
     return (
         <div className={`flex mr-1 my-1 text-white ${border} ${roundedness}`}>
-            {link ? 
-                <Link
-                    href={link}
-                    target={target ? target : ''}
-                >
-                    <ButtonInnerText
-                        text={text}
-                        link={link}
-                        roundedness={roundedness}
-                        icon={icon}
-                    />
+            {link ? (
+                <Link href={link} target={target ? target : ''}>
+                    <ButtonInnerText text={text} link={link} roundedness={roundedness} icon={icon} />
                 </Link>
-            :
-                <ButtonInnerText
-                    text={text}
-                    link={link}
-                    roundedness={roundedness}
-                    icon={icon}
-                />}
+            ) : (
+                <ButtonInnerText text={text} link={link} roundedness={roundedness} icon={icon} />
+            )}
         </div>
     );
 };
 
-const ButtonInnerText = ({text, icon, link, roundedness }: IButtonProps) => {
-    const svgIcon = (icon && svgIcons[icon]) ? svgIcons[icon].icon : undefined;
-    const iconInvert = (icon && svgIcons[icon]) ? svgIcons[icon].iconInvert : false;
+const ButtonInnerText = ({ text, icon, link, roundedness }: IButtonProps) => {
+    const svgIcon = icon && svgIcons[icon] ? svgIcons[icon].icon : undefined;
+    const iconInvert = icon && svgIcons[icon] ? svgIcons[icon].iconInvert : false;
     return (
-        <span className={`flex px-2 py-1 md:px-3 md:py-2 bg-neutral-900 ${link && 'hover:bg-slate-800'} ${roundedness}`}>
-            { svgIcon ? 
-                <Image className={`self-center h-4 w-auto md:h-6 md:w-auto mr-1 ${iconInvert && 'invert'}`} src={svgIcon} alt={`${text}`} />
-            : 
-                null
-            }
+        <span
+            className={`flex px-2 py-1 md:px-3 md:py-2 bg-neutral-900 ${link && 'hover:bg-slate-800'} ${roundedness}`}
+        >
+            {svgIcon ? (
+                <Image
+                    className={`self-center h-4 w-auto md:h-6 md:w-auto mr-1 ${iconInvert && 'invert'}`}
+                    src={svgIcon}
+                    alt={`${text}`}
+                />
+            ) : null}
             <p className={`self-center text-sm md:text-base ${svgIcon && 'pl-1'}`}>{text}</p>
         </span>
-    )
-}
+    );
+};
 
-export default Button
+export default Button;

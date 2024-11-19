@@ -1,5 +1,5 @@
 'use client';
-import React, { useState, useTransition } from 'react'
+import React, { useState, useTransition } from 'react';
 import Card from './Card';
 import { projects } from '../content';
 import { ITabProps, PrjType } from '../types';
@@ -21,35 +21,33 @@ const ProjectsSection = () => {
         });
     };
 
-	return (
-		<section className='' id='projects'>
-            <div className="place-self-center text-slate-200 text-left justify-self-start">
-                <h2 className="text-4xl font-bold text-blue-400 mb-4">
-                    Projects
-                </h2>
+    return (
+        <section className='' id='projects'>
+            <div className='place-self-center text-slate-200 text-left justify-self-start'>
+                <h2 className='text-4xl font-bold text-blue-400 mb-4'>Projects</h2>
 
-				<div className="justify-start my-2 flex flex-row">
-					<Tabs tabs={tabs} currentTab={tab} updateTabCallback={handleTabChange} />
-				</div>
+                <div className='justify-start my-2 flex flex-row'>
+                    <Tabs tabs={tabs} currentTab={tab} updateTabCallback={handleTabChange} />
+                </div>
 
-				<div className='flex flex-col'>
-					{projects.map((project, index) => {
-						if (tab === PrjType.All || project.type.includes(tab))
-							return (
-								<Card
-									key={index}
-									title={project.title} 
-									subtitle={project.subtitle} 
-									bulletPoints={project.bulletPoints}
-									technologies={project.technologies}
-									link={project.link}
-								/>
-							)
-					})}
-				</div>
-			</div>
-		</section>
-	);
+                <div className='flex flex-col'>
+                    {projects.map((project, index) => {
+                        if (tab === PrjType.All || project.type.includes(tab))
+                            return (
+                                <Card
+                                    key={index}
+                                    title={project.title}
+                                    subtitle={project.subtitle}
+                                    bulletPoints={project.bulletPoints}
+                                    technologies={project.technologies}
+                                    link={project.link}
+                                />
+                            );
+                    })}
+                </div>
+            </div>
+        </section>
+    );
 };
 
 export default ProjectsSection;
