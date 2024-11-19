@@ -72,9 +72,9 @@ export const experiences: Exps[] = [
             '<a href="https://apexfintechsolutions.com" target="_blank" class="funderline">Apex Fintech Solutions</a> | July 2024 - Present',
         bulletPoints: [
             'Bringing Apex&apos;s legacy securities lending platform to the cloud',
-            'Developed microservices in Golang to establish connectivity with the New York Stock Exchange, enhancing real-time data acess and integration',
+            'Developed microservices in Golang to establish connectivity with the New York Stock Exchange through the Depository Trust & Clearing Corporation (DTCC), enhancing real-time data acess and integration',
             'Engineered a new frontend platform enabling traders to efficiently locate stock, book contracts, and monitor open contracts, ultimately streamlining trading operations and user experience',
-            'Constructed a robust backend-for-frontend (BFF) service, tailored to facilitate seamless communication bewteen the frontend interface and multiple underlying microservices',
+            'Constructed a robust backend-for-frontend (BFF) service, tailored to facilitate seamless communication between the frontend interface and multiple underlying microservices',
         ],
         technologies: ['Golang', 'gRPC', 'React', 'TypeScript', 'PostgreSQL', 'Kubernetes', 'Docker', 'CSharp', 'Git'],
         type: [ExpType.FullTime],
