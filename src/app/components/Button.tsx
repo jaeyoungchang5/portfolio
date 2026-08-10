@@ -56,6 +56,11 @@ import GolangIcon from '../../../public/icons/go-8.svg';
 import PostgreSQLIcon from '../../../public/icons/postgresql.svg';
 import KubernetesIcon from '../../../public/icons/kubernetes.svg';
 import DockerIcon from '../../../public/icons/docker.svg';
+import GoogleCloudIcon from '../../../public/icons/google-cloud.svg';
+import KafkaIcon from '../../../public/icons/apache-kafka.svg';
+import PubSubIcon from '../../../public/icons/google-pubsub.svg';
+import SVNIcon from '../../../public/icons/subversion.svg';
+import YarnIcon from '../../../public/icons/yarn.svg';
 
 const svgIcons: { [Name: string]: IButtonProps } = {
     GitHub: { text: 'GitHub', icon: GithubIcon },
@@ -114,6 +119,13 @@ const svgIcons: { [Name: string]: IButtonProps } = {
     PostgreSQL: { text: 'PostgreSQL', icon: PostgreSQLIcon },
     Kubernetes: { text: 'Kubernetes', icon: KubernetesIcon },
     Docker: { text: 'Docker', icon: DockerIcon },
+    GoogleCloud: { text: 'Google Cloud Platform', icon: GoogleCloudIcon, iconInvert: true },
+    CloudRun: { text: 'Cloud Run', icon: GoogleCloudIcon, iconInvert: true },
+    VertexAI: { text: 'Vertex AI', icon: GoogleCloudIcon, iconInvert: true },
+    Kafka: { text: 'Kafka', icon: KafkaIcon, iconInvert: true },
+    PubSub: { text: 'Pub/Sub', icon: PubSubIcon, iconInvert: true },
+    SVN: { text: 'SVN', icon: SVNIcon, iconInvert: true },
+    Yarn: { text: 'Yarn', icon: YarnIcon, iconInvert: true },
 };
 
 const Button = ({ text, link, target, border, roundedness, icon }: IButtonProps) => {
