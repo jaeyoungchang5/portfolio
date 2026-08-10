@@ -33,6 +33,15 @@ export const skills: Array<Skills> = [
     { icon: 'Tailwind', skillType: [SkillType.Frameworks, SkillType.Web] },
     { icon: 'Kubernetes', skillType: [SkillType.Tools] },
     { icon: 'Docker', skillType: [SkillType.Tools] },
+    { icon: 'GoogleCloud', skillType: [SkillType.Tools] },
+    { icon: 'CloudRun', skillType: [SkillType.Tools] },
+    { icon: 'Kafka', skillType: [SkillType.Tools] },
+    { icon: 'PubSub', skillType: [SkillType.Tools] },
+    { icon: 'VertexAI', skillType: [SkillType.Tools] },
+    { icon: 'SVN', skillType: [SkillType.Tools] },
+    { icon: 'Yarn', skillType: [SkillType.Tools] },
+    { icon: 'Agile', skillType: [SkillType.Tools] },
+    { icon: 'MUMPS', skillType: [SkillType.Languages] },
     { icon: 'Expo', skillType: [SkillType.Frameworks, SkillType.Mobile, SkillType.Tools] },
     { icon: 'Firebase', skillType: [SkillType.Tools] },
     { icon: 'Heroku', skillType: [SkillType.Tools] },
@@ -67,16 +76,34 @@ type Exps = ICardProps & { type: ExpType[] };
 
 export const experiences: Exps[] = [
     {
-        title: 'Software Engineer II',
+        title: 'Senior Software Engineer',
         subtitle:
             '<a href="https://apexfintechsolutions.com" target="_blank" class="funderline">Apex Fintech Solutions</a> | July 2024 - Present',
         bulletPoints: [
-            'Bringing Apex&apos;s legacy securities lending platform to the cloud',
-            'Developed microservices in Golang to establish connectivity with the New York Stock Exchange through the Depository Trust & Clearing Corporation (DTCC), enhancing real-time data acess and integration',
-            'Engineered a new frontend platform enabling traders to efficiently locate stock, book contracts, and monitor open contracts, ultimately streamlining trading operations and user experience',
-            'Constructed a robust backend-for-frontend (BFF) service, tailored to facilitate seamless communication between the frontend interface and multiple underlying microservices',
+            'Promoted from Software Engineer II in July 2026 in recognition of technical leadership',
+            'Power Apex&apos;s Securities Lending program — a $100M+ revenue business across three product offerings spanning trading, contract management, inventory management, and revenue allocation',
+            'Champion the migration of Apex Lend Plus and Stock Locates, two flagship Securities Lending products, to the cloud — applications traders use daily to manage contracts and inventory, surface insights, and act on recommendations',
+            'Architect and deliver event-driven, cloud-native microservices on Google Cloud Platform (GCP), decommissioning legacy on-premises applications and re-platforming to Google Kubernetes Engine (GKE) and Cloud Run',
+            'Provide production support across both modern cloud-native and legacy on-premises systems, ensuring reliability throughout the migration',
+            'Mentor junior engineers and lead cross-domain initiatives across the engineering organization',
+            'Pioneer AI-driven developer productivity tooling, building Claude agents and skills the team uses for code review, test generation, internal documentation, and cloud-migration acceleration',
+            'Drive a quality-first engineering culture through comprehensive code review, testing standards, and release management practices that minimize production change failures',
         ],
-        technologies: ['Golang', 'gRPC', 'React', 'TypeScript', 'PostgreSQL', 'Kubernetes', 'Docker', 'CSharp', 'Git'],
+        technologies: [
+            'Golang',
+            'gRPC',
+            'React',
+            'TypeScript',
+            'CSharp',
+            'SQL',
+            'PostgreSQL',
+            'GoogleCloud',
+            'Kubernetes',
+            'CloudRun',
+            'PubSub',
+            'Docker',
+            'Git',
+        ],
         type: [ExpType.FullTime],
     },
     {
@@ -84,7 +111,7 @@ export const experiences: Exps[] = [
         subtitle:
             '<a href="https://www.epic.com/" target="_blank" class="funderline">Epic Systems</a> | August 2022 - July 2024',
         bulletPoints: [
-            'Spearheaded multiple projects for Epic&apos;s Dermatology Application, owning all aspects from design to development',
+            'Spearheaded multiple projects for Epic&apos;s Dermatology Application, owning all aspects from design and end-user interviews to full-stack development and post-implementation usability testing',
             'Developed full-stack solutions to help dermatologists document patients&apos; skin conditions',
             'Discovered, investigated, and fixed hundreds of bugs',
             'Supported the company-wide move from SVN to Git',
@@ -96,7 +123,7 @@ export const experiences: Exps[] = [
         title: 'Software Engineer',
         subtitle:
             '<a class="funderline" href="https://www.linkedin.com/company/yoketeam/" target="_blank">YOKE</a> | Aug 2021 - Dec 2021',
-        bulletPoints: ['Built features to enhance the way student atheletes maximize their name, image, and likeness'],
+        bulletPoints: ['Built features to enhance the way student athletes maximize their name, image, and likeness'],
         technologies: ['React', 'TypeScript', 'Git'],
         type: [ExpType.FullTime, ExpType.StartUp],
     },
@@ -107,10 +134,10 @@ export const experiences: Exps[] = [
         bulletPoints: [
             'Completed an implementation of Salesforce CRM for several SGH companies in under two months, including historical data migration from each company&apos;s legacy CRM, data security between each company, and feature enhancements for each company',
             'Identified <a class="funderline" href="https://fluidautomationstation.com/" target="_blank">Fuel Automation Station&apos;</a> (FAS) strategic customers by analyzing trends in crude oil price in relation to customers&apos; revenue and utilization of fracking units, shifting the sales team&apos;s focus to the most strategic and profitable customers',
-            '<a class="funderline" href="https://photos.app.goo.gl/osEqMRQajRicLNS5A" target="_blank">Exhibited in Abu Dhabi International Petroleum Exhibition & Conference</a> (ADIPEC 2019) and showcased FAS&apos; software capabilities to thousands of attendees, resulting in a deal with <a class="funderline" href="https://saudidrill.com" target="_blank">Saudi Drill Company</a>',
+            '<a class="funderline" href="https://photos.app.goo.gl/osEqMRQajRicLNS5A" target="_blank">Exhibited at the Abu Dhabi International Petroleum Exhibition & Conference</a> (ADIPEC 2019) and showcased FAS&apos; software capabilities to thousands of attendees, resulting in a deal with <a class="funderline" href="https://saudidrill.com" target="_blank">Saudi Drill Company</a>',
             'Created an online inventory management system for FAS&apos; warehouses around the U.S.',
             'Designed UI/UX for dashboard reports in FAS&apos; cloud software',
-            '<a class="funderline" href="https://photos.app.goo.gl/xUjRt96Y8C1HZKSFA" target="_blank">Flown out to FAS&apos; Command Center and Operating Frac Sites</a> in the Houston (TX) area to research the needs of operators and identify places for improvements for the Cloud Software (August 2019)',
+            '<a class="funderline" href="https://photos.app.goo.gl/xUjRt96Y8C1HZKSFA" target="_blank">Traveled to FAS&apos; Command Center and Operating Frac Sites</a> in the Houston, TX area to research operator needs and identify improvements to the Cloud Software (August 2019)',
         ],
         technologies: ['Salesforce'],
         type: [ExpType.Internship],
@@ -142,6 +169,18 @@ export const experiences: Exps[] = [
 type Prjs = ICardProps & { type: PrjType[] };
 
 export const projects: Prjs[] = [
+    {
+        title: 'Pixel Dash',
+        subtitle: 'A Hardware + Cloud Smart Display (2026, in progress)',
+        bulletPoints: [
+            'Building a Tidbyt-inspired smart display: a 64x32 RGB LED matrix driven by an Adafruit MatrixPortal M4, paired with a custom cloud backend',
+            'Built as a monorepo with two independently deployed pieces: firmware (C++/PlatformIO) flashed to the physical device, and a backend API (TypeScript/Express) running on Google Cloud Run',
+            'Designed the device-to-cloud contract: the device polls a single endpoint with a device ID, and the API resolves the user&apos;s schedule and preferences, returning only pre-simplified data for a configurable set of live widgets — weather, forecast, sunrise/sunset, real-time transit (e.g., CTA arrivals), sports scores and standings, and other user-defined feeds — to keep payloads small enough for the firmware&apos;s limited memory',
+            'Maintain a shared widget-type contract kept in sync across the embedded firmware and the backend as new widgets are added',
+        ],
+        technologies: ['CPlusPlus', 'PlatformIO', 'TypeScript', 'Express', 'CloudRun', 'SQL'],
+        type: [PrjType.FullStack],
+    },
     {
         title: 'My Portfolio',
         subtitle: '',
