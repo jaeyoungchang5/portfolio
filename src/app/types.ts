@@ -44,12 +44,19 @@ export type ILinkProps = {
     link: string;
 };
 
+export type IRoleProps = {
+    title: string;
+    subtitle?: string;
+    bulletPoints: string[];
+};
+
 export type ICardProps = {
     title: string;
     subtitle?: string;
     bulletPoints: string[];
     technologies: string[];
     link?: ILinkProps;
+    roles?: IRoleProps[];
 };
 
 export type INavLinkProps = {

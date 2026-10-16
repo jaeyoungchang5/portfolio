@@ -26,6 +26,7 @@ export const skills: Array<Skills> = [
     { icon: 'Express', skillType: [SkillType.Frameworks, SkillType.Web] },
     { icon: 'SQL', skillType: [SkillType.Languages, SkillType.Database] },
     { icon: 'PostgreSQL', skillType: [SkillType.Languages, SkillType.Database] },
+    { icon: 'Redis', skillType: [SkillType.Database] },
     { icon: 'MongoDB', skillType: [SkillType.Database] },
     { icon: 'Git', skillType: [SkillType.Tools] },
     { icon: 'Redux', skillType: [SkillType.Libraries, SkillType.Web] },
@@ -76,18 +77,35 @@ type Exps = ICardProps & { type: ExpType[] };
 
 export const experiences: Exps[] = [
     {
-        title: 'Senior Software Engineer',
-        subtitle:
-            '<a href="https://apexfintechsolutions.com" target="_blank" class="funderline">Apex Fintech Solutions</a> | July 2024 - Present',
-        bulletPoints: [
-            'Promoted from Software Engineer II in July 2026 in recognition of technical leadership',
-            'Power Apex&apos;s Securities Lending program — a $100M+ revenue business across three product offerings spanning trading, contract management, inventory management, and revenue allocation',
-            'Champion the migration of Apex Lend Plus and Stock Locates, two flagship Securities Lending products, to the cloud — applications traders use daily to manage contracts and inventory, surface insights, and act on recommendations',
-            'Architect and deliver event-driven, cloud-native microservices on Google Cloud Platform (GCP), decommissioning legacy on-premises applications and re-platforming to Google Kubernetes Engine (GKE) and Cloud Run',
-            'Provide production support across both modern cloud-native and legacy on-premises systems, ensuring reliability throughout the migration',
-            'Mentor junior engineers and lead cross-domain initiatives across the engineering organization',
-            'Pioneer AI-driven developer productivity tooling, building Claude agents and skills the team uses for code review, test generation, internal documentation, and cloud-migration acceleration',
-            'Drive a quality-first engineering culture through comprehensive code review, testing standards, and release management practices that minimize production change failures',
+        title: 'Apex Fintech Solutions',
+        bulletPoints: [],
+        roles: [
+            {
+                title: 'Senior Software Engineer & Team Lead',
+                subtitle:
+                    '<a href="https://apexfintechsolutions.com" target="_blank" class="funderline">Apex Fintech Solutions</a> | July 2026 - Present',
+                bulletPoints: [
+                    'Lead a team of three engineers as a player-coach: I write and review code daily and own the team&apos;s technical decisions',
+                    'Delivered the engineering work that brought Fisher Investments and State Street live on Apex&apos;s wealth management platform',
+                    'One of the first team leads (Squad Captains) in Apex&apos;s squad model, where small cross-functional squads own initiatives from build through release and production support',
+                    'Partner with Product and Technical Solutions Architects to validate specs before build: pressure-testing requirements against how the systems actually work, flagging gaps and edge cases early, and agreeing on design tradeoffs so my team can make implementation calls on its own within that architecture',
+                    'Participate in the company-wide production on-call rotation',
+                ],
+            },
+            {
+                title: 'Software Engineer II, Securities Lending',
+                subtitle:
+                    '<a href="https://apexfintechsolutions.com" target="_blank" class="funderline">Apex Fintech Solutions</a> | July 2024 - June 2026',
+                bulletPoints: [
+                    'Built the core services behind Apex&apos;s Securities Lending program, a $100M+ revenue business, across product offerings for trading, contract management, inventory management, and revenue allocation',
+                    'Led the migration of Apex Lend Plus and Stock Locates from on-prem to Google Cloud (GKE, Cloud Run, PostgreSQL, Redis, BigQuery), which now serve nearly all production traffic for managing contracts and inventory, surfacing insights, and acting on recommendations',
+                    'Partnered directly with Apex&apos;s securities lending traders to identify friction in their daily workflows and delivered tailored solutions',
+                    'Served on the RIA Trade Away Tiger Team, a client initiative that let traders execute trades away from Apex as their clearing platform, working across accounts, client configuration, and trade execution domains',
+                    'Provided production support across both modern cloud-native and legacy on-premises systems',
+                    'Built Claude agents and skills that every engineer on the team uses for code review, test generation, internal documentation, and cloud-migration work',
+                    'Mentored junior engineers and led cross-domain initiatives across the engineering organization',
+                ],
+            },
         ],
         technologies: [
             'Golang',
@@ -97,6 +115,7 @@ export const experiences: Exps[] = [
             'CSharp',
             'SQL',
             'PostgreSQL',
+            'Redis',
             'GoogleCloud',
             'Kubernetes',
             'CloudRun',
@@ -111,47 +130,52 @@ export const experiences: Exps[] = [
         subtitle:
             '<a href="https://www.epic.com/" target="_blank" class="funderline">Epic Systems</a> | August 2022 - July 2024',
         bulletPoints: [
-            'Spearheaded multiple projects for Epic&apos;s Dermatology Application, owning all aspects from design and end-user interviews to full-stack development and post-implementation usability testing',
-            'Developed full-stack solutions to help dermatologists document patients&apos; skin conditions',
-            'Discovered, investigated, and fixed hundreds of bugs',
+            'Owned the Skin Cancer History project for Epic&apos;s Dermatology application end to end: user research, design, full-stack development, and post-launch usability testing',
+            'Shadowed and interviewed practicing dermatologists across the country to understand gaps in their documentation workflows',
+            'Shipped full-stack clinical software to help dermatologists document patients&apos; skin conditions',
+            'Discovered, investigated, and fixed hundreds of production bugs in live clinical systems',
             'Supported the company-wide move from SVN to Git',
         ],
         technologies: ['React', 'TypeScript', 'CSharp', 'Dotnet', 'Git', 'Cache'],
         type: [ExpType.FullTime],
     },
     {
+        title: 'Co-Founder',
+        subtitle: 'Wealth Kitchen Inc. | June 2023 - March 2024',
+        bulletPoints: [
+            'Co-founded a software company solving everyday problems for mid-sized RIA firms and their wealth managers',
+            'Built a platform that brings advisors&apos; daily tools into one view and suggests next tasks, so nothing falls through the cracks and advisors can focus on the work that matters most',
+        ],
+        technologies: [],
+        type: [ExpType.StartUp],
+    },
+    {
         title: 'Software Engineer',
         subtitle:
             '<a class="funderline" href="https://www.linkedin.com/company/yoketeam/" target="_blank">YOKE</a> | Aug 2021 - Dec 2021',
-        bulletPoints: ['Built features to enhance the way student athletes maximize their name, image, and likeness'],
+        bulletPoints: [
+            'Built React/TypeScript features to enhance the way student athletes maximize their name, image, and likeness',
+        ],
         technologies: ['React', 'TypeScript', 'Git'],
         type: [ExpType.FullTime, ExpType.StartUp],
     },
     {
-        title: 'Technology Project Management Intern',
+        title: 'Undergraduate Teaching Assistant',
         subtitle:
-            '<a class="funderline" href="https://www.simongroupholdings.com/" target="_blank">Simon Group Holdings</a> | May 2019 - Feb 2020',
+            '<a class="funderline" href="https://www.nd.edu" target="_blank">University of Notre Dame</a> | Aug 2020 - Dec 2021',
         bulletPoints: [
-            'Completed an implementation of Salesforce CRM for several SGH companies in under two months, including historical data migration from each company&apos;s legacy CRM, data security between each company, and feature enhancements for each company',
-            'Identified <a class="funderline" href="https://fluidautomationstation.com/" target="_blank">Fuel Automation Station&apos;</a> (FAS) strategic customers by analyzing trends in crude oil price in relation to customers&apos; revenue and utilization of fracking units, shifting the sales team&apos;s focus to the most strategic and profitable customers',
-            '<a class="funderline" href="https://photos.app.goo.gl/osEqMRQajRicLNS5A" target="_blank">Exhibited at the Abu Dhabi International Petroleum Exhibition & Conference</a> (ADIPEC 2019) and showcased FAS&apos; software capabilities to thousands of attendees, resulting in a deal with <a class="funderline" href="https://saudidrill.com" target="_blank">Saudi Drill Company</a>',
-            'Created an online inventory management system for FAS&apos; warehouses around the U.S.',
-            'Designed UI/UX for dashboard reports in FAS&apos; cloud software',
-            '<a class="funderline" href="https://photos.app.goo.gl/xUjRt96Y8C1HZKSFA" target="_blank">Traveled to FAS&apos; Command Center and Operating Frac Sites</a> in the Houston, TX area to research operator needs and identify improvements to the Cloud Software (August 2019)',
+            'Helped teach hundreds of students in Fundamentals of Computing (CSE 20311), Notre Dame&apos;s introductory computer science course',
         ],
-        technologies: ['Salesforce'],
+        technologies: [],
         type: [ExpType.Internship],
     },
     {
-        title: 'Product Management Intern',
-        subtitle:
-            '<a class="funderline" href="https://aeropartsnow.com/" target="_blank">AeroParts Now</a> | Summer 2020',
+        title: 'Software Development Intern',
+        subtitle: '<a href="https://www.epic.com/" target="_blank" class="funderline">Epic Systems</a> | Summer 2021',
         bulletPoints: [
-            'Automated uploading customers&apos; aircraft inventory into the APN Database, decreasing the upload time by 5 hours',
-            'Defined APN&apos;s 2020/2021 Product Development Roadmap (Scope of Work for development team, categorization of modules & sub-modules, calculation of time-costs, and determination of priority)',
-            'Configured APN&apos;s Pipedrive CRM with automation, dashboard reports, and feature enhancements',
+            'Prototyped a full-stack tool that shows patients a detailed preview of medical record data a third-party app is requesting, built to health care data exchange standards',
         ],
-        technologies: ['React', 'JavaScript', 'Express', 'HTML', 'CSS', 'Git'],
+        technologies: [],
         type: [ExpType.Internship],
     },
     {
@@ -159,10 +183,36 @@ export const experiences: Exps[] = [
         subtitle:
             '<a class="funderline" href="https://ideacenter.nd.edu/" target="_blank">The IDEA Center</a> | Summer 2020',
         bulletPoints: [
-            'Built an eCommerce web app equipped with user authentication, product listings, Stripe-payment integration, an admin console, and customizable email notifications',
+            'Built an eCommerce web app with user authentication, product listings, Stripe payments, an admin console, and customizable email notifications',
         ],
         technologies: ['React', 'JavaScript', 'Redux', 'Express', 'Git'],
         type: [ExpType.Internship, ExpType.StartUp],
+    },
+    {
+        title: 'Product Management Intern',
+        subtitle:
+            '<a class="funderline" href="https://aeropartsnow.com/" target="_blank">AeroParts Now</a> | Summer 2020',
+        bulletPoints: [
+            'Automated uploading customers&apos; aircraft inventory into the APN database, cutting upload time by 5 hours',
+            'Defined APN&apos;s 2020/2021 product roadmap: scope of work, module breakdown, time-cost estimates, and priorities',
+            'Configured APN&apos;s Pipedrive CRM with automation, dashboard reports, and feature enhancements',
+        ],
+        technologies: ['React', 'JavaScript', 'Express', 'HTML', 'CSS', 'Git'],
+        type: [ExpType.Internship],
+    },
+    {
+        title: 'Technology Project Management Intern',
+        subtitle:
+            '<a class="funderline" href="https://www.simongroupholdings.com/" target="_blank">Simon Group Holdings</a> | May 2019 - Feb 2020',
+        bulletPoints: [
+            'Implemented Salesforce CRM across several SGH companies in under two months, including legacy data migration, data separation between companies, and company-specific enhancements',
+            '<a class="funderline" href="https://photos.app.goo.gl/xUjRt96Y8C1HZKSFA" target="_blank">Visited</a> <a class="funderline" href="https://fluidautomationstation.com/" target="_blank">Fuel Automation Station&apos;s</a> (FAS) Command Center and frac sites near Houston to learn operators&apos; needs and find improvements for FAS&apos;s cloud software',
+            'Identified FAS&apos;s most strategic customers by analyzing crude oil price trends against customer revenue and frac unit utilization, refocusing the sales team',
+            '<a class="funderline" href="https://photos.app.goo.gl/osEqMRQajRicLNS5A" target="_blank">Exhibited at ADIPEC 2019</a> in Abu Dhabi, showcasing FAS&apos;s software to thousands of attendees and leading to a deal with <a class="funderline" href="https://saudidrill.com" target="_blank">Saudi Drill Company</a>',
+            'Built an online inventory management system for FAS&apos;s U.S. warehouses and designed dashboard reports for its cloud software',
+        ],
+        technologies: ['Salesforce'],
+        type: [ExpType.Internship],
     },
 ];
 
@@ -175,7 +225,7 @@ export const projects: Prjs[] = [
         bulletPoints: [
             'Building a Tidbyt-inspired smart display: a 64x32 RGB LED matrix driven by an Adafruit MatrixPortal M4, paired with a custom cloud backend',
             'Built as a monorepo with two independently deployed pieces: firmware (C++/PlatformIO) flashed to the physical device, and a backend API (TypeScript/Express) running on Google Cloud Run',
-            'Designed the device-to-cloud contract: the device polls a single endpoint with a device ID, and the API resolves the user&apos;s schedule and preferences, returning only pre-simplified data for a configurable set of live widgets — weather, forecast, sunrise/sunset, real-time transit (e.g., CTA arrivals), sports scores and standings, and other user-defined feeds — to keep payloads small enough for the firmware&apos;s limited memory',
+            'Designed the device-to-cloud contract: the device polls one endpoint, and the API returns pre-simplified data for the user&apos;s widgets (weather, CTA transit arrivals, sports scores, and more) to fit the firmware&apos;s limited memory',
             'Maintain a shared widget-type contract kept in sync across the embedded firmware and the backend as new widgets are added',
         ],
         technologies: ['CPlusPlus', 'PlatformIO', 'TypeScript', 'Express', 'CloudRun', 'SQL'],

@@ -58,6 +58,7 @@ import KubernetesIcon from '../../../public/icons/kubernetes.svg';
 import DockerIcon from '../../../public/icons/docker.svg';
 import GoogleCloudIcon from '../../../public/icons/google-cloud.svg';
 import KafkaIcon from '../../../public/icons/apache-kafka.svg';
+import RedisIcon from '../../../public/icons/redis.svg';
 import PubSubIcon from '../../../public/icons/google-pubsub.svg';
 import SVNIcon from '../../../public/icons/subversion.svg';
 import YarnIcon from '../../../public/icons/yarn.svg';
@@ -117,6 +118,7 @@ const svgIcons: { [Name: string]: IButtonProps } = {
     gRPC: { text: 'gRPC', icon: gRPCIcon },
     Golang: { text: 'Golang', icon: GolangIcon },
     PostgreSQL: { text: 'PostgreSQL', icon: PostgreSQLIcon },
+    Redis: { text: 'Redis', icon: RedisIcon },
     Kubernetes: { text: 'Kubernetes', icon: KubernetesIcon },
     Docker: { text: 'Docker', icon: DockerIcon },
     GoogleCloud: { text: 'Google Cloud Platform', icon: GoogleCloudIcon, iconInvert: true },

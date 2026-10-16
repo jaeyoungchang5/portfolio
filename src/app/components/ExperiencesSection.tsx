@@ -38,6 +38,7 @@ const ExperiencesSection = () => {
                                 subtitle={experience.subtitle}
                                 bulletPoints={experience.bulletPoints}
                                 technologies={experience.technologies}
+                                roles={experience.roles}
                             />
                         );
                     })}
