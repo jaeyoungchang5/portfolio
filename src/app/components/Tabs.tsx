@@ -1,20 +1,22 @@
 import React from 'react';
 import TabButton from './TabButton';
-import { ITabsProps, SkillType } from '../types';
 
-const Tabs = ({ tabs, currentTab, updateTabCallback }: ITabsProps) => {
-    return (
-        <div className=''>
-            {tabs.map((tab, index) => {
-                return (
-                    <TabButton key={index} selectTab={() => updateTabCallback(tab.tab)} active={currentTab === tab.tab}>
-                        {' '}
-                        {tab.text}{' '}
-                    </TabButton>
-                );
-            })}
-        </div>
-    );
+export type Tab<T extends string> = { value: T; label: string };
+
+type TabsProps<T extends string> = {
+    tabs: Tab<T>[];
+    current: T;
+    onChange: (value: T) => void;
 };
+
+const Tabs = <T extends string>({ tabs, current, onChange }: TabsProps<T>) => (
+    <div role='tablist'>
+        {tabs.map((tab) => (
+            <TabButton key={tab.value} active={current === tab.value} selectTab={() => onChange(tab.value)}>
+                {tab.label}
+            </TabButton>
+        ))}
+    </div>
+);
 
 export default Tabs;

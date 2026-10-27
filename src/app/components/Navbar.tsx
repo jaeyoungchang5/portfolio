@@ -2,15 +2,30 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { IMenuOverlayProps, INavLinkProps } from '../types';
 import GithubIcon from '../../../public/icons/github-icon.svg';
 import LinkedinIcon from '../../../public/icons/linkedin-icon.svg';
 import MenuIcon from '../../../public/icons/menu-icon.svg';
 import CloseIcon from '../../../public/icons/close-icon.svg';
 import UpIcon from '../../../public/icons/up.svg';
+import { linkOf } from '@/content';
 
-const navLinks = [
-    { title: '🏠', path: '/' },
+type NavItem = { title: string; path: string };
+
+type NavLinkProps = {
+    href: string;
+    title: string;
+    navbarOpen: boolean;
+    navbarCloseCallback: () => void;
+};
+
+type MenuOverlayProps = {
+    links: NavItem[];
+    navbarOpen: boolean;
+    navbarCloseCallback: () => void;
+};
+
+const navLinks: NavItem[] = [
+    { title: 'Home', path: '/' },
     { title: 'About', path: '#about' },
     { title: 'Skills', path: '#skills' },
     { title: 'Experiences', path: '#experiences' },
@@ -58,16 +73,20 @@ const Navbar = () => {
                         {!navbarOpen ? (
                             <button
                                 onClick={() => setNavbarOpen(true)}
+                                aria-label='Open menu'
+                                aria-expanded={false}
                                 className={`flex items-center px-3 py-2 text-slate-200 hover:text-white hover:border-white`}
                             >
-                                <Image className='h-5 w-auto invert' src={MenuIcon} alt='Menu Icon' />
+                                <Image className='h-5 w-auto invert' src={MenuIcon} alt='' />
                             </button>
                         ) : (
                             <button
                                 onClick={() => setNavbarOpen(false)}
+                                aria-label='Close menu'
+                                aria-expanded={true}
                                 className={`flex items-center px-3 py-2 text-slate-200 hover:text-white hover:border-white`}
                             >
-                                <Image className='h-5 w-auto invert' src={CloseIcon} alt='Close Icon' />
+                                <Image className='h-5 w-auto invert' src={CloseIcon} alt='' />
                             </button>
                         )}
                     </div>
@@ -92,14 +111,14 @@ const Navbar = () => {
                 </div>
                 <div className='flex flex-row justify-end'>
                     <div className='rounded-lg hover:bg-[#ADB7BE]'>
-                        <Link href='https://github.com/jaeyoungchang5' target='_blank'>
-                            <Image className='h-10 w-auto' src={GithubIcon} alt='Icon' />
-                        </Link>
+                        <a href={linkOf('github').href} target='_blank' rel='noopener noreferrer' aria-label='GitHub'>
+                            <Image className='h-10 w-auto' src={GithubIcon} alt='' />
+                        </a>
                     </div>
                     <div className='rounded-lg hover:bg-[#ADB7BE]'>
-                        <Link href='https://www.linkedin.com/in/jaeyoungchang/' target='_blank'>
-                            <Image className='h-10 w-auto' src={LinkedinIcon} alt='Icon' />
-                        </Link>
+                        <a href={linkOf('linkedin').href} target='_blank' rel='noopener noreferrer' aria-label='LinkedIn'>
+                            <Image className='h-10 w-auto' src={LinkedinIcon} alt='' />
+                        </a>
                     </div>
                 </div>
             </div>
@@ -107,15 +126,16 @@ const Navbar = () => {
                 <button
                     className='fixed bottom-0 right-0 px-2 py-2 mr-3 mb-3 md:mr-6 md:mb-6 z-50 bg-slate-200 hover:bg-white rounded-full items-center'
                     onClick={scrollToTop}
+                    aria-label='Scroll to top'
                 >
-                    <Image className='h-5 w-auto' src={UpIcon} alt='Scroll to top' />
+                    <Image className='h-5 w-auto' src={UpIcon} alt='' />
                 </button>
             )}
         </nav>
     );
 };
 
-const NavLink = ({ href, title, navbarOpen, navbarCloseCallback }: INavLinkProps) => {
+const NavLink = ({ href, title, navbarOpen, navbarCloseCallback }: NavLinkProps) => {
     const isBrowser = () => typeof window !== 'undefined';
 
     function handleClick() {
@@ -139,7 +159,7 @@ const NavLink = ({ href, title, navbarOpen, navbarCloseCallback }: INavLinkProps
     );
 };
 
-const MenuOverlay = ({ links, navbarOpen, navbarCloseCallback }: IMenuOverlayProps) => {
+const MenuOverlay = ({ links, navbarOpen, navbarCloseCallback }: MenuOverlayProps) => {
     return (
         <ul className='absolute top-12 bg-gray-800 border rounded-md items-center'>
             {links.map((link, index) => (

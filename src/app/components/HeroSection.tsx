@@ -2,6 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
+import { profile } from '@/content';
 
 const HeroSection = () => {
     return (
@@ -16,7 +17,7 @@ const HeroSection = () => {
                     <span className='text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-700'>
                         Hey, I&apos;m{' '}
                     </span>
-                    <TypeAnimation sequence={['JaeYoung', 2000]} wrapper='span' speed={50} />
+                    <TypeAnimation sequence={[profile.firstName, 2000]} wrapper='span' speed={50} />
                 </h1>
             </motion.div>
         </section>
