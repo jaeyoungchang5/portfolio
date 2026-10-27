@@ -8,8 +8,8 @@ const variants = {
 
 type ITabButtonProps = {
     active: boolean;
-    selectTab: any;
-    children: any;
+    selectTab: () => void;
+    children: React.ReactNode;
 };
 
 const TabButton = ({ active, selectTab, children }: ITabButtonProps) => {
