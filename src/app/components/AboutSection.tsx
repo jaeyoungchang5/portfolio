@@ -22,28 +22,28 @@ const AboutSection = () => {
                 <div className='text-center lg:text-left lg:col-span-8 justify-self-start place-self-center'>
                     <h2 className='text-4xl font-bold text-blue-400 mb-4'>About Me</h2>
                     <p className='text-center lg:text-left pb-4 text-lg text-slate-200 '>
-                        I&apos;m a full-stack software engineer in Chicago, currently at{' '}
+                        Curious by nature, people-first by heart.
+                        <br></br>
+                        <br></br>I&apos;m a lifelong learner whose greatest passion is people. I do my best work close
+                        to the people using the software. At Apex, that meant working directly with securities lending
+                        traders to find friction in their daily workflows. At Epic, it meant shadowing and talking with
+                        dermatologists across the country to see how they document patients&apos; skin conditions. From
+                        first conversation to launch and beyond, I build with the end user in mind.
+                        <br></br>
+                        <br></br>Today I&apos;m a senior software engineer and team lead at{' '}
                         <a href='https://apexfintechsolutions.com' target='_blank' className='funderline'>
                             Apex Fintech Solutions
-                        </a>
-                        .
-                        <br></br>
-                        <br></br>I do my best work close to the people using the software. At Apex, that meant working
-                        directly with securities lending traders to find friction in their daily workflows. At Epic, it
-                        meant shadowing and talking with dermatologists across the country to see how they document
-                        patients&apos; skin conditions. From first conversation to launch and beyond, I build with the end
-                        user in mind.
-                        <br></br>
-                        <br></br>I graduated from the{' '}
-                        <a href='https://www.nd.edu' target='_blank' className='funderline'>
-                            University of Notre Dame
                         </a>{' '}
-                        in 2022 with a BS in Computer Science and a Minor in Engineering Corporate Practice.
+                        in Chicago, and a 2022{' '}
+                        <a href='https://www.nd.edu' target='_blank' className='funderline'>
+                            Notre Dame
+                        </a>{' '}
+                        grad.
                         <br></br>
                         <br></br>I love playing, watching, and talking sports! I&apos;ve been playing soccer, tennis,
                         and golf since I was a kid, and more recently picked up gaelic football and hurling in college.
-                        I&apos;m an avid fan of the Detroit Lions, Detroit Red Wings, Korean National Football Team,
-                        and all Notre Dame sports. In my free time, I like to{' '}
+                        I&apos;m an avid fan of the Detroit Lions, Detroit Red Wings, Korean National Football Team, and
+                        all Notre Dame sports. In my free time, I like to{' '}
                         <a
                             href='https://www.goodreads.com/user/show/126699611-jaeyoung-chang'
                             target='_blank'
@@ -54,7 +54,7 @@ const AboutSection = () => {
                         , play the guitar, woodwork, and eat delicious foods.
                         <br></br>
                         <br></br>
-                        My greatest passion is people, so let&apos;s connect and get to know one another!
+                        Let&apos;s connect and get to know one another!
                     </p>
                     <div className='justify-center lg:justify-start flex flex-row flex-wrap'>
                         {links.map((linkObj, index) => {
