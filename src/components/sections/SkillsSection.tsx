@@ -34,25 +34,23 @@ const SkillsSection = () => {
 
     return (
         <Section id='skills' title='Skills'>
-            {/* Scrolls sideways on phones when the tabs don't fit. */}
-            <div className='no-scrollbar -mx-4 mb-8 overflow-x-auto px-4 sm:mx-0 sm:px-0'>
-                <div className='flex gap-6 whitespace-nowrap border-b border-rule-soft text-detail'>
-                    {filters.map(f => (
-                        <button
-                            key={f.value}
-                            type='button'
-                            aria-pressed={filter === f.value}
-                            onClick={() => setFilter(f.value)}
-                            className={`-mb-px border-b-2 pb-2.5 transition-colors ${
-                                filter === f.value
-                                    ? 'border-accent text-ink'
-                                    : 'border-transparent text-muted hover:text-ink'
-                            }`}
-                        >
-                            {f.label}
-                        </button>
-                    ))}
-                </div>
+            {/* Wraps onto two lines on phones; the full-width rule only shows once it fits on one line. */}
+            <div className='mb-8 flex flex-wrap gap-x-6 gap-y-3 text-detail sm:border-b sm:border-rule-soft'>
+                {filters.map(f => (
+                    <button
+                        key={f.value}
+                        type='button'
+                        aria-pressed={filter === f.value}
+                        onClick={() => setFilter(f.value)}
+                        className={`border-b-2 pb-1.5 transition-colors sm:-mb-px sm:pb-2.5 ${
+                            filter === f.value
+                                ? 'border-accent text-ink'
+                                : 'border-transparent text-muted hover:text-ink'
+                        }`}
+                    >
+                        {f.label}
+                    </button>
+                ))}
             </div>
 
             <ul className='flex flex-wrap gap-2'>

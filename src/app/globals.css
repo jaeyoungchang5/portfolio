@@ -53,14 +53,3 @@ section {
         @apply text-sm text-muted;
     }
 }
-
-@layer utilities {
-    /* Hides the scrollbar on rows that scroll sideways on phones (e.g. skill filters). */
-    .no-scrollbar {
-        scrollbar-width: none;
-    }
-
-    .no-scrollbar::-webkit-scrollbar {
-        display: none;
-    }
-}
