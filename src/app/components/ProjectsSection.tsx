@@ -1,48 +1,61 @@
 'use client';
-import React, { useState, useTransition } from 'react';
+import React, { useState } from 'react';
 import Card from './Card';
-import { projects } from '../content';
-import { ITabProps, PrjType } from '../types';
-import Tabs from './Tabs';
+import ExternalLink from './ExternalLink';
+import Tabs, { type Tab } from './Tabs';
+import { projects, type ProjectCategory } from '@/content';
+
+type Filter = ProjectCategory | 'all';
+
+const tabs: Tab<Filter>[] = [
+    { value: 'all', label: 'All' },
+    { value: 'full-stack', label: 'Full-Stack' },
+    { value: 'mobile', label: 'Mobile' },
+    { value: 'web', label: 'Web' },
+];
 
 const ProjectsSection = () => {
-    const [tab, setTab] = useState(PrjType.All);
-    const [isPending, startTransition] = useTransition();
-    const tabs: ITabProps[] = [
-        { tab: PrjType.All, text: 'All' },
-        { tab: PrjType.FullStack, text: 'Full-Stack' },
-        { tab: PrjType.Mobile, text: 'Mobile' },
-        { tab: PrjType.Web, text: 'Web' },
-    ];
-
-    const handleTabChange = (skillType: PrjType) => {
-        startTransition(() => {
-            setTab(skillType);
-        });
-    };
+    const [filter, setFilter] = useState<Filter>('all');
+    const visible = projects.filter((p) => filter === 'all' || p.categories.includes(filter));
 
     return (
-        <section className='' id='projects'>
+        <section id='projects'>
             <div className='place-self-center text-slate-200 text-left justify-self-start'>
                 <h2 className='text-4xl font-bold text-blue-400 mb-4'>Projects</h2>
 
                 <div className='justify-start my-2 flex flex-row'>
-                    <Tabs tabs={tabs} currentTab={tab} updateTabCallback={handleTabChange} />
+                    <Tabs tabs={tabs} current={filter} onChange={setFilter} />
                 </div>
 
                 <div className='flex flex-col'>
-                    {projects.map((project, index) => {
-                        if (tab === PrjType.All || project.type.includes(tab))
-                            return (
-                                <Card
-                                    key={index}
-                                    title={project.title}
-                                    subtitle={project.subtitle}
-                                    bulletPoints={project.bulletPoints}
-                                    technologies={project.technologies}
-                                    link={project.link}
-                                />
+                    {visible.map((project) => {
+                        const parts: React.ReactNode[] = [project.tagline, project.status].filter(Boolean);
+                        if (project.repo)
+                            parts.push(
+                                <ExternalLink key='repo' href={project.repo} className='funderline'>
+                                    View repo
+                                </ExternalLink>,
                             );
+                        return (
+                            <Card
+                                key={project.name}
+                                tech={project.tech}
+                                entries={[
+                                    {
+                                        title: project.name,
+                                        highlights: project.highlights,
+                                        subtitle: parts.length
+                                            ? parts.map((part, i) => (
+                                                  <React.Fragment key={i}>
+                                                      {i > 0 && ' | '}
+                                                      {part}
+                                                  </React.Fragment>
+                                              ))
+                                            : undefined,
+                                    },
+                                ]}
+                            />
+                        );
                     })}
                 </div>
             </div>
