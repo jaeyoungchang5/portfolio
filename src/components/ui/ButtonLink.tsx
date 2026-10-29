@@ -2,7 +2,7 @@ import React from 'react';
 import Anchor from './Anchor';
 
 const variants = {
-    primary: 'bg-accent font-medium text-paper hover:bg-accent-dark',
+    primary: 'bg-accent font-medium text-accent-contrast hover:bg-accent-hover',
     outline: 'border border-outline text-ink hover:border-ink',
 };
 

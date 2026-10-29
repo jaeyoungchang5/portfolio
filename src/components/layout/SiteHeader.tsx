@@ -1,5 +1,6 @@
 'use client';
 import React, { useEffect, useState } from 'react';
+import ThemeToggle from './ThemeToggle';
 import { profile } from '@/content';
 
 // Each href must match a Section id.
@@ -17,7 +18,8 @@ const MenuIcon = ({ open }: { open: boolean }) => (
 );
 
 /**
- * Sticky header. Phones get a menu button that opens a full-width list of links; from `sm` up the links are inline.
+ * Sticky header with the theme switch. Phones get a menu button that opens a full-width list of links; from `sm` up
+ * the links are inline.
  * If you change its height (padding or font size), update --header-height in globals.css.
  */
 const SiteHeader = () => {
@@ -38,28 +40,31 @@ const SiteHeader = () => {
                     {profile.name}
                 </a>
 
-                <nav aria-label='Primary' className='hidden sm:block'>
-                    <ul className='flex gap-7 text-detail'>
-                        {nav.map(item => (
-                            <li key={item.href}>
-                                <a href={item.href} className='text-body hover:text-ink'>
-                                    {item.label}
-                                </a>
-                            </li>
-                        ))}
-                    </ul>
-                </nav>
+                <div className='flex items-center gap-1 sm:gap-6'>
+                    <nav aria-label='Primary' className='hidden sm:block'>
+                        <ul className='flex gap-7 text-detail'>
+                            {nav.map(item => (
+                                <li key={item.href}>
+                                    <a href={item.href} className='text-body hover:text-ink'>
+                                        {item.label}
+                                    </a>
+                                </li>
+                            ))}
+                        </ul>
+                    </nav>
+                    <ThemeToggle />
 
-                <button
-                    type='button'
-                    className='-mr-2.5 flex h-11 w-11 items-center justify-center text-ink sm:hidden'
-                    aria-label={open ? 'Close menu' : 'Open menu'}
-                    aria-expanded={open}
-                    aria-controls='mobile-menu'
-                    onClick={() => setOpen(!open)}
-                >
-                    <MenuIcon open={open} />
-                </button>
+                    <button
+                        type='button'
+                        className='-mr-2.5 flex h-11 w-11 items-center justify-center text-ink sm:hidden'
+                        aria-label={open ? 'Close menu' : 'Open menu'}
+                        aria-expanded={open}
+                        aria-controls='mobile-menu'
+                        onClick={() => setOpen(!open)}
+                    >
+                        <MenuIcon open={open} />
+                    </button>
+                </div>
             </div>
 
             {open && (

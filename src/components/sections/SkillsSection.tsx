@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Section from '@/components/ui/Section';
-import { getTech, profile, skillIds, type TechCategory } from '@/content';
+import { getTech, profile, skillIds, type IconOnDark, type TechCategory } from '@/content';
 
 type Filter = TechCategory | 'all' | 'hobbies';
 
@@ -17,10 +17,22 @@ const filters: { value: Filter; label: string }[] = [
     { value: 'hobbies', label: 'Hobbies' },
 ];
 
-const Chip = ({ label, icon }: { label: string; icon?: string }) => (
-    <li className='inline-flex items-center gap-2 rounded-full border border-rule bg-white/50 px-3 py-1.5 text-detail text-ink'>
+const onDarkClass: Record<IconOnDark, string> = {
+    invert: 'dark:invert',
+    brighten: 'dark:brightness-[1.8]',
+};
+
+const Chip = ({ label, icon, onDark }: { label: string; icon?: string; onDark?: IconOnDark }) => (
+    <li className='inline-flex items-center gap-2 rounded-full border border-rule bg-surface px-3 py-1.5 text-detail text-ink'>
         {icon && (
-            <Image src={`/icons/${icon}`} alt='' width={18} height={18} unoptimized className='h-[18px] w-[18px]' />
+            <Image
+                src={`/icons/${icon}`}
+                alt=''
+                width={18}
+                height={18}
+                unoptimized
+                className={`h-[18px] w-[18px] ${onDark ? onDarkClass[onDark] : ''}`}
+            />
         )}
         {label}
     </li>
@@ -57,9 +69,9 @@ const SkillsSection = () => {
 
             <ul className='flex flex-wrap gap-2'>
                 {skills.map(id => (
-                    <Chip key={id} label={getTech(id).label} icon={getTech(id).icon} />
+                    <Chip key={id} {...getTech(id)} />
                 ))}
-                {showHobbies && profile.hobbies.map(hobby => <Chip key={hobby.label} {...hobby} />)}
+                {showHobbies && profile.hobbies.map(hobby => <Chip key={hobby.label} {...hobby} onDark='invert' />)}
             </ul>
         </Section>
     );

@@ -1,19 +1,27 @@
 import type { Config } from 'tailwindcss';
 
-// Design tokens. Change a color, size, or spacing here and it updates everywhere it's used.
+// Design tokens. Change a size or spacing here and it updates everywhere it's used.
+// Colors point at CSS variables so they can switch with the theme: set their light and dark values in globals.css.
+// (Because they're variables, opacity modifiers like `bg-paper/50` don't work on them.)
 const config: Config = {
     content: ['./src/**/*.{ts,tsx}'],
+    darkMode: 'class', // `dark` on <html>, set by the theme switch
     theme: {
         extend: {
             colors: {
-                paper: '#F5F3EE', // page background
-                ink: '#1C1B19', // headings and primary text
-                body: '#45413A', // paragraph text
-                muted: '#6B665C', // labels, dates, secondary text
-                rule: '#D9D5CB', // section dividers and borders
-                'rule-soft': '#E4E0D6', // lighter dividers inside a section
-                outline: '#C9C4B8', // outlined button borders
-                accent: { DEFAULT: '#1F4D3A', dark: '#123226' }, // links and primary button
+                paper: 'var(--color-paper)', // page background
+                surface: 'var(--color-surface)', // raised elements, e.g. skill chips
+                ink: 'var(--color-ink)', // headings and primary text
+                body: 'var(--color-body)', // paragraph text
+                muted: 'var(--color-muted)', // labels, dates, secondary text
+                rule: 'var(--color-rule)', // section dividers and borders
+                'rule-soft': 'var(--color-rule-soft)', // lighter dividers inside a section
+                outline: 'var(--color-outline)', // outlined button borders
+                accent: {
+                    DEFAULT: 'var(--color-accent)', // links and primary button
+                    hover: 'var(--color-accent-hover)',
+                    contrast: 'var(--color-accent-contrast)', // text on an accent background
+                },
             },
             fontFamily: {
                 serif: ['var(--font-serif)', 'Georgia', 'serif'],
