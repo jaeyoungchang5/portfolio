@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { IBM_Plex_Sans, Newsreader } from 'next/font/google';
 import './globals.css';
+import { themeInitScript } from '@/components/layout/theme';
 import { profile } from '@/content';
 
 const serif = Newsreader({ subsets: ['latin'], axes: ['opsz'], variable: '--font-serif' });
@@ -21,7 +22,12 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
     return (
-        <html lang='en' className={`${serif.variable} ${sans.variable}`}>
+        // suppressHydrationWarning: themeInitScript adds `dark` to <html> before React hydrates.
+        <html lang='en' className={`${serif.variable} ${sans.variable}`} suppressHydrationWarning>
+            <head>
+                {/* A fixed string from our own code, not content, so injecting it is safe. */}
+                <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+            </head>
             <body>{children}</body>
         </html>
     );

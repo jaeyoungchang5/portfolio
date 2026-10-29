@@ -34,7 +34,7 @@ src/
     page.tsx        Puts the sections in order
     layout.tsx      Fonts and page metadata
     globals.css     Base styles and the few shared CSS classes
-tailwind.config.ts  Colors, font sizes, and spacing (design tokens)
+tailwind.config.ts  Font sizes, spacing, and color names (design tokens)
 next.config.mjs     Security headers
 public/             Images and skill icons
 ```
@@ -56,7 +56,9 @@ Text fields support two bits of markup: `[label](https://link)` for links and `_
 
 ## Changing the look
 
-- Colors, font sizes, section spacing, and page width are named tokens in `tailwind.config.ts`. Change them there.
+- Font sizes, section spacing, and page width are named tokens in `tailwind.config.ts`. Change them there.
+- Colors have a light and a dark value, set as CSS variables at the top of `globals.css`. The Tailwind color names (`bg-paper`, `text-ink`, ...) point at them.
+- Dark mode: the site always starts light. The round button in the header switches themes and remembers the visitor's choice. A skill icon that's hard to see on the dark background takes `onDark: 'invert'` (single-color icons) or `'brighten'` (dark brand colors) in `tech.ts`.
 - Styling otherwise lives on each component as Tailwind classes. `globals.css` only holds base styles and two shared classes (`.text-link`, `.eyebrow`).
 - The sticky header's height is mirrored in `--header-height` in `globals.css` so in-page links don't land under it. Update both together.
 - New page section: create it in `components/sections/`, wrap it in `<Section id title>`, add it to `app/page.tsx`, and add its `id` to the nav list in `SiteHeader.tsx`.

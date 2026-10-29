@@ -2,6 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Theme colors. Tailwind's color tokens (bg-paper, text-ink, ...) read these, so changing a value here
+   recolors the whole site. `.dark` is set on <html> by the theme switch. */
+:root {
+    color-scheme: light;
+    --color-paper: #f5f3ee;
+    --color-surface: #faf9f6;
+    --color-ink: #1c1b19;
+    --color-body: #45413a;
+    --color-muted: #6b665c;
+    --color-rule: #d9d5cb;
+    --color-rule-soft: #e4e0d6;
+    --color-outline: #c9c4b8;
+    --color-accent: #1f4d3a;
+    --color-accent-hover: #123226;
+    --color-accent-contrast: #f5f3ee;
+}
+
+.dark {
+    color-scheme: dark;
+    --color-paper: #161714;
+    --color-surface: #1e1f1b;
+    --color-ink: #edeae3;
+    --color-body: #c9c5bc;
+    --color-muted: #9b968c;
+    --color-rule: #34352f;
+    --color-rule-soft: #2a2b26;
+    --color-outline: #4a4b44;
+    --color-accent: #8cc5a6;
+    --color-accent-hover: #acd8bf;
+    --color-accent-contrast: #10241a;
+}
+
 /* Sticky header height, used so in-page links don't land under it. Keep in sync with SiteHeader's padding. */
 :root {
     --header-height: 65px;
@@ -34,7 +66,7 @@ section {
 }
 
 ::selection {
-    @apply bg-accent text-paper;
+    @apply bg-accent text-accent-contrast;
 }
 
 :focus-visible {
@@ -45,7 +77,7 @@ section {
 @layer components {
     /* Underlined inline link, used in paragraphs and for organization names. */
     .text-link {
-        @apply text-accent underline decoration-1 underline-offset-[3px] hover:text-accent-dark;
+        @apply text-accent underline decoration-1 underline-offset-[3px] hover:text-accent-hover;
     }
 
     /* Small muted label: dates, tech stacks, sub-headings. */

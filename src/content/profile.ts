@@ -23,7 +23,7 @@ export const profile = {
         { kind: 'linkedin', label: 'LinkedIn', href: 'https://www.linkedin.com/in/jaeyoungchang/' },
     ] satisfies SocialLink[],
     email,
-    /** Shown under Skills. Icons are files in /public/icons. */
+    /** Shown under Skills. Icons are files in /public/icons; all are single-color, so they're inverted in dark mode (see SkillsSection). */
     hobbies: [
         { label: 'Soccer', icon: 'soccerball.svg' },
         { label: 'Tennis', icon: 'tennis.svg' },

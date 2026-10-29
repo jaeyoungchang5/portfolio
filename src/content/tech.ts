@@ -1,9 +1,14 @@
 export type TechCategory = 'language' | 'framework' | 'library' | 'web' | 'mobile' | 'database' | 'tool';
 
+export type IconOnDark = 'invert' | 'brighten';
+
 type TechDef = {
     label: string;
     /** File in /public/icons. */
     icon?: string;
+    /** How the icon adjusts in dark mode so it stays visible: 'invert' for single-color dark icons,
+     *  'brighten' for dark brand colors that shouldn't change hue. */
+    onDark?: IconOnDark;
     categories: TechCategory[];
     /** Set false for tech that should only appear on experience/project cards. */
     inSkills?: boolean;
@@ -15,7 +20,7 @@ type TechDef = {
  */
 export const tech = {
     Golang: { label: 'Go', icon: 'go-8.svg', categories: ['language'] },
-    gRPC: { label: 'gRPC', icon: 'grpc.svg', categories: ['framework'] },
+    gRPC: { label: 'gRPC', icon: 'grpc.svg', onDark: 'brighten', categories: ['framework'] },
     TypeScript: { label: 'TypeScript', icon: 'typescript-icon.svg', categories: ['language', 'web', 'mobile'] },
     JavaScript: { label: 'JavaScript', icon: 'javascript.svg', categories: ['language', 'web', 'mobile'] },
     CSharp: { label: 'C#', icon: 'c-sharp.svg', categories: ['language', 'web'] },
@@ -24,11 +29,11 @@ export const tech = {
     Java: { label: 'Java', icon: 'java.svg', categories: ['language'] },
     React: { label: 'React', icon: 'react.svg', categories: ['library', 'web'] },
     ReactNative: { label: 'React Native', icon: 'react.svg', categories: ['framework', 'mobile'] },
-    Next: { label: 'Next.js', icon: 'nextjs-icon.svg', categories: ['framework', 'web'] },
+    Next: { label: 'Next.js', icon: 'nextjs-icon.svg', onDark: 'invert', categories: ['framework', 'web'] },
     Dotnet: { label: '.NET', icon: 'dotnet.svg', categories: ['framework', 'web'] },
     Node: { label: 'Node.js', icon: 'nodejs-icon.svg', categories: ['web'] },
     Express: { label: 'Express.js', icon: 'nodejs-icon.svg', categories: ['framework', 'web'] },
-    SQL: { label: 'SQL', icon: 'mysql-icon.svg', categories: ['language', 'database'] },
+    SQL: { label: 'SQL', icon: 'mysql-icon.svg', onDark: 'brighten', categories: ['language', 'database'] },
     PostgreSQL: { label: 'PostgreSQL', icon: 'postgresql.svg', categories: ['language', 'database'] },
     Redis: { label: 'Redis', icon: 'redis.svg', categories: ['database'] },
     MongoDB: { label: 'MongoDB', icon: 'mongodb-icon.svg', categories: ['database'] },
@@ -38,22 +43,22 @@ export const tech = {
     Tailwind: { label: 'Tailwind CSS', icon: 'tailwindcss-icon.svg', categories: ['framework', 'web'] },
     Kubernetes: { label: 'Kubernetes', icon: 'kubernetes.svg', categories: ['tool'] },
     Docker: { label: 'Docker', icon: 'docker.svg', categories: ['tool'] },
-    GoogleCloud: { label: 'Google Cloud', icon: 'google-cloud.svg', categories: ['tool'] },
-    CloudRun: { label: 'Cloud Run', icon: 'google-cloud.svg', categories: ['tool'] },
-    Kafka: { label: 'Kafka', icon: 'apache-kafka.svg', categories: ['tool'] },
-    PubSub: { label: 'Pub/Sub', icon: 'google-pubsub.svg', categories: ['tool'] },
-    VertexAI: { label: 'Vertex AI', icon: 'google-cloud.svg', categories: ['tool'] },
-    SVN: { label: 'SVN', icon: 'subversion.svg', categories: ['tool'] },
-    Yarn: { label: 'Yarn', icon: 'yarn.svg', categories: ['tool'] },
+    GoogleCloud: { label: 'Google Cloud', icon: 'google-cloud.svg', onDark: 'invert', categories: ['tool'] },
+    CloudRun: { label: 'Cloud Run', icon: 'google-cloud.svg', onDark: 'invert', categories: ['tool'] },
+    Kafka: { label: 'Kafka', icon: 'apache-kafka.svg', onDark: 'invert', categories: ['tool'] },
+    PubSub: { label: 'Pub/Sub', icon: 'google-pubsub.svg', onDark: 'invert', categories: ['tool'] },
+    VertexAI: { label: 'Vertex AI', icon: 'google-cloud.svg', onDark: 'invert', categories: ['tool'] },
+    SVN: { label: 'SVN', icon: 'subversion.svg', onDark: 'invert', categories: ['tool'] },
+    Yarn: { label: 'Yarn', icon: 'yarn.svg', onDark: 'invert', categories: ['tool'] },
     Agile: { label: 'Agile', categories: ['tool'] },
     MUMPS: { label: 'MUMPS', categories: ['language'] },
-    Expo: { label: 'Expo', icon: 'expo-icon.svg', categories: ['framework', 'mobile', 'tool'] },
+    Expo: { label: 'Expo', icon: 'expo-icon.svg', onDark: 'invert', categories: ['framework', 'mobile', 'tool'] },
     Firebase: { label: 'Firebase', icon: 'firebase.svg', categories: ['tool'] },
-    Heroku: { label: 'Heroku', icon: 'heroku-icon.svg', categories: ['tool'] },
+    Heroku: { label: 'Heroku', icon: 'heroku-icon.svg', onDark: 'brighten', categories: ['tool'] },
     Netlify: { label: 'Netlify', icon: 'netlify-icon.svg', categories: ['tool'] },
-    Vercel: { label: 'Vercel', icon: 'vercel-icon.svg', categories: ['tool'] },
+    Vercel: { label: 'Vercel', icon: 'vercel-icon.svg', onDark: 'invert', categories: ['tool'] },
     Postman: { label: 'Postman', icon: 'postman-icon.svg', categories: ['tool'] },
-    Markdown: { label: 'Markdown', icon: 'markdown.svg', categories: ['language'] },
+    Markdown: { label: 'Markdown', icon: 'markdown.svg', onDark: 'invert', categories: ['language'] },
     Bash: { label: 'Bash', icon: 'bash-icon.svg', categories: ['language', 'tool'] },
     Swift: { label: 'Swift', icon: 'swift.svg', categories: ['language', 'mobile'] },
     Kotlin: { label: 'Kotlin', icon: 'kotlin-icon.svg', categories: ['language', 'mobile'] },
