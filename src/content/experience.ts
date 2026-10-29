@@ -10,6 +10,8 @@ export const experiences: Experience[] = [
             {
                 title: 'Senior Software Engineer & Team Lead',
                 dates: { start: '2026-07' },
+                summary:
+                    "Lead a team of three as a player-coach. Delivered the engineering that brought Fisher Investments and State Street live on Apex's wealth management platform, as one of the first Squad Captains in Apex's squad model.",
                 highlights: [
                     "Lead a team of three engineers as a player-coach: I write and review code daily and own the team's technical decisions",
                     "Delivered the engineering work that brought Fisher Investments and State Street live on Apex's wealth management platform",
@@ -21,6 +23,8 @@ export const experiences: Experience[] = [
             {
                 title: 'Software Engineer II, Securities Lending',
                 dates: { start: '2024-07', end: '2026-06' },
+                summary:
+                    'Built the core services behind a $100M+ securities lending business. Led the migration of Apex Lend Plus and Stock Locates from on-prem to Google Cloud, which now serve nearly all production traffic.',
                 highlights: [
                     "Built the core services behind Apex's Securities Lending program, a $100M+ revenue business, across product offerings for trading, contract management, inventory management, and revenue allocation",
                     'Led the migration of Apex Lend Plus and Stock Locates from on-prem to Google Cloud (GKE, Cloud Run, PostgreSQL, Redis, BigQuery), which now serve nearly all production traffic for managing contracts and inventory, surfacing insights, and acting on recommendations',
@@ -48,6 +52,7 @@ export const experiences: Experience[] = [
             'Docker',
             'Git',
         ],
+        featured: true,
     },
     {
         org: epic,
@@ -55,6 +60,8 @@ export const experiences: Experience[] = [
             {
                 title: 'Full-Stack Software Engineer',
                 dates: { start: '2022-08', end: '2024-07' },
+                summary:
+                    "Owned the Skin Cancer History project for Epic's Dermatology application end to end: shadowing dermatologists across the country, design, full-stack development, and post-launch usability testing.",
                 highlights: [
                     "Owned the Skin Cancer History project for Epic's Dermatology application end to end: user research, design, full-stack development, and post-launch usability testing",
                     'Shadowed and interviewed practicing dermatologists across the country to understand gaps in their documentation workflows',
@@ -65,6 +72,7 @@ export const experiences: Experience[] = [
             },
         ],
         tech: ['React', 'TypeScript', 'CSharp', 'Dotnet', 'Git', 'Cache'],
+        featured: true,
     },
     {
         org: { name: 'Wealth Kitchen Inc.' },
@@ -72,6 +80,8 @@ export const experiences: Experience[] = [
             {
                 title: 'Co-Founder',
                 dates: { start: '2023-06', end: '2024-03' },
+                summary:
+                    'Co-founded a software company building tools for mid-sized RIA firms and their wealth managers.',
                 highlights: [
                     'Co-founded a software company solving everyday problems for mid-sized RIA firms and their wealth managers',
                     "Built a platform that brings advisors' daily tools into one view and suggests next tasks, so nothing falls through the cracks and advisors can focus on the work that matters most",
@@ -79,6 +89,7 @@ export const experiences: Experience[] = [
             },
         ],
         tech: [],
+        featured: true,
     },
     {
         org: { name: 'YOKE', url: 'https://www.linkedin.com/company/yoketeam/' },

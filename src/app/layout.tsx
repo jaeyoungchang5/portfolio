@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { IBM_Plex_Sans, Newsreader } from 'next/font/google';
 import './globals.css';
 import { profile } from '@/content';
 
-const inter = Inter({ subsets: ['latin'] });
+const serif = Newsreader({ subsets: ['latin'], axes: ['opsz'], variable: '--font-serif' });
+const sans = IBM_Plex_Sans({ subsets: ['latin'], weight: ['400', '500', '600'], variable: '--font-sans' });
 
 export const metadata: Metadata = {
     metadataBase: new URL('https://jaeyoungchang.vercel.app'),
@@ -20,8 +21,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
     return (
-        <html lang='en'>
-            <body className={inter.className}>{children}</body>
+        <html lang='en' className={`${serif.variable} ${sans.variable}`}>
+            <body>{children}</body>
         </html>
     );
 }

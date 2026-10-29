@@ -2,17 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Sticky header height, used so in-page links don't land under it. Keep in sync with SiteHeader's padding. */
 :root {
-    --foreground-rgb: 0, 0, 0;
-    --background-start-rgb: 214, 219, 220;
-    --background-end-rgb: 255, 255, 255;
+    --header-height: 65px;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (min-width: 640px) {
     :root {
-        --foreground-rgb: 255, 255, 255;
-        --background-start-rgb: 0, 0, 0;
-        --background-end-rgb: 0, 0, 0;
+        --header-height: 92px;
     }
 }
 
@@ -20,28 +17,50 @@ html {
     scroll-behavior: smooth;
 }
 
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
 body {
-    color: rgb(var(--foreground-rgb));
-    background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+    @apply bg-paper font-sans text-ink antialiased;
+    font-size: 17px;
+    line-height: 1.6;
 }
 
 section {
-    scroll-margin-top: 80px;
+    scroll-margin-top: calc(var(--header-height) + 8px);
 }
 
-.funderline {
-    border-bottom: 0.2rem solid #1d4ed8;
-    border-radius: 1.5px;
+::selection {
+    @apply bg-accent text-paper;
 }
 
-.funderline:hover {
-    background-color: rgba(29, 78, 216, 0.4);
-    border-top: 0.2rem rgba(29, 78, 216, 0.4);
-    border-radius: 1.5px;
+:focus-visible {
+    @apply outline outline-2 outline-offset-2 outline-accent;
+}
+
+/* Small styles reused across many components. Everything else lives with its component. */
+@layer components {
+    /* Underlined inline link, used in paragraphs and for organization names. */
+    .text-link {
+        @apply text-accent underline decoration-1 underline-offset-[3px] hover:text-accent-dark;
+    }
+
+    /* Small muted label: dates, tech stacks, sub-headings. */
+    .eyebrow {
+        @apply text-sm text-muted;
+    }
 }
 
 @layer utilities {
-    .text-balance {
-        text-wrap: balance;
+    /* Hides the scrollbar on rows that scroll sideways on phones (e.g. skill filters). */
+    .no-scrollbar {
+        scrollbar-width: none;
+    }
+
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
     }
 }

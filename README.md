@@ -1,28 +1,62 @@
 # Portfolio Website
 
-Hi 👋 This is my personal [portfolio](https://jaeyoungchang.vercel.app). I've it built from scratch using Next.js and Tailwind CSS. It showcases my skills, experiences, projects, and achievements in an elegant and responsive design.
+Hi 👋 This is my personal [portfolio](https://jaeyoungchang.vercel.app), built with Next.js and Tailwind CSS and deployed on Vercel.
 
 ![Home View](public/images/Portfolio_Home.png)
 
 If you would like to look at my old website to see how it compares, check it out with [this link](https://jaeyoungchang-portfolio.netlify.app/). The website code lives in the [backupHTMLCSS branch](https://github.com/jaeyoungchang5/portfolio/tree/backupHTMLCSS).
 
-## Installation
+## Getting started
 
-1. Clone the repository: `git clone https://github.com/jaeyoungchang5/portfolio.git`
-2. Navigate to the project directory: `cd portfolio`
-3. Install the dependencies: `npm install`
+```bash
+npm install
+npm run dev     # http://localhost:3000
+```
 
-## Usage
+| Script                 | What it does                               |
+| ---------------------- | ------------------------------------------ |
+| `npm run dev`          | Local dev server with hot reload           |
+| `npm run build`        | Production build (also type-checks)        |
+| `npm run lint`         | ESLint                                     |
+| `npm run format`       | Prettier, including Tailwind class sorting |
+| `npm run format:check` | Fails if any file isn't formatted          |
 
-1. Start the development server: `npm run dev`
-2. Open your browser and visit `http://localhost:3000` to view the website.
+## Project structure
 
-## Dependencies
+```
+src/
+  content/          All site text and data. Most edits happen here.
+  components/
+    layout/         SiteHeader (sticky nav) and SiteFooter
+    sections/       One file per page section: Hero, Experience, Projects, Skills, About
+    ui/             Small shared pieces: Section, ButtonLink, Anchor, Details, RichText, ...
+  app/
+    page.tsx        Puts the sections in order
+    layout.tsx      Fonts and page metadata
+    globals.css     Base styles and the few shared CSS classes
+tailwind.config.ts  Colors, font sizes, and spacing (design tokens)
+next.config.mjs     Security headers
+public/             Images and skill icons
+```
 
-The following dependencies are required for this project:
+## Editing content
 
--   Next.js: A React framework for server-side rendering and static site generation.
--   Tailwind CSS: A highly customizable CSS framework.
--   React: A JavaScript library for building user interfaces.
--   TypeScript: A typed superset of JavaScript that compiles to plain JavaScript.
--   Vercel: A development platform used for deploying the website
+Everything shown on the site comes from `src/content/`. Types in `src/content/types.ts` describe each field, so the editor and the build catch mistakes.
+
+| To change...                               | Edit                                                                                |
+| ------------------------------------------ | ----------------------------------------------------------------------------------- |
+| Headline, intro, About text, contact links | `profile.ts`                                                                        |
+| A job or role                              | `experience.ts` (`featured: true` gives it a full entry; others go under "Earlier") |
+| A project                                  | `projects.ts` (order in the file is order on the page)                              |
+| Skills and their filter categories         | `tech.ts` (add the icon file to `public/icons/`)                                    |
+| Hobbies                                    | `profile.ts` → `hobbies`                                                            |
+| Education                                  | `education.ts`                                                                      |
+
+Text fields support two bits of markup: `[label](https://link)` for links and `_text_` for emphasis. Nothing else is interpreted, and no raw HTML is rendered.
+
+## Changing the look
+
+- Colors, font sizes, section spacing, and page width are named tokens in `tailwind.config.ts`. Change them there.
+- Styling otherwise lives on each component as Tailwind classes. `globals.css` only holds base styles and two shared classes (`.text-link`, `.eyebrow`).
+- The sticky header's height is mirrored in `--header-height` in `globals.css` so in-page links don't land under it. Update both together.
+- New page section: create it in `components/sections/`, wrap it in `<Section id title>`, add it to `app/page.tsx`, and add its `id` to the nav list in `SiteHeader.tsx`.
