@@ -1,11 +1,12 @@
 import React from 'react';
-import ExternalLink from './ExternalLink';
+import Anchor from './Anchor';
 import type { RichText as RichTextSource } from '@/content';
 
 // [label](href) or _emphasis_
 const TOKEN = /\[([^\]]+)\]\(([^)\s]+)\)|_([^_]+)_/g;
 const SAFE_HREF = /^(https:\/\/|mailto:|\/(?!\/))/;
 
+/** Renders a content string, turning [label](href) into links and _text_ into emphasis. See RichText in src/content/types.ts. */
 const RichText = ({ text }: { text: RichTextSource }) => {
     const nodes: React.ReactNode[] = [];
     let last = 0;
@@ -16,9 +17,9 @@ const RichText = ({ text }: { text: RichTextSource }) => {
             nodes.push(<em key={match.index}>{emphasis}</em>);
         } else if (SAFE_HREF.test(href)) {
             nodes.push(
-                <ExternalLink key={match.index} href={href} className='funderline'>
+                <Anchor key={match.index} href={href} className='text-link'>
                     {label}
-                </ExternalLink>,
+                </Anchor>,
             );
         } else {
             nodes.push(whole);

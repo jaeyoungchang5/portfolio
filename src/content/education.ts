@@ -4,12 +4,9 @@ export const education: Education[] = [
     {
         school: { name: 'University of Notre Dame', url: 'https://www.nd.edu' },
         degree: 'BS in Computer Science',
-        dates: { start: '2018-08', end: '2022-05', label: '2018 – 2022' },
+        minor: 'Minor in Engineering Corporate Practice',
+        dates: { start: '2018-08', end: '2022-05' },
         gpa: '3.705',
-        highlights: [
-            'Graduated with a BS in Computer Science from the College of Engineering',
-            'Earned a Minor in Engineering Corporate Practice',
-        ],
         coursework: [
             'Data Structures',
             'Algorithms',

@@ -1,30 +1,25 @@
-import AboutSection from './components/AboutSection';
-import EducationSection from './components/EducationSection';
-import ExperiencesSection from './components/ExperiencesSection';
-import Footer from './components/Footer';
-import HeroSection from './components/HeroSection';
-import Navbar from './components/Navbar';
-import ProjectsSection from './components/ProjectsSection';
-import SectionDivider from './components/SectionDivider';
-import SkillsSection from './components/SkillsSection';
+import SiteFooter from '@/components/layout/SiteFooter';
+import SiteHeader from '@/components/layout/SiteHeader';
+import AboutSection from '@/components/sections/AboutSection';
+import ExperienceSection from '@/components/sections/ExperienceSection';
+import Hero from '@/components/sections/Hero';
+import ProjectsSection from '@/components/sections/ProjectsSection';
+import SkillsSection from '@/components/sections/SkillsSection';
 
 export default function Home() {
     return (
-        <main className='flex min-h-screen flex-col items-center justify-between p-8 md:p-24 bg-neutral-900'>
-            <Navbar />
-            <div className='container mx-auto md:px-12 py-4'>
-                <HeroSection />
-                <AboutSection />
-                <SectionDivider />
-                <SkillsSection />
-                <SectionDivider />
-                <ExperiencesSection />
-                <SectionDivider />
-                <ProjectsSection />
-                <SectionDivider />
-                <EducationSection />
+        <>
+            <SiteHeader />
+            <div className='mx-auto max-w-page px-4 sm:px-8'>
+                <main>
+                    <Hero />
+                    <ExperienceSection />
+                    <ProjectsSection />
+                    <SkillsSection />
+                    <AboutSection />
+                </main>
+                <SiteFooter />
             </div>
-            <Footer />
-        </main>
+        </>
     );
 }

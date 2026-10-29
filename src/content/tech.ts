@@ -4,8 +4,6 @@ type TechDef = {
     label: string;
     /** File in /public/icons. */
     icon?: string;
-    /** Icon is dark-on-transparent and needs inverting on a dark background. */
-    invert?: boolean;
     categories: TechCategory[];
     /** Set false for tech that should only appear on experience/project cards. */
     inSkills?: boolean;
@@ -26,7 +24,7 @@ export const tech = {
     Java: { label: 'Java', icon: 'java.svg', categories: ['language'] },
     React: { label: 'React', icon: 'react.svg', categories: ['library', 'web'] },
     ReactNative: { label: 'React Native', icon: 'react.svg', categories: ['framework', 'mobile'] },
-    Next: { label: 'Next.js', icon: 'nextjs-icon.svg', invert: true, categories: ['framework', 'web'] },
+    Next: { label: 'Next.js', icon: 'nextjs-icon.svg', categories: ['framework', 'web'] },
     Dotnet: { label: '.NET', icon: 'dotnet.svg', categories: ['framework', 'web'] },
     Node: { label: 'Node.js', icon: 'nodejs-icon.svg', categories: ['web'] },
     Express: { label: 'Express.js', icon: 'nodejs-icon.svg', categories: ['framework', 'web'] },
@@ -40,22 +38,22 @@ export const tech = {
     Tailwind: { label: 'Tailwind CSS', icon: 'tailwindcss-icon.svg', categories: ['framework', 'web'] },
     Kubernetes: { label: 'Kubernetes', icon: 'kubernetes.svg', categories: ['tool'] },
     Docker: { label: 'Docker', icon: 'docker.svg', categories: ['tool'] },
-    GoogleCloud: { label: 'Google Cloud', icon: 'google-cloud.svg', invert: true, categories: ['tool'] },
-    CloudRun: { label: 'Cloud Run', icon: 'google-cloud.svg', invert: true, categories: ['tool'] },
-    Kafka: { label: 'Kafka', icon: 'apache-kafka.svg', invert: true, categories: ['tool'] },
-    PubSub: { label: 'Pub/Sub', icon: 'google-pubsub.svg', invert: true, categories: ['tool'] },
-    VertexAI: { label: 'Vertex AI', icon: 'google-cloud.svg', invert: true, categories: ['tool'] },
-    SVN: { label: 'SVN', icon: 'subversion.svg', invert: true, categories: ['tool'] },
-    Yarn: { label: 'Yarn', icon: 'yarn.svg', invert: true, categories: ['tool'] },
+    GoogleCloud: { label: 'Google Cloud', icon: 'google-cloud.svg', categories: ['tool'] },
+    CloudRun: { label: 'Cloud Run', icon: 'google-cloud.svg', categories: ['tool'] },
+    Kafka: { label: 'Kafka', icon: 'apache-kafka.svg', categories: ['tool'] },
+    PubSub: { label: 'Pub/Sub', icon: 'google-pubsub.svg', categories: ['tool'] },
+    VertexAI: { label: 'Vertex AI', icon: 'google-cloud.svg', categories: ['tool'] },
+    SVN: { label: 'SVN', icon: 'subversion.svg', categories: ['tool'] },
+    Yarn: { label: 'Yarn', icon: 'yarn.svg', categories: ['tool'] },
     Agile: { label: 'Agile', categories: ['tool'] },
     MUMPS: { label: 'MUMPS', categories: ['language'] },
-    Expo: { label: 'Expo', icon: 'expo-icon.svg', invert: true, categories: ['framework', 'mobile', 'tool'] },
+    Expo: { label: 'Expo', icon: 'expo-icon.svg', categories: ['framework', 'mobile', 'tool'] },
     Firebase: { label: 'Firebase', icon: 'firebase.svg', categories: ['tool'] },
     Heroku: { label: 'Heroku', icon: 'heroku-icon.svg', categories: ['tool'] },
     Netlify: { label: 'Netlify', icon: 'netlify-icon.svg', categories: ['tool'] },
-    Vercel: { label: 'Vercel', icon: 'vercel-icon.svg', invert: true, categories: ['tool'] },
+    Vercel: { label: 'Vercel', icon: 'vercel-icon.svg', categories: ['tool'] },
     Postman: { label: 'Postman', icon: 'postman-icon.svg', categories: ['tool'] },
-    Markdown: { label: 'Markdown', icon: 'markdown.svg', invert: true, categories: ['language'] },
+    Markdown: { label: 'Markdown', icon: 'markdown.svg', categories: ['language'] },
     Bash: { label: 'Bash', icon: 'bash-icon.svg', categories: ['language', 'tool'] },
     Swift: { label: 'Swift', icon: 'swift.svg', categories: ['language', 'mobile'] },
     Kotlin: { label: 'Kotlin', icon: 'kotlin-icon.svg', categories: ['language', 'mobile'] },
@@ -73,4 +71,6 @@ export type TechId = keyof typeof tech;
 
 export const getTech = (id: TechId): TechDef => tech[id];
 
-export const skillIds = (Object.keys(tech) as TechId[]).filter((id) => getTech(id).inSkills !== false);
+export const skillIds = (Object.keys(tech) as TechId[]).filter(id => getTech(id).inSkills !== false);
+
+export const techLabels = (ids: TechId[]) => ids.map(id => tech[id].label);

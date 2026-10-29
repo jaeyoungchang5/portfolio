@@ -1,12 +1,13 @@
 import React from 'react';
-import ExternalLink from './ExternalLink';
+import Anchor from './Anchor';
 import type { Organization } from '@/content';
 
+/** Organization name, linked when it has a URL. */
 const OrgName = ({ org }: { org: Organization }) =>
     org.url ? (
-        <ExternalLink href={org.url} className='funderline'>
+        <Anchor href={org.url} className='text-link'>
             {org.name}
-        </ExternalLink>
+        </Anchor>
     ) : (
         <>{org.name}</>
     );
