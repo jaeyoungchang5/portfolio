@@ -62,14 +62,15 @@ const ExperienceSection = () => {
                     <h3 className='eyebrow font-normal'>Earlier</h3>
                     <ul className={`${contentClass} space-y-2.5`}>
                         {earlier.map(experience => (
+                            // Phones: dates in a fixed left column so they line up. From `sm` up: dates on the right.
                             <li
                                 key={experience.org.name + experience.roles[0].title}
-                                className='flex flex-wrap justify-between gap-x-4 gap-y-1'
+                                className='grid grid-cols-[6.5rem_minmax(0,1fr)] items-baseline gap-x-3 sm:flex sm:justify-between sm:gap-x-4'
                             >
+                                <span className='eyebrow sm:order-last sm:shrink-0'>{yearSpan(experience)}</span>
                                 <span>
                                     {experience.roles[0].title}, <OrgName org={experience.org} />
                                 </span>
-                                <span className='eyebrow'>{yearSpan(experience)}</span>
                             </li>
                         ))}
                     </ul>

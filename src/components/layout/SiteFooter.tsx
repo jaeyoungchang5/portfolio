@@ -4,12 +4,13 @@ import SocialIcon from '@/components/ui/SocialIcon';
 import { linkOf, profile } from '@/content';
 
 const SiteFooter = () => (
-    <footer className='flex flex-wrap items-center justify-between gap-4 border-t border-rule pb-14 pt-10 text-sm text-muted'>
+    // Phones: copyright, then the email on its own line, then GitHub and LinkedIn side by side.
+    <footer className='flex flex-col gap-4 border-t border-rule pb-14 pt-10 text-sm text-muted sm:flex-row sm:flex-wrap sm:items-center sm:justify-between'>
         <span>
             © {new Date().getFullYear()} {profile.name}
         </span>
         <ul className='flex flex-wrap gap-x-6 gap-y-2'>
-            <li>
+            <li className='w-full sm:w-auto'>
                 <Anchor href={linkOf('email').href} className='text-link'>
                     {profile.email}
                 </Anchor>
